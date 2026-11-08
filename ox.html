@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161a20" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+<title>행정법 기출 OX</title>
+<meta name="description" content="2020~2026 공무원 행정법총론 기출에 반복 출제된 판례·조문 지문을 OX 문제로 풀어보는 페이지">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script>
+  try { var t = localStorage.getItem('adminlaw-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+<style>
+  :root{
+    --bg:#f5f7fa; --surface:#ffffff; --surface-2:#f0f3f7; --ink:#15191e; --muted:#5b6574; --line:#e1e6ec;
+    --law:#1f56a8; --law-soft:#e9f0fb; --suit:#0b7a62; --suit-soft:#e4f4ee; --star:#cf8600;
+    --o:#1f56a8; --o-soft:#e7effb; --x:#c0352b; --x-soft:#fbeceb;
+    --good:#0b7a62; --good-soft:#e4f4ee; --bad:#c0352b; --bad-soft:#fbeceb;
+    --shadow:0 1px 2px rgba(16,24,40,.05), 0 4px 16px rgba(16,24,40,.06);
+    --header-h:60px; --safe-b:env(safe-area-inset-bottom, 0px);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0e1115; --surface:#161a20; --surface-2:#1d232b; --ink:#e7eaee; --muted:#9aa4b2; --line:#29303a;
+      --law:#86b4ff; --law-soft:#18253a; --suit:#5fd0b2; --suit-soft:#122e27; --star:#f3b437;
+      --o:#86b4ff; --o-soft:#18253a; --x:#ff7b70; --x-soft:#3a1c1a;
+      --good:#5fd0b2; --good-soft:#122e27; --bad:#ff7b70; --bad-soft:#3a1c1a;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0e1115; --surface:#161a20; --surface-2:#1d232b; --ink:#e7eaee; --muted:#9aa4b2; --line:#29303a;
+    --law:#86b4ff; --law-soft:#18253a; --suit:#5fd0b2; --suit-soft:#122e27; --star:#f3b437;
+    --o:#86b4ff; --o-soft:#18253a; --x:#ff7b70; --x-soft:#3a1c1a;
+    --good:#5fd0b2; --good-soft:#122e27; --bad:#ff7b70; --bad-soft:#3a1c1a;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
+  body{margin:0; background:var(--bg); color:var(--ink); line-height:1.6; padding-bottom:var(--safe-b);
+    font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
+    -webkit-font-smoothing:antialiased; -webkit-tap-highlight-color:transparent; word-break:keep-all; overflow-wrap:anywhere}
+  a{color:inherit}
+  button, select{font:inherit; color:inherit}
+  .wrap{max-width:820px; margin:0 auto; padding:0 20px}
+  [hidden]{display:none !important}
+
+  /* header */
+  .site-h{position:sticky; top:0; z-index:30; height:var(--header-h); background:color-mix(in srgb, var(--surface) 90%, transparent);
+    backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+  .site-h .wrap{height:100%; display:flex; align-items:center; gap:10px; max-width:1100px}
+  .brand{display:flex; align-items:center; gap:10px; text-decoration:none; font-weight:800; font-size:16px; margin-right:auto; min-width:0}
+  .brand-mark{flex:none; width:32px; height:32px; border-radius:9px; display:grid; place-items:center; color:#fff; font-size:15px; background:linear-gradient(135deg, var(--law), var(--suit))}
+  .h-link{text-decoration:none; font-size:14px; font-weight:700; color:var(--muted); padding:8px 12px; border-radius:9px; border:1px solid var(--line); background:var(--surface); white-space:nowrap}
+  .icon-btn{flex:none; width:40px; height:40px; border-radius:10px; border:1px solid var(--line); background:var(--surface); cursor:pointer; display:grid; place-items:center; font-size:16px}
+
+  /* intro */
+  .intro{padding:28px 0 6px}
+  .intro h1{font-size:clamp(24px, 4vw, 32px); letter-spacing:-.8px; margin:0 0 6px; line-height:1.3}
+  .intro p{margin:0; color:var(--muted); font-size:15px}
+  .notice{margin-top:10px; font-size:12.5px; color:var(--muted); background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:9px 12px}
+
+  /* stats */
+  .stats{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)) auto; gap:8px; align-items:stretch; margin:16px 0 10px}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:10px 12px}
+  .stat b{display:block; font-size:20px; letter-spacing:-.4px; font-variant-numeric:tabular-nums}
+  .stat span{font-size:12.5px; color:var(--muted)}
+  .stat.bad b{color:var(--bad)}
+  .reset{border:1px solid var(--line); background:var(--surface); border-radius:12px; padding:0 12px; font-size:13px; font-weight:700; color:var(--muted); cursor:pointer}
+  .bar{height:6px; background:var(--surface-2); border-radius:6px; overflow:hidden}
+  .bar i{display:block; height:100%; width:0; background:linear-gradient(90deg, var(--law), var(--suit)); transition:width .3s}
+
+  /* controls */
+  .controls{position:sticky; top:var(--header-h); z-index:20; background:var(--bg); padding:12px 0 10px; display:grid; gap:10px; border-bottom:1px solid var(--line); margin-bottom:16px}
+  .row{display:flex; gap:8px}
+  .row select{flex:1 1 auto; min-width:0; height:44px; font-size:15px; font-weight:600; padding:0 10px; border-radius:11px; border:1px solid var(--line); background:var(--surface)}
+  .toggle{flex:none; height:44px; padding:0 14px; border-radius:11px; border:1px solid var(--line); background:var(--surface); font-size:14px; font-weight:700; cursor:pointer; white-space:nowrap}
+  .toggle[aria-pressed="true"]{background:var(--ink); color:var(--bg); border-color:var(--ink)}
+  .tabs{display:grid; grid-template-columns:repeat(3, 1fr); background:var(--surface-2); border-radius:12px; padding:3px}
+  .tabs button{height:40px; border:0; background:transparent; border-radius:9px; font-size:14.5px; font-weight:700; color:var(--muted); cursor:pointer}
+  .tabs button[aria-selected="true"]{background:var(--surface); color:var(--ink); box-shadow:var(--shadow)}
+  .tabs .n{display:inline-block; min-width:20px; margin-left:4px; padding:0 6px; border-radius:99px; font-size:12px; background:var(--bad-soft); color:var(--bad)}
+
+  /* question card */
+  .qcard{background:var(--surface); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); overflow:hidden}
+  .q-top{display:flex; align-items:center; flex-wrap:wrap; gap:6px 8px; padding:14px 18px 0; font-size:13px}
+  .q-num{font-weight:800; font-variant-numeric:tabular-nums}
+  .chip{font-size:12px; font-weight:700; padding:2px 9px; border-radius:99px; background:var(--surface-2); color:var(--muted); text-decoration:none}
+  .chip.law{background:var(--law-soft); color:var(--law)} .chip.suit{background:var(--suit-soft); color:var(--suit)}
+  .stars{color:var(--star); letter-spacing:1px; font-size:12.5px; margin-left:auto}
+  .q-text{padding:14px 18px 18px; font-size:18px; line-height:1.7; font-weight:600; letter-spacing:-.2px}
+  .ox{display:grid; grid-template-columns:1fr 1fr; gap:10px; padding:0 18px 18px}
+  .ox button{height:72px; border-radius:14px; font-size:34px; font-weight:900; cursor:pointer; border:2px solid var(--line); background:var(--surface); transition:transform .08s}
+  .ox button:active{transform:scale(.97)}
+  .ox .bo{color:var(--o)} .ox .bx{color:var(--x)}
+  .ox button:hover{border-color:currentColor}
+  .ox button:disabled{cursor:default; opacity:.35}
+  .ox button.pick{opacity:1; border-color:var(--bad); background:var(--bad-soft)}
+  .ox button.answer{opacity:1; border-color:var(--good); background:var(--good-soft); position:relative}
+  .ox button.answer::after{content:"정답"; position:absolute; top:6px; right:8px; font-size:11px; font-weight:800; color:var(--good)}
+  .result{border-top:1px solid var(--line); padding:14px 18px 18px}
+  .verdict{display:flex; align-items:center; gap:10px; font-size:17px; font-weight:800; margin-bottom:8px}
+  .verdict .mark{display:grid; place-items:center; width:30px; height:30px; border-radius:50%; font-size:16px; color:#fff}
+  .verdict.good{color:var(--good)} .verdict.good .mark{background:var(--good)}
+  .verdict.bad{color:var(--bad)} .verdict.bad .mark{background:var(--bad)}
+  :root[data-theme="dark"] .verdict .mark{color:#0e1115}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .verdict .mark{color:#0e1115} }
+  .exp{margin:0 0 10px; font-size:15.5px; line-height:1.7}
+  .exp b.ans{padding:0 6px; border-radius:5px}
+  .exp b.ans.O{background:var(--o-soft); color:var(--o)} .exp b.ans.X{background:var(--x-soft); color:var(--x)}
+  .more{display:inline-flex; align-items:center; gap:4px; font-size:14px; font-weight:700; text-decoration:none; color:var(--law); min-height:36px}
+  .nav{display:grid; grid-template-columns:auto 1fr; gap:10px; margin-top:12px}
+  .btn{height:52px; border-radius:13px; font-size:16px; font-weight:800; cursor:pointer; border:1px solid var(--line); background:var(--surface); padding:0 18px}
+  .btn.primary{background:var(--ink); color:var(--bg); border-color:var(--ink)}
+  .btn:disabled{opacity:.4; cursor:default}
+  .kbd-hint{margin:10px 2px 0; font-size:12.5px; color:var(--muted)}
+
+  /* end */
+  .end{text-align:center; padding:30px 18px}
+  .end .big{font-size:44px; font-weight:900; letter-spacing:-1px; margin:6px 0}
+  .end p{color:var(--muted); margin:0 0 18px}
+  .end .btns{display:grid; gap:10px; max-width:340px; margin:0 auto}
+
+  /* list */
+  .list{display:grid; gap:12px}
+  .item .q-text{font-size:16.5px; padding-bottom:14px}
+  .item .ox{padding-bottom:14px}
+  .item .ox button{height:54px; font-size:26px}
+  .empty{text-align:center; color:var(--muted); padding:50px 10px; background:var(--surface); border:1px dashed var(--line); border-radius:16px}
+  .list-tools{display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:10px; font-size:13.5px; color:var(--muted)}
+  .link-btn{border:0; background:none; color:var(--muted); font-weight:700; font-size:13.5px; cursor:pointer; text-decoration:underline; padding:8px 0}
+
+  .site-f{margin-top:40px; border-top:1px solid var(--line); background:var(--surface)}
+  .site-f .wrap{padding-top:20px; padding-bottom:28px; font-size:12.5px; color:var(--muted)}
+  .site-f p{margin:0 0 6px}
+
+  @media (max-width: 640px){
+    :root{--header-h:54px}
+    .wrap{padding:0 16px}
+    .brand{font-size:15px}
+    .brand-mark{width:30px; height:30px}
+    .h-link{padding:7px 10px; font-size:13px}
+    .intro{padding-top:20px}
+    .intro p{font-size:14.5px}
+    .stats{grid-template-columns:repeat(3, minmax(0,1fr)); gap:6px}
+    .stat{padding:8px 10px}
+    .stat b{font-size:18px}
+    .reset{grid-column:1 / -1; height:38px}
+    .controls{position:static; margin-left:-16px; margin-right:-16px; padding-left:16px; padding-right:16px}
+    .q-top{padding:12px 14px 0}
+    .q-text{padding:12px 14px 16px; font-size:17px}
+    .ox{padding:0 14px 14px}
+    .result{padding:12px 14px 16px}
+    .exp{font-size:15px}
+    .kbd-hint{display:none}
+  }
+  @media (prefers-reduced-motion: reduce){ .bar i, .ox button{transition:none} }
+</style>
+</head>
+<body>
+
+<header class="site-h">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">法</span>행정법 기출 OX</a>
+    <a class="h-link" href="index.html">용어사전</a>
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="화면 테마 바꾸기">◐</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="intro">
+    <h1>기출 OX 문제 <span style="color:var(--muted); font-weight:700">112문항</span></h1>
+    <p>2020~2026년 행정법총론 기출에 되풀이해 나온 판례·조문 지문을 OX로 풀어 봐요. 틀린 문제는 오답노트에 자동으로 모입니다.</p>
+    <p class="notice">※ 실제 기출 지문을 그대로 옮긴 것이 아니라, 반복 출제된 판례·조문 포인트를 OX 형식으로 다시 쓴 문제입니다. 문항별 출제 연도는 표시하지 않았습니다.</p>
+  </section>
+
+  <section class="stats" aria-label="학습 기록">
+    <div class="stat"><b id="sDone">0</b><span>푼 문제</span></div>
+    <div class="stat"><b id="sRate">–</b><span>정답률</span></div>
+    <div class="stat bad"><b id="sWrong">0</b><span>오답노트</span></div>
+    <button class="reset" id="resetAll" type="button">기록 초기화</button>
+  </section>
+  <div class="bar" aria-hidden="true"><i id="progress"></i></div>
+
+  <div class="controls">
+    <div class="row">
+      <label class="sr" for="scope" style="position:absolute; left:-9999px">출제 범위</label>
+      <select id="scope"><option value="all">전체 범위 (112문항)</option><option value="law">PART Ⅰ 행정기본법 전체 (62)</option><option value="suit">PART Ⅱ 행정소송법 전체 (50)</option><optgroup label="행정기본법 단원별"><option value="law-1">1. 행정법의 일반원칙 (13)</option><option value="law-2">2. 처분(행정행위)의 종류와 모습 (13)</option><option value="law-3">3. 처분의 효력·하자·취소와 철회 (15)</option><option value="law-4">4. 행정입법·제재·행정상 강제 (15)</option><option value="law-5">5. 처분에 대한 불복 (6)</option></optgroup><optgroup label="행정소송법 단원별"><option value="suit-1">1. 행정소송의 종류 (11)</option><option value="suit-2">2. 소송요건 (17)</option><option value="suit-3">3. 심리와 임시구제 (10)</option><option value="suit-4">4. 판결과 그 효력 (12)</option></optgroup></select>
+      <button class="toggle" id="shuffle" type="button" aria-pressed="false">섞기</button>
+    </div>
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" data-view="quiz" aria-selected="true">문제 풀기</button>
+      <button type="button" role="tab" data-view="list" aria-selected="false">전체 목록</button>
+      <button type="button" role="tab" data-view="wrong" aria-selected="false">오답노트<span class="n" id="wrongN">0</span></button>
+    </div>
+  </div>
+
+  <main id="view" aria-live="polite"></main>
+</div>
+
+<footer class="site-f">
+  <div class="wrap">
+    <p>문항은 용어사전의 빈출 판례·조문을 바탕으로 만들었습니다. 해설 아래 "관련 용어 카드 보기"를 누르면 해당 개념 설명으로 이동합니다.</p>
+    <p>풀이 기록은 이 기기의 브라우저에만 저장되며, 다른 기기와 공유되지 않습니다.</p>
+  </div>
+</footer>
+
+<script id="data" type="application/json">[{"id":"q1","part":"law","ch":"law-1","chTitle":"행정법의 일반원칙","term":"법치행정의 원칙","tid":"t1","f":3,"a":"O","q":"행정기본법은 국민의 권리를 제한하거나 의무를 부과하는 경우와 그 밖에 국민생활에 중요한 영향을 미치는 경우에는 법률에 근거하여야 한다고 규정하고 있다.","e":"행정기본법 §8 후단 그대로입니다. 법률유보의 범위를 \"국민생활에 중요한 영향을 미치는 경우\"까지 넓혀 명문화했습니다."},{"id":"q2","part":"law","ch":"law-1","chTitle":"행정법의 일반원칙","term":"법치행정의 원칙","tid":"t1","f":3,"a":"X","q":"헌법재판소는 텔레비전방송수신료의 금액 결정을 한국방송공사 이사회에 맡기더라도 의회유보원칙에 위반되지 않는다고 보았다.","e":"수신료 금액은 국회가 스스로 정해야 하는 본질적 사항이므로, 이사회 결정에 맡긴 것은 의회유보원칙 위반입니다(헌재 1999)."},{"id":"q3","part":"law","ch":"law-1","chTitle":"행정법의 일반원칙","term":"평등의 원칙· 행정의 자기구속","tid":"t2","f":2,"a":"X","q":"위법한 행정관행이 반복되어 왔다면 행정청은 평등원칙에 따라 그 위법한 관행에도 구속된다.","e":"\"불법에는 평등이 없다.\" 자기구속은 적법한 관행에만 인정되고, 위법한 관행에는 구속되지 않습니다."},{"id":"q4","part":"law","ch":"law-1","chTitle":"행정법의 일반원칙","term":"평등의 원칙· 행정의 자기구속","tid":"t2","f":2,"a":"O","q":"재량준칙이 되풀이 시행되어 행정관행이 성립한 경우, 행정청은 특별한 사정이 없는 한 평등원칙이나 신뢰보호원칙에 따라 그 준칙에 따라야 할 자기구속을 받는다.","e":"재량준칙 자체는 대외적 구속력이 없지만, 반복 시행으로 관행이 생기면 평등원칙을 매개로 행정청을 구속합니다(판례)."},{"id":"q5","part":"law","ch":"law-1","chTitle":"행정법의 일반원칙","term":"비례의 원칙","tid":"t3","f":3,"a":"O","q":"행정기본법은 비례원칙의 내용으로 적합성, 필요성, 상당성(법익균형)을 모두 규정하고 있다.","e":"행정기본법 §10 제1호~제3호에 세 요소가 모두 들어 있습니다."},{"id":"q6","part":"law","ch":"law-1","chTitle":"행정법의 일반원칙","term":"비례의 원칙","tid":"t3","f":3,"a":"X","q":"음주운전을 이유로 한 운전면허 취소처분에서는 취소로 인한 당사자의 불이익이 교통사고 방지라는 일반예방적 측면보다 더 강조되어야 한다.","e":"판례는 반대입니다. 음주운전 면허취소는 당사자의 불이익보다 교통안전이라는 공익(일반예방) 측면이 더 강조되어야 한다고 봅니다."},{"id":"q7","part":"law","ch":"law-1","chTitle":"행정법의 일반원칙","term":"신뢰보호의 원칙","tid":"t4","f":3,"a":"X","q":"행정청의 공적 견해표명이 있었는지는 담당자의 조직상 지위와 임무와 관계없이 행정조직상의 형식적 권한분장에 따라서만 판단하여야 한다.","e":"판례는 형식적 권한분장에 구애될 것이 아니라 담당자의 조직상 지위·임무, 언동의 경위 등 실질에 따라 판단해야 한다고 봅니다."},{"id":"q8","part":"law","ch":"law-1","chTitle":"행정법의 일반원칙","term":"신뢰보호의 원칙","tid":"t4","f":3,"a":"O","q":"행정청이 공적 견해를 표명한 후 그 전제가 된 사실적·법률적 상태가 변경되었다면, 그 견해표명은 행정청의 별다른 의사표시 없이도 실효된다.","e":"판례 그대로입니다. 사정이 바뀌면 견해표명은 따로 취소하지 않아도 효력을 잃습니다."},{"id":"q9","part":"law","ch":"law-1","chTitle":"행정법의 일반원칙","term":"신뢰보호의 원칙","tid":"t4","f":3,"a":"O","q":"행정기본법은 행정청이 권한 행사의 기회가 있음에도 장기간 행사하지 않아 국민이 그 권한이 행사되지 않을 것으로 믿을 만한 정당한 사유가 있는 경우, 원칙적으로 그 권한을 행사해서는 안 된다고 규정한다.","e":"실권의 법리를 명문화한 §12②입니다. 단, 공익 또는 제3자의 이익을 현저히 해칠 우려가 있으면 예외입니다."},{"id":"q10","part":"law","ch":"law-1","chTitle":"행정법의 일반원칙","term":"부당결부금지의 원칙","tid":"t5","f":2,"a":"X","q":"주택사업계획을 승인하면서 그 사업과 아무 관련 없는 토지를 기부채납하도록 한 부관은 부당결부금지원칙에 위반되어 당연무효이다.","e":"부당결부금지원칙 위반으로 위법하지만, 판례는 그 하자가 당연무효에 이를 정도는 아니라고 봅니다(취소사유)."},{"id":"q11","part":"law","ch":"law-1","chTitle":"행정법의 일반원칙","term":"부당결부금지의 원칙","tid":"t5","f":2,"a":"O","q":"한 사람이 여러 종류의 운전면허를 취득한 경우 이를 취소할 때 서로 별개로 취급하는 것이 원칙이지만, 취소사유가 다른 면허와 공통된 경우에는 여러 면허를 함께 취소할 수 있다.","e":"판례의 기본 공식입니다. 공통된 사유면 관련성이 있어 함께 취소해도 부당결부가 아닙니다."},{"id":"q12","part":"law","ch":"law-1","chTitle":"행정법의 일반원칙","term":"법 적용의 기준","tid":"t6","f":2,"a":"X","q":"당사자의 신청에 따른 처분은 법령등에 특별한 규정이 없으면 신청 당시의 법령등에 따른다.","e":"신청 \"당시\"가 아니라 처분 \"당시\"의 법령등에 따릅니다(§14②). 시험에서 가장 자주 바꿔 내는 함정입니다."},{"id":"q13","part":"law","ch":"law-1","chTitle":"행정법의 일반원칙","term":"법 적용의 기준","tid":"t6","f":2,"a":"O","q":"법령등을 위반한 행위 후 법령이 변경되어 제재처분 기준이 가벼워졌고 해당 법령에 특별한 규정이 없다면, 변경된 법령등을 적용한다.","e":"제재처분은 원칙적으로 위반행위 당시 법령에 따르지만, 유리하게 바뀌었다면 변경된 법령을 적용합니다(§14③ 단서)."},{"id":"q14","part":"law","ch":"law-2","chTitle":"처분(행정행위)의 종류와 모습","term":"기속행위· 재량행위","tid":"t7","f":3,"a":"O","q":"재량행위에 대한 사법심사는 행정청의 공익판단 여지를 감안하여 재량권의 일탈·남용이 있는지 여부만을 대상으로 한다.","e":"기속행위는 법원이 독자적 결론을 내고 비교하지만(판단대치), 재량행위는 일탈·남용 여부만 심사합니다."},{"id":"q15","part":"law","ch":"law-2","chTitle":"처분(행정행위)의 종류와 모습","term":"기속행위· 재량행위","tid":"t7","f":3,"a":"X","q":"귀화허가는 법률이 정한 요건을 갖추면 반드시 허가하여야 하는 기속행위이다.","e":"판례는 귀화허가를 재량행위로 봅니다. 요건을 갖춰도 허가 여부에 재량이 있습니다."},{"id":"q16","part":"law","ch":"law-2","chTitle":"처분(행정행위)의 종류와 모습","term":"허가·특허·인가","tid":"t8","f":3,"a":"X","q":"재개발조합설립인가는 조합 설립행위를 보충하여 그 효력을 완성시키는 강학상 인가에 해당한다.","e":"이름은 인가지만 판례는 행정주체(공법인)의 지위를 부여하는 설권적 처분, 즉 특허로 봅니다."},{"id":"q17","part":"law","ch":"law-2","chTitle":"처분(행정행위)의 종류와 모습","term":"허가·특허·인가","tid":"t8","f":3,"a":"O","q":"기본행위에 하자가 있는 경우, 그 기본행위의 하자를 이유로 인가처분의 취소나 무효확인을 구할 법률상 이익은 없다.","e":"인가는 보충행위입니다. 기본행위의 하자는 기본행위 자체를 다퉈야 하고, 인가에 고유한 하자가 있을 때만 인가를 다툽니다."},{"id":"q18","part":"law","ch":"law-2","chTitle":"처분(행정행위)의 종류와 모습","term":"부관","tid":"t9","f":3,"a":"O","q":"행정청은 처분에 재량이 없는 경우에는 법률에 근거가 있는 경우에만 부관을 붙일 수 있다.","e":"행정기본법 §17②입니다. 재량이 있으면 부관을 붙일 수 있고(§17①), 재량이 없으면 법률 근거가 필요합니다."},{"id":"q19","part":"law","ch":"law-2","chTitle":"처분(행정행위)의 종류와 모습","term":"부관","tid":"t9","f":3,"a":"X","q":"부관 중 조건은 독립하여 행정쟁송의 대상이 될 수 있으나, 부담은 독립하여 행정쟁송의 대상이 될 수 없다.","e":"반대입니다. 부담만 그 자체로 처분이라 독립하여 다툴 수 있고, 조건·기한 등은 독립하여 다툴 수 없습니다."},{"id":"q20","part":"law","ch":"law-2","chTitle":"처분(행정행위)의 종류와 모습","term":"부관","tid":"t9","f":3,"a":"X","q":"행정청은 처분을 한 후에는 당사자의 동의가 있더라도 부관을 새로 붙일 수 없다.","e":"§17③에 따라 ①법률 근거 ②당사자 동의 ③사정변경으로 목적 달성 불가 중 하나에 해당하면 사후부관이 가능합니다."},{"id":"q21","part":"law","ch":"law-2","chTitle":"처분(행정행위)의 종류와 모습","term":"수리를 요하는 신고","tid":"t10","f":2,"a":"O","q":"건축신고 반려행위는 항고소송의 대상이 되는 처분에 해당한다.","e":"대판 2010 전원합의체입니다. 반려를 다투지 못하면 시정명령·이행강제금 등의 위험을 안게 되므로 처분성을 인정했습니다."},{"id":"q22","part":"law","ch":"law-2","chTitle":"처분(행정행위)의 종류와 모습","term":"수리를 요하는 신고","tid":"t10","f":2,"a":"X","q":"인허가의제 효과를 수반하는 건축신고는 행정청이 수리하지 않아도 신고서가 도달하면 효력이 발생하는 자기완결적 신고이다.","e":"판례는 인허가의제 효과가 있는 건축신고를 수리를 요하는 신고로 봅니다(대판 2011 전합)."},{"id":"q23","part":"law","ch":"law-2","chTitle":"처분(행정행위)의 종류와 모습","term":"인허가의제","tid":"t11","f":2,"a":"O","q":"관련 인허가 행정청은 협의를 요청받은 날부터 20일 이내에 의견을 제출하여야 하며, 그 기간 내에 의견을 제출하지 않으면 협의가 된 것으로 본다.","e":"행정기본법 §24④입니다. \"20일\"과 \"협의 간주\"를 같이 기억하세요."},{"id":"q24","part":"law","ch":"law-2","chTitle":"처분(행정행위)의 종류와 모습","term":"인허가의제","tid":"t11","f":2,"a":"X","q":"주택건설사업계획 승인으로 의제된 지구단위계획결정에 하자가 있다면, 이해관계인은 의제된 인허가가 아니라 주된 처분인 사업계획 승인의 취소를 구해야 한다.","e":"판례는 의제된 인허가의 위법을 다투려면 그 \"의제된 인허가\"의 취소를 구해야 한다고 봅니다(대판 2018)."},{"id":"q25","part":"law","ch":"law-2","chTitle":"처분(행정행위)의 종류와 모습","term":"자동적 처분","tid":"t12","f":1,"a":"X","q":"행정청은 처분에 재량이 있는 경우에도 법률로 정하는 바에 따라 완전히 자동화된 시스템으로 처분할 수 있다.","e":"§20 단서: 처분에 재량이 있는 경우에는 자동적 처분을 할 수 없습니다."},{"id":"q26","part":"law","ch":"law-2","chTitle":"처분(행정행위)의 종류와 모습","term":"자동적 처분","tid":"t12","f":1,"a":"O","q":"행정기본법상 처분을 할 수 있는 완전히 자동화된 시스템에는 인공지능 기술을 적용한 시스템이 포함된다.","e":"§20 본문에 \"(인공지능 기술을 적용한 시스템을 포함한다)\"라고 명시되어 있습니다."},{"id":"q27","part":"law","ch":"law-3","chTitle":"처분의 효력·하자·취소와 철회","term":"공정력","tid":"t13","f":3,"a":"O","q":"과세처분이 당연무효가 아닌 한, 민사법원은 부당이득반환청구 소송에서 그 과세처분의 효력을 부인할 수 없다.","e":"효력을 없애는 것은 행정소송의 몫입니다. 당연무효가 아니면 민사법원은 \"돈을 돌려주라\"고 할 수 없습니다."},{"id":"q28","part":"law","ch":"law-3","chTitle":"처분의 효력·하자·취소와 철회","term":"공정력","tid":"t13","f":3,"a":"X","q":"위법한 행정처분으로 손해를 입은 사람이 국가배상을 청구하려면 먼저 그 처분이 취소되어야 한다.","e":"국가배상은 처분의 효력을 없애는 게 아니라 위법성만 판단하면 되므로, 취소되지 않았어도 청구할 수 있습니다."},{"id":"q29","part":"law","ch":"law-3","chTitle":"처분의 효력·하자·취소와 철회","term":"공정력","tid":"t13","f":3,"a":"X","q":"연령 미달의 결격자가 다른 사람 이름으로 시험에 응시하여 받은 운전면허는 당연무효이므로, 그 면허로 운전하면 무면허운전죄가 성립한다.","e":"판례는 이 면허가 당연무효가 아니라 취소사유일 뿐이라고 보아, 취소되기 전에 운전한 것은 무면허운전이 아니라고 했습니다."},{"id":"q30","part":"law","ch":"law-3","chTitle":"처분의 효력·하자·취소와 철회","term":"존속력","tid":"t14","f":2,"a":"O","q":"처분에 불가쟁력이 발생하였더라도 처분청은 그 처분을 직권으로 취소할 수 있다.","e":"불가쟁력은 \"국민\"이 더 이상 다툴 수 없다는 것뿐이라, 행정청의 직권취소는 막지 않습니다."},{"id":"q31","part":"law","ch":"law-3","chTitle":"처분의 효력·하자·취소와 철회","term":"존속력","tid":"t14","f":2,"a":"X","q":"제소기간이 지나 불가쟁력이 생긴 처분에 대해서는 국가배상청구도 할 수 없다.","e":"불가쟁력이 생겨도 처분의 위법을 이유로 한 국가배상청구는 가능합니다."},{"id":"q32","part":"law","ch":"law-3","chTitle":"처분의 효력·하자·취소와 철회","term":"무효와 취소","tid":"t15","f":3,"a":"O","q":"판례는 행정처분이 당연무효가 되려면 그 하자가 법규의 중요한 부분을 위반한 중대한 것으로서 객관적으로 명백한 것이어야 한다는 중대명백설을 취한다.","e":"중대 + 명백 둘 다 갖춰야 무효입니다."},{"id":"q33","part":"law","ch":"law-3","chTitle":"처분의 효력·하자·취소와 철회","term":"무효와 취소","tid":"t15","f":3,"a":"X","q":"법률이 위헌으로 결정되기 전에 그 법률에 근거하여 내려진 처분은 특별한 사정이 없는 한 당연무효이다.","e":"위헌결정 전에는 위헌인지 명백하지 않았으므로 원칙적으로 취소사유에 그칩니다."},{"id":"q34","part":"law","ch":"law-3","chTitle":"처분의 효력·하자·취소와 철회","term":"무효와 취소","tid":"t15","f":3,"a":"O","q":"위헌결정 이후에 그 위헌법률에 근거한 과세처분을 집행하기 위해 한 체납처분은 당연무효이다.","e":"대판 2012 전원합의체입니다. 위헌결정 \"후\"의 집행은 당연무효라는 점을 앞 문항과 구별하세요."},{"id":"q35","part":"law","ch":"law-3","chTitle":"처분의 효력·하자·취소와 철회","term":"하자의 승계","tid":"t16","f":3,"a":"O","q":"대집행의 계고처분과 대집행영장에 의한 통지 사이에는 하자의 승계가 인정된다.","e":"계고 → 통지 → 실행 → 비용징수는 하나의 법률효과를 위한 연속 절차라 하자가 승계됩니다."},{"id":"q36","part":"law","ch":"law-3","chTitle":"처분의 효력·하자·취소와 철회","term":"하자의 승계","tid":"t16","f":3,"a":"X","q":"과세처분과 체납처분은 하나의 법률효과를 목적으로 하므로, 과세처분의 취소사유인 하자는 체납처분에 승계된다.","e":"과세처분과 체납처분은 별개의 법률효과를 목적으로 하므로 하자가 승계되지 않습니다."},{"id":"q37","part":"law","ch":"law-3","chTitle":"처분의 효력·하자·취소와 철회","term":"하자의 승계","tid":"t16","f":3,"a":"O","q":"개별공시지가결정을 다투지 않았더라도, 그 결정의 위법을 이유로 이를 기초로 한 과세처분의 취소를 구할 수 있는 경우가 있다.","e":"판례는 수인한도를 넘는 불이익이 있고 결과가 예측가능하지 않았다면 예외적으로 하자의 승계를 인정합니다(대판 1994)."},{"id":"q38","part":"law","ch":"law-3","chTitle":"처분의 효력·하자·취소와 철회","term":"직권취소","tid":"t17","f":3,"a":"X","q":"당사자가 거짓이나 부정한 방법으로 수익적 처분을 받았더라도, 행정청이 이를 취소하려면 당사자의 불이익과 공익을 반드시 비교·형량하여야 한다.","e":"§18② 단서: 거짓·부정한 방법으로 받았거나, 위법성을 알았거나 중대한 과실로 몰랐던 경우에는 이익형량을 하지 않아도 됩니다."},{"id":"q39","part":"law","ch":"law-3","chTitle":"처분의 효력·하자·취소와 철회","term":"직권취소","tid":"t17","f":3,"a":"O","q":"처분청은 법령에 직권취소의 근거 규정이 없더라도 위법한 처분을 스스로 취소할 수 있다.","e":"판례는 처분청이 별도의 법적 근거 없이도 직권취소할 수 있다고 봅니다."},{"id":"q40","part":"law","ch":"law-3","chTitle":"처분의 효력·하자·취소와 철회","term":"철회","tid":"t18","f":3,"a":"X","q":"적법한 처분의 철회는 원칙적으로 처분 시로 소급하여 그 효력을 잃게 한다.","e":"철회는 장래를 향해서만 효력을 잃게 합니다(§19①). 소급이 원칙인 것은 직권취소입니다."},{"id":"q41","part":"law","ch":"law-3","chTitle":"처분의 효력·하자·취소와 철회","term":"철회","tid":"t18","f":3,"a":"O","q":"행정기본법은 중대한 공익을 위하여 필요한 경우를 적법한 처분의 철회 사유로 규정하고 있다.","e":"§19① 제3호입니다. 나머지는 ①법률에서 정한 철회 사유 ②법령 변경·사정변경입니다."},{"id":"q42","part":"law","ch":"law-4","chTitle":"행정입법·제재·행정상 강제","term":"법규명령· 행정규칙","tid":"t19","f":3,"a":"X","q":"제재적 처분기준이 부령인 시행규칙 형식으로 정해져 있다면, 판례는 이를 대외적 구속력이 있는 법규명령으로 본다.","e":"부령 형식의 제재기준은 행정 내부의 사무처리기준(행정규칙)으로 봅니다. 대통령령 형식이면 법규명령으로 봅니다."},{"id":"q43","part":"law","ch":"law-4","chTitle":"행정입법·제재·행정상 강제","term":"법규명령· 행정규칙","tid":"t19","f":3,"a":"O","q":"상위법령의 위임을 받아 그 내용을 보충하는 고시는 상위법령과 결합하여 대외적 구속력을 가진다.","e":"법령보충적 행정규칙입니다. 다만 위임 범위를 벗어난 부분은 구속력이 없습니다."},{"id":"q44","part":"law","ch":"law-4","chTitle":"행정입법·제재·행정상 강제","term":"공법상 계약","tid":"t20","f":1,"a":"O","q":"행정기본법상 공법상 계약을 체결하는 경우에는 계약의 목적 및 내용을 명확하게 적은 계약서를 작성하여야 한다.","e":"§27① 후단입니다. 공법상 계약은 서면(계약서)이 필수입니다."},{"id":"q45","part":"law","ch":"law-4","chTitle":"행정입법·제재·행정상 강제","term":"공법상 계약","tid":"t20","f":1,"a":"X","q":"계약직 공무원에 대한 채용계약 해지의 의사표시는 행정처분이므로 항고소송으로 다투어야 한다.","e":"판례는 이를 공법상 계약에 따른 의사표시로 보아 공법상 당사자소송으로 다투어야 한다고 봅니다."},{"id":"q46","part":"law","ch":"law-4","chTitle":"행정입법·제재·행정상 강제","term":"과징금","tid":"t21","f":1,"a":"X","q":"과징금은 행정상 제재일 뿐이므로 법률의 근거 없이 대통령령만으로도 부과할 수 있다.","e":"§28: 과징금은 법률에 근거가 있어야 하고, 부과·징수 주체, 사유, 상한액 등을 법률로 명확히 정해야 합니다."},{"id":"q47","part":"law","ch":"law-4","chTitle":"행정입법·제재·행정상 강제","term":"과징금","tid":"t21","f":1,"a":"O","q":"과징금은 한꺼번에 납부하는 것이 원칙이지만, 사업 여건 악화 등 일정한 사유가 있으면 납부기한을 연기하거나 분할 납부하게 할 수 있다.","e":"§29입니다. 재해, 사업 여건 악화, 자금 사정의 현저한 어려움 등이 사유입니다."},{"id":"q48","part":"law","ch":"law-4","chTitle":"행정입법·제재·행정상 강제","term":"제재처분의 제척기간","tid":"t22","f":2,"a":"O","q":"행정청은 법령등의 위반행위가 종료된 날부터 5년이 지나면 해당 위반행위에 대하여 원칙적으로 제재처분을 할 수 없다.","e":"§23①입니다. 대상은 인허가 정지·취소·철회, 등록 말소, 영업소 폐쇄, 정지를 갈음하는 과징금입니다."},{"id":"q49","part":"law","ch":"law-4","chTitle":"행정입법·제재·행정상 강제","term":"제재처분의 제척기간","tid":"t22","f":2,"a":"X","q":"제재처분의 제척기간 5년은 위반행위가 처음 시작된 날부터 기산한다.","e":"시작된 날이 아니라 위반행위가 \"종료된 날\"부터 기산합니다."},{"id":"q50","part":"law","ch":"law-4","chTitle":"행정입법·제재·행정상 강제","term":"행정대집행","tid":"t23","f":3,"a":"X","q":"토지나 건물의 인도(명도)의무는 대체적 작위의무이므로 행정대집행의 대상이 된다.","e":"인도의무는 점유자 본인이 나가야 이행되는 비대체적 의무라 대집행 대상이 아닙니다."},{"id":"q51","part":"law","ch":"law-4","chTitle":"행정입법·제재·행정상 강제","term":"행정대집행","tid":"t23","f":3,"a":"O","q":"건물 철거명령과 그 불이행을 전제로 한 대집행 계고는 1장의 문서로 동시에 할 수 있다.","e":"판례는 철거명령과 계고를 한 문서로 동시에 하는 것을 허용합니다."},{"id":"q52","part":"law","ch":"law-4","chTitle":"행정입법·제재·행정상 강제","term":"행정대집행","tid":"t23","f":3,"a":"X","q":"공익사업을 위한 협의취득 시 건물소유자가 건물을 철거하기로 약정했다면, 그 철거의무는 행정대집행의 대상이 된다.","e":"협의취득 약정에 따른 철거의무는 사법상 의무라 대집행 대상이 아닙니다(대집행은 공법상 의무만)."},{"id":"q53","part":"law","ch":"law-4","chTitle":"행정입법·제재·행정상 강제","term":"이행강제금","tid":"t24","f":3,"a":"O","q":"의무자가 의무를 이행하면 행정청은 새로운 이행강제금의 부과를 즉시 중지하되, 이미 부과한 이행강제금은 징수하여야 한다.","e":"행정기본법 §31⑤입니다."},{"id":"q54","part":"law","ch":"law-4","chTitle":"행정입법·제재·행정상 강제","term":"이행강제금","tid":"t24","f":3,"a":"X","q":"건축법상 이행강제금 납부의무는 의무자가 사망하면 상속인에게 승계된다.","e":"이행강제금은 일신전속적 성질이라 상속되지 않고, 의무자가 사망하면 절차가 종료됩니다."},{"id":"q55","part":"law","ch":"law-4","chTitle":"행정입법·제재·행정상 강제","term":"직접강제·강제징수· 즉시강제","tid":"t25","f":2,"a":"O","q":"즉시강제는 다른 수단으로는 행정목적을 달성할 수 없는 경우에만 허용되며, 이 경우에도 최소한으로만 실시하여야 한다.","e":"행정기본법 §33①입니다."},{"id":"q56","part":"law","ch":"law-4","chTitle":"행정입법·제재·행정상 강제","term":"직접강제·강제징수· 즉시강제","tid":"t25","f":2,"a":"X","q":"직접강제는 행정대집행이나 이행강제금 부과보다 우선적으로 실시하여야 한다.","e":"반대입니다. 직접강제는 대집행·이행강제금으로 이행을 확보할 수 없거나 실현이 불가능할 때만 실시합니다(보충성, §32①)."},{"id":"q57","part":"law","ch":"law-5","chTitle":"처분에 대한 불복","term":"이의신청","tid":"t26","f":3,"a":"X","q":"행정기본법상 이의신청은 처분을 받은 날부터 90일 이내에 하여야 한다.","e":"30일 이내입니다(§36①). 90일은 이의신청 결과를 받은 뒤 행정심판·행정소송을 제기하는 기간입니다."},{"id":"q58","part":"law","ch":"law-5","chTitle":"처분에 대한 불복","term":"이의신청","tid":"t26","f":3,"a":"O","q":"행정기본법상 이의신청을 한 경우에도 그와 관계없이 행정심판 또는 행정소송을 제기할 수 있다.","e":"§36③입니다. 이의신청은 선택 사항이라 쟁송 제기를 막지 않습니다."},{"id":"q59","part":"law","ch":"law-5","chTitle":"처분에 대한 불복","term":"이의신청","tid":"t26","f":3,"a":"X","q":"과태료 부과 및 징수에 관한 사항도 행정기본법상 이의신청의 대상이 된다.","e":"과태료 부과·징수는 §36⑦에 따라 적용이 제외됩니다(질서위반행위규제법이 따로 규율)."},{"id":"q60","part":"law","ch":"law-5","chTitle":"처분에 대한 불복","term":"처분의 재심사","tid":"t27","f":2,"a":"X","q":"영업정지와 같은 제재처분에 대해서도 행정기본법상 처분의 재심사를 신청할 수 있다.","e":"제재처분과 행정상 강제는 처분의 재심사 대상에서 제외됩니다(§37①)."},{"id":"q61","part":"law","ch":"law-5","chTitle":"처분에 대한 불복","term":"처분의 재심사","tid":"t27","f":2,"a":"O","q":"처분의 재심사는 당사자가 재심사 사유를 안 날부터 60일 이내에 신청하여야 하며, 처분이 있은 날부터 5년이 지나면 신청할 수 없다.","e":"§37③입니다. 60일 / 5년을 기억하세요."},{"id":"q62","part":"law","ch":"law-5","chTitle":"처분에 대한 불복","term":"처분의 재심사","tid":"t27","f":2,"a":"O","q":"처분의 재심사 결과 중 처분을 유지하는 결과에 대하여는 행정심판, 행정소송 및 그 밖의 쟁송수단으로 불복할 수 없다.","e":"§37⑤입니다. 다만 재심사와 별개로 행정청의 직권취소·철회는 가능합니다(§37⑥)."},{"id":"q63","part":"suit","ch":"suit-1","chTitle":"행정소송의 종류","term":"항고소송· 취소소송","tid":"t28","f":3,"a":"X","q":"현행 행정소송법은 항고소송의 종류로 의무이행소송을 명시적으로 규정하고 있다.","e":"법정 항고소송은 취소소송, 무효등확인소송, 부작위위법확인소송 3가지뿐이고, 판례도 의무이행소송을 인정하지 않습니다."},{"id":"q64","part":"suit","ch":"suit-1","chTitle":"행정소송의 종류","term":"항고소송· 취소소송","tid":"t28","f":3,"a":"O","q":"처분의 무효선언을 구하는 의미의 취소소송도 형식이 취소소송인 이상 제소기간 등 취소소송의 요건을 갖추어야 한다.","e":"판례입니다. 내용은 무효 주장이라도 취소소송 형식을 택했다면 제소기간을 지켜야 합니다."},{"id":"q65","part":"suit","ch":"suit-1","chTitle":"행정소송의 종류","term":"무효등확인소송","tid":"t29","f":2,"a":"O","q":"처분의 무효확인소송을 제기하기 위해 민사소송 등 다른 직접적인 구제수단이 없을 것(보충성)은 요구되지 않는다.","e":"대판 2008 전원합의체에서 보충성 불요로 판례를 변경했습니다."},{"id":"q66","part":"suit","ch":"suit-1","chTitle":"행정소송의 종류","term":"무효등확인소송","tid":"t29","f":2,"a":"X","q":"무효등확인소송에도 사정판결에 관한 행정소송법 규정이 준용된다.","e":"무효인 처분은 존치시킬 효력이 없으므로 사정판결을 할 수 없습니다(판례)."},{"id":"q67","part":"suit","ch":"suit-1","chTitle":"행정소송의 종류","term":"부작위위법확인소송","tid":"t30","f":2,"a":"O","q":"부작위위법확인소송의 인용판결이 확정된 후 행정청이 신청에 대해 거부처분을 하더라도 판결의 기속력에 위반되지 않는다.","e":"부작위위법확인판결은 \"응답하라\"는 의미일 뿐이라 거부처분도 응답에 해당합니다."},{"id":"q68","part":"suit","ch":"suit-1","chTitle":"행정소송의 종류","term":"부작위위법확인소송","tid":"t30","f":2,"a":"X","q":"부작위위법확인소송 계속 중 행정청이 거부처분을 하더라도 그 소의 이익은 그대로 유지된다.","e":"처분(거부 포함)을 하면 부작위 상태가 해소되어 소의 이익이 없어지므로 각하됩니다."},{"id":"q69","part":"suit","ch":"suit-1","chTitle":"행정소송의 종류","term":"당사자소송","tid":"t31","f":3,"a":"O","q":"부가가치세 환급세액 지급청구는 민사소송이 아니라 행정소송법상 당사자소송의 절차에 따라야 한다.","e":"대판 2013 전원합의체입니다."},{"id":"q70","part":"suit","ch":"suit-1","chTitle":"행정소송의 종류","term":"당사자소송","tid":"t31","f":3,"a":"X","q":"당사자소송의 피고는 처분 등을 한 행정청이다.","e":"당사자소송의 피고는 국가·공공단체 그 밖의 권리주체입니다(§39). 행정청이 피고인 것은 항고소송입니다."},{"id":"q71","part":"suit","ch":"suit-1","chTitle":"행정소송의 종류","term":"당사자소송","tid":"t31","f":3,"a":"O","q":"당사자소송을 본안으로 하는 가처분에는 민사집행법상 가처분 규정이 준용된다.","e":"대결 2015입니다. 항고소송에서는 가처분이 준용되지 않는 것과 구별하세요."},{"id":"q72","part":"suit","ch":"suit-1","chTitle":"행정소송의 종류","term":"민중소송· 기관소송","tid":"t32","f":1,"a":"X","q":"민중소송은 법률에 정한 경우가 아니더라도 국민 누구나 제기할 수 있다.","e":"민중소송과 기관소송은 법률이 정한 경우에, 법률이 정한 사람만 제기할 수 있습니다(§45)."},{"id":"q73","part":"suit","ch":"suit-1","chTitle":"행정소송의 종류","term":"민중소송· 기관소송","tid":"t32","f":1,"a":"O","q":"헌법재판소법에 따라 헌법재판소의 관장사항으로 되는 권한쟁의심판 사항은 행정소송법상 기관소송에서 제외된다.","e":"§3 제4호 단서입니다."},{"id":"q74","part":"suit","ch":"suit-2","chTitle":"소송요건","term":"처분성","tid":"t33","f":3,"a":"X","q":"공정거래위원회의 고발조치는 항고소송의 대상이 되는 행정처분이다.","e":"고발은 수사의 단서일 뿐 국민의 권리의무에 직접 영향을 주지 않아 처분이 아닙니다(판례)."},{"id":"q75","part":"suit","ch":"suit-2","chTitle":"소송요건","term":"처분성","tid":"t33","f":3,"a":"O","q":"지목변경신청 반려행위는 항고소송의 대상이 되는 행정처분에 해당한다.","e":"대판 2004 전원합의체입니다. 지목은 토지소유권 행사의 전제요건이라 처분성을 인정했습니다."},{"id":"q76","part":"suit","ch":"suit-2","chTitle":"소송요건","term":"처분성","tid":"t33","f":3,"a":"X","q":"운전면허 행정처분처리대장상 벌점의 배점은 항고소송의 대상이 되는 처분이다.","e":"벌점 배점 자체는 국민의 권리의무에 직접 영향을 미치지 않아 처분이 아닙니다(판례)."},{"id":"q77","part":"suit","ch":"suit-2","chTitle":"소송요건","term":"원고적격","tid":"t34","f":3,"a":"O","q":"환경영향평가 대상지역 안의 주민은 특단의 사정이 없는 한 환경상 이익의 침해 또는 침해 우려가 있는 것으로 사실상 추정되어 원고적격이 인정된다.","e":"대상지역 \"밖\"의 주민은 침해 우려를 스스로 증명해야 원고적격이 인정됩니다(새만금, 대판 2006 전합)."},{"id":"q78","part":"suit","ch":"suit-2","chTitle":"소송요건","term":"원고적격","tid":"t34","f":3,"a":"X","q":"목욕장 영업허가를 받은 기존업자는 인근에 신규 목욕장 허가가 나 영업상 이익이 감소했다면 그 신규허가의 취소를 구할 원고적격이 있다.","e":"허가로 얻는 기존업자의 이익은 반사적 이익이라 원고적격이 없습니다. 특허 사업자(시외버스 등)라면 인정됩니다."},{"id":"q79","part":"suit","ch":"suit-2","chTitle":"소송요건","term":"원고적격","tid":"t34","f":3,"a":"O","q":"인허가 등 수익적 처분을 신청한 여러 사람이 서로 경쟁관계에 있는 경우, 허가를 받지 못한 사람은 다른 사람에 대한 허가처분의 취소를 구할 원고적격이 있다.","e":"경원자 소송입니다(LPG 충전소, 법학전문대학원 인가 등)."},{"id":"q80","part":"suit","ch":"suit-2","chTitle":"소송요건","term":"협의의 소의 이익","tid":"t35","f":3,"a":"O","q":"영업정지 기간이 지났더라도 부령인 시행규칙에 가중처분 규정이 있다면 그 영업정지처분의 취소를 구할 법률상 이익이 있다.","e":"대판 2006 전원합의체입니다. 장래 가중처분을 받을 불이익을 없앨 이익이 있다고 봤습니다."},{"id":"q81","part":"suit","ch":"suit-2","chTitle":"소송요건","term":"협의의 소의 이익","tid":"t35","f":3,"a":"X","q":"건축허가 취소소송 계속 중 건축공사가 완료되었더라도 인접 주민은 여전히 그 건축허가의 취소를 구할 소의 이익이 있다.","e":"공사가 끝나면 허가를 취소해도 원상회복이 불가능하므로 소의 이익이 없습니다(판례)."},{"id":"q82","part":"suit","ch":"suit-2","chTitle":"소송요건","term":"협의의 소의 이익","tid":"t35","f":3,"a":"O","q":"고등학교 퇴학처분을 받은 후 고등학교졸업학력 검정고시에 합격하였더라도 퇴학처분의 취소를 구할 소의 이익이 있다.","e":"검정고시 합격으로 학생 신분이 회복되는 것은 아니므로 소의 이익이 인정됩니다(판례)."},{"id":"q83","part":"suit","ch":"suit-2","chTitle":"소송요건","term":"피고적격","tid":"t36","f":3,"a":"X","q":"대통령이 한 처분에 대한 취소소송의 피고는 대통령이다.","e":"대통령의 처분은 소속 장관이 피고가 됩니다(국가공무원법 등)."},{"id":"q84","part":"suit","ch":"suit-2","chTitle":"소송요건","term":"피고적격","tid":"t36","f":3,"a":"O","q":"처분적 조례에 대한 항고소송의 피고는 지방의회가 아니라 조례를 공포한 지방자치단체의 장이다.","e":"두밀분교 판례입니다. 교육·학예에 관한 조례는 교육감이 피고입니다."},{"id":"q85","part":"suit","ch":"suit-2","chTitle":"소송요건","term":"피고적격","tid":"t36","f":3,"a":"X","q":"내부위임을 받은 기관이 자기 명의로 처분을 했다면, 취소소송의 피고는 권한을 위임한 위임청이다.","e":"판례는 실제로 그 이름으로 처분한 수임기관을 피고로 봅니다(처분은 권한 없는 자의 처분이라 위법)."},{"id":"q86","part":"suit","ch":"suit-2","chTitle":"소송요건","term":"제소기간","tid":"t37","f":3,"a":"O","q":"취소소송은 처분 등이 있음을 안 날부터 90일, 처분 등이 있은 날부터 1년 이내에 제기하여야 한다.","e":"§20①②입니다. 둘 중 하나라도 지나면 제기할 수 없고, 90일은 불변기간입니다."},{"id":"q87","part":"suit","ch":"suit-2","chTitle":"소송요건","term":"제소기간","tid":"t37","f":3,"a":"X","q":"무효등확인소송도 처분이 있음을 안 날부터 90일 이내에 제기하여야 한다.","e":"무효등확인소송에는 제소기간 제한이 없습니다."},{"id":"q88","part":"suit","ch":"suit-2","chTitle":"소송요건","term":"제소기간","tid":"t37","f":3,"a":"O","q":"행정심판을 거친 경우 취소소송의 제소기간은 재결서의 정본을 송달받은 날부터 기산한다.","e":"§20① 단서입니다. \"재결이 있은 날\"이 아니라 \"정본을 송달받은 날\"입니다."},{"id":"q89","part":"suit","ch":"suit-2","chTitle":"소송요건","term":"행정심판 전치주의","tid":"t38","f":2,"a":"X","q":"현행 행정소송법은 행정심판을 반드시 거쳐야 하는 필요적 전치주의를 원칙으로 한다.","e":"원칙은 임의적 전치이고(§18① 본문), 다른 법률에 규정이 있을 때만 필요적 전치입니다."},{"id":"q90","part":"suit","ch":"suit-2","chTitle":"소송요건","term":"행정심판 전치주의","tid":"t38","f":2,"a":"O","q":"도로교통법에 따른 운전면허 취소처분에 대한 취소소송은 행정심판의 재결을 거치지 않으면 제기할 수 없다.","e":"운전면허 처분은 조세·공무원 징계와 함께 필요적 전치의 대표 예입니다."},{"id":"q91","part":"suit","ch":"suit-3","chTitle":"심리와 임시구제","term":"집행정지","tid":"t39","f":3,"a":"X","q":"취소소송이 제기되면 처분의 효력이나 그 집행은 원칙적으로 정지된다.","e":"원칙은 집행부정지입니다(§23①). 법원의 집행정지 결정이 있어야 멈춥니다."},{"id":"q92","part":"suit","ch":"suit-3","chTitle":"심리와 임시구제","term":"집행정지","tid":"t39","f":3,"a":"X","q":"거부처분은 집행정지의 대상이 된다.","e":"거부처분의 효력을 정지해도 신청 전 상태로 돌아갈 뿐이라 신청인에게 이익이 없으므로 대상이 아닙니다(판례)."},{"id":"q93","part":"suit","ch":"suit-3","chTitle":"심리와 임시구제","term":"집행정지","tid":"t39","f":3,"a":"O","q":"집행정지 결정에 대한 즉시항고에는 결정의 집행을 정지하는 효력이 없다.","e":"§23⑤입니다."},{"id":"q94","part":"suit","ch":"suit-3","chTitle":"심리와 임시구제","term":"가처분","tid":"t40","f":2,"a":"X","q":"판례는 항고소송에서도 민사집행법상 가처분 규정이 준용된다고 본다.","e":"항고소송에서는 가처분이 준용되지 않습니다. 당사자소송에서만 준용됩니다."},{"id":"q95","part":"suit","ch":"suit-3","chTitle":"심리와 임시구제","term":"처분사유의 추가·변경","tid":"t41","f":2,"a":"O","q":"처분사유의 추가·변경은 당초 처분사유와 기본적 사실관계의 동일성이 인정되는 한도 내에서만 허용된다.","e":"판례의 기준입니다. 사실심 변론종결 시까지 가능합니다."},{"id":"q96","part":"suit","ch":"suit-3","chTitle":"심리와 임시구제","term":"처분사유의 추가·변경","tid":"t41","f":2,"a":"X","q":"행정청은 소송 중에 처분 이후 새로 발생한 사실을 처분사유로 추가할 수 있다.","e":"추가·변경할 수 있는 것은 처분 당시 이미 존재하던 사유뿐입니다."},{"id":"q97","part":"suit","ch":"suit-3","chTitle":"심리와 임시구제","term":"위법판단의 기준시","tid":"t42","f":2,"a":"O","q":"취소소송에서 처분의 위법 여부는 원칙적으로 처분 시의 법령과 사실상태를 기준으로 판단한다.","e":"판례는 처분시설을 취합니다."},{"id":"q98","part":"suit","ch":"suit-3","chTitle":"심리와 임시구제","term":"위법판단의 기준시","tid":"t42","f":2,"a":"X","q":"부작위위법확인소송에서 부작위의 위법 여부는 신청 시를 기준으로 판단한다.","e":"부작위위법확인소송은 판결 시(사실심 변론종결 시)를 기준으로 판단합니다."},{"id":"q99","part":"suit","ch":"suit-3","chTitle":"심리와 임시구제","term":"소의 변경· 소송참가","tid":"t43","f":2,"a":"O","q":"처분변경으로 인한 소의 변경은 처분의 변경이 있음을 안 날부터 60일 이내에 신청하여야 한다.","e":"§22②입니다."},{"id":"q100","part":"suit","ch":"suit-3","chTitle":"심리와 임시구제","term":"소의 변경· 소송참가","tid":"t43","f":2,"a":"X","q":"법원은 제3자의 소송참가를 당사자나 제3자의 신청이 있는 경우에만 허가할 수 있고 직권으로는 할 수 없다.","e":"§16①: 당사자 또는 제3자의 신청 \"또는 직권\"으로 참가시킬 수 있습니다."},{"id":"q101","part":"suit","ch":"suit-4","chTitle":"판결과 그 효력","term":"사정판결","tid":"t44","f":3,"a":"O","q":"사정판결을 하는 경우 법원은 그 판결의 주문에서 처분 등이 위법함을 명시하여야 한다.","e":"§28① 후단입니다."},{"id":"q102","part":"suit","ch":"suit-4","chTitle":"판결과 그 효력","term":"사정판결","tid":"t44","f":3,"a":"X","q":"사정판결의 경우 소송비용은 패소한 원고가 부담한다.","e":"원고 청구가 이유 있는데도 기각하는 것이므로 소송비용은 피고가 부담합니다(§32)."},{"id":"q103","part":"suit","ch":"suit-4","chTitle":"판결과 그 효력","term":"사정판결","tid":"t44","f":3,"a":"X","q":"사정판결은 당사자의 명백한 주장이 없으면 법원이 직권으로 할 수 없다.","e":"판례는 당사자의 주장이 없어도 기록에 나타난 사실을 바탕으로 직권으로 사정판결을 할 수 있다고 봅니다."},{"id":"q104","part":"suit","ch":"suit-4","chTitle":"판결과 그 효력","term":"기속력","tid":"t45","f":3,"a":"X","q":"취소소송에서 청구를 기각하는 판결에도 기속력이 인정된다.","e":"기속력은 인용판결(원고 승소)에만 인정됩니다. 기판력은 인용·기각 모두에 생깁니다."},{"id":"q105","part":"suit","ch":"suit-4","chTitle":"판결과 그 효력","term":"기속력","tid":"t45","f":3,"a":"O","q":"거부처분 취소판결이 확정된 후, 행정청이 종전 처분 이후 개정된 법령과 그에 따른 새로운 사유를 들어 다시 거부처분을 하는 것은 기속력에 위반되지 않는다.","e":"판례입니다. 새 사유에 의한 재거부도 재처분의무를 이행한 것으로 봅니다."},{"id":"q106","part":"suit","ch":"suit-4","chTitle":"판결과 그 효력","term":"기속력","tid":"t45","f":3,"a":"O","q":"확정판결의 기속력에 위반하여 한 행정처분은 당연무효이다.","e":"판례입니다."},{"id":"q107","part":"suit","ch":"suit-4","chTitle":"판결과 그 효력","term":"기판력","tid":"t46","f":2,"a":"O","q":"취소소송에서 청구기각 판결이 확정된 후 같은 처분에 대해 무효확인을 구하는 소송을 제기하면 기판력에 저촉된다.","e":"처분이 적법하다는 판단이 확정되었으므로, 같은 처분이 무효라는 주장은 기판력에 저촉됩니다(판례)."},{"id":"q108","part":"suit","ch":"suit-4","chTitle":"판결과 그 효력","term":"기판력","tid":"t46","f":2,"a":"X","q":"기판력은 판결 주문뿐만 아니라 판결 이유 중의 판단에도 미친다.","e":"기판력은 판결 주문에 포함된 것에만 미칩니다. 판결 이유 중 위법사유 판단까지 미치는 것은 기속력입니다."},{"id":"q109","part":"suit","ch":"suit-4","chTitle":"판결과 그 효력","term":"형성력·제3자효","tid":"t47","f":2,"a":"O","q":"처분을 취소하는 확정판결은 제3자에 대하여도 효력이 있다.","e":"§29① 취소판결의 제3자효입니다. 집행정지 결정에도 준용됩니다(§29②)."},{"id":"q110","part":"suit","ch":"suit-4","chTitle":"판결과 그 효력","term":"형성력·제3자효","tid":"t47","f":2,"a":"X","q":"제3자에 의한 재심청구는 확정판결이 있음을 안 날부터 90일 이내에 하여야 한다.","e":"안 날부터 30일, 판결이 확정된 날부터 1년 이내입니다(§31③)."},{"id":"q111","part":"suit","ch":"suit-4","chTitle":"판결과 그 효력","term":"간접강제","tid":"t48","f":2,"a":"X","q":"처분의 무효확인판결에도 간접강제에 관한 행정소송법 규정이 준용된다.","e":"판례는 무효확인판결에는 간접강제가 준용되지 않는다고 봅니다. 부작위위법확인판결에는 준용됩니다."},{"id":"q112","part":"suit","ch":"suit-4","chTitle":"판결과 그 효력","term":"간접강제","tid":"t48","f":2,"a":"O","q":"간접강제 결정에서 정한 기간이 지난 뒤라도 행정청이 판결 취지에 따른 재처분을 했다면 더 이상 배상금을 추심할 수 없다.","e":"간접강제 배상금은 재처분을 하게 하려는 심리적 강제수단이기 때문입니다(판례)."}]</script>
+<script>
+(function(){
+  var root = document.documentElement;
+  var Q = JSON.parse(document.getElementById('data').textContent);
+  var byId = {}; Q.forEach(function(q){ byId[q.id] = q; });
+  var $ = function(id){ return document.getElementById(id); };
+  var KEY = 'adminlaw-ox';
+  function load(){ try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch(e){ return {}; } }
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(rec)); } catch(e){} }
+  var rec = load();   // id -> 1(정답) | 0(오답)  — 마지막 풀이 기준
+
+  $('themeBtn').addEventListener('click', function(){
+    var cur = root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('adminlaw-theme', next); } catch(e){}
+  });
+
+  var state = { view:'quiz', scope:'all', shuffle:false, queue:[], i:0, session:{} };
+
+  function inScope(q){ return state.scope === 'all' || q.part === state.scope || q.ch === state.scope; }
+  function shuffled(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function buildQueue(onlyWrong){
+    var ids = Q.filter(inScope).filter(function(q){ return !onlyWrong || rec[q.id] === 0; }).map(function(q){ return q.id; });
+    state.queue = state.shuffle ? shuffled(ids) : ids;
+    state.i = 0; state.session = {};
+  }
+  function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+
+  function stats(){
+    var ids = Object.keys(rec), right = ids.filter(function(k){ return rec[k] === 1; }).length, wrong = ids.length - right;
+    $('sDone').textContent = ids.length + ' / ' + Q.length;
+    $('sRate').textContent = ids.length ? Math.round(right / ids.length * 100) + '%' : '–';
+    $('sWrong').textContent = wrong;
+    $('wrongN').textContent = wrong;
+    $('wrongN').hidden = !wrong;
+    $('progress').style.width = (ids.length / Q.length * 100) + '%';
+  }
+
+  function head(q, numText){
+    return '<div class="q-top"><span class="q-num">' + numText + '</span>' +
+      '<span class="chip ' + q.part + '">' + esc(q.chTitle) + '</span>' +
+      '<span class="chip">' + esc(q.term) + '</span>' +
+      '<span class="stars" title="출제 빈도">' + '★★★'.slice(0, q.f) + '☆☆☆'.slice(0, 3 - q.f) + '</span></div>';
+  }
+  function resultHtml(q, pick){
+    var ok = pick === q.a;
+    return '<div class="result"><div class="verdict ' + (ok ? 'good' : 'bad') + '"><span class="mark">' + (ok ? '✓' : '✕') + '</span>' +
+      (ok ? '정답이에요!' : '틀렸어요') + '</div>' +
+      '<p class="exp">정답 <b class="ans ' + q.a + '">' + q.a + '</b> · ' + esc(q.e) + '</p>' +
+      '<a class="more" href="index.html#' + q.tid + '">관련 용어 카드 보기 →</a></div>';
+  }
+  function oxHtml(q, pick){
+    function b(v){
+      var cls = 'b' + v.toLowerCase() + (pick ? (pick === v ? ' pick' : '') + (q.a === v ? ' answer' : '') : '');
+      return '<button type="button" class="' + cls + '" data-pick="' + v + '"' + (pick ? ' disabled' : '') + ' aria-label="' + (v === 'O' ? '맞다(O)' : '틀리다(X)') + '">' + v + '</button>';
+    }
+    return '<div class="ox">' + b('O') + b('X') + '</div>';
+  }
+  function answer(q, pick){
+    rec[q.id] = pick === q.a ? 1 : 0; save();
+    state.session[q.id] = pick;
+    stats();
+  }
+
+  // ---------- 문제 풀기 ----------
+  function renderQuiz(){
+    var v = $('view');
+    if (!state.queue.length) { v.innerHTML = '<div class="empty">이 범위에는 문제가 없어요.</div>'; return; }
+    if (state.i >= state.queue.length) {
+      var ids = state.queue, right = ids.filter(function(id){ return state.session[id] === byId[id].a; }).length;
+      var wrongHere = ids.filter(function(id){ return rec[id] === 0; }).length;
+      v.innerHTML = '<div class="qcard end"><div>이번 범위를 다 풀었어요</div><div class="big">' + right + ' / ' + ids.length + '</div>' +
+        '<p>정답률 ' + Math.round(right / ids.length * 100) + '%</p><div class="btns">' +
+        (wrongHere ? '<button class="btn primary" type="button" id="again-wrong">틀린 ' + wrongHere + '문제만 다시 풀기</button>' : '') +
+        '<button class="btn' + (wrongHere ? '' : ' primary') + '" type="button" id="again">처음부터 다시 풀기</button></div></div>';
+      if ($('again-wrong')) $('again-wrong').onclick = function(){ buildQueue(true); renderQuiz(); scrollTop(); };
+      $('again').onclick = function(){ buildQueue(false); renderQuiz(); scrollTop(); };
+      return;
+    }
+    var q = byId[state.queue[state.i]], pick = state.session[q.id];
+    v.innerHTML = '<article class="qcard">' + head(q, (state.i + 1) + ' / ' + state.queue.length) +
+      '<div class="q-text">' + esc(q.q) + '</div>' + oxHtml(q, pick) + (pick ? resultHtml(q, pick) : '') + '</article>' +
+      '<div class="nav"><button class="btn" type="button" id="prev"' + (state.i ? '' : ' disabled') + '>이전</button>' +
+      '<button class="btn primary" type="button" id="next">' + (pick ? (state.i + 1 < state.queue.length ? '다음 문제 →' : '결과 보기') : '건너뛰기') + '</button></div>' +
+      '<p class="kbd-hint">키보드: O / X 로 답하고, Enter 또는 → 로 다음 문제</p>';
+    v.querySelectorAll('.ox button').forEach(function(b){
+      b.onclick = function(){ answer(q, b.dataset.pick); renderQuiz(); var r = v.querySelector('.result'); if (r && r.getBoundingClientRect().bottom > innerHeight) r.scrollIntoView({block:'nearest', behavior:'smooth'}); };
+    });
+    $('prev').onclick = function(){ if (state.i) { state.i--; renderQuiz(); scrollTop(); } };
+    $('next').onclick = function(){ state.i++; renderQuiz(); scrollTop(); };
+  }
+  function scrollTop(){
+    var c = document.querySelector('.controls');
+    var y = c.getBoundingClientRect().top + scrollY - 0;
+    if (scrollY > y) scrollTo({top:y, behavior:'auto'});
+  }
+
+  // ---------- 목록 / 오답노트 ----------
+  function renderList(onlyWrong){
+    var v = $('view');
+    var items = Q.filter(inScope).filter(function(q){ return !onlyWrong || rec[q.id] === 0; });
+    if (!items.length) {
+      v.innerHTML = '<div class="empty">' + (onlyWrong ? '오답노트가 비어 있어요. 틀린 문제가 생기면 여기에 모입니다.' : '이 범위에는 문제가 없어요.') + '</div>';
+      return;
+    }
+    var tools = '<div class="list-tools"><span>' + items.length + '문항' + (onlyWrong ? ' · 다시 맞히면 오답노트에서 빠져요' : '') + '</span>' +
+      (onlyWrong ? '<button class="link-btn" type="button" id="quizWrong">오답만 문제 풀기 →</button>' : '') + '</div>';
+    v.innerHTML = tools + '<div class="list">' + items.map(function(q){
+      var n = Q.indexOf(q) + 1, pick = state.session['L' + q.id];
+      return '<article class="qcard item" data-id="' + q.id + '">' + head(q, 'Q' + n) +
+        '<div class="q-text">' + esc(q.q) + '</div>' + oxHtml(q, pick) + (pick ? resultHtml(q, pick) : '') + '</article>';
+    }).join('') + '</div>';
+    v.querySelectorAll('.item .ox button').forEach(function(b){
+      b.onclick = function(){
+        var card = b.closest('.item'), q = byId[card.dataset.id], pick = b.dataset.pick;
+        answer(q, pick); state.session['L' + q.id] = pick;
+        var tmp = document.createElement('div');
+        tmp.innerHTML = '<article class="qcard item" data-id="' + q.id + '">' + head(q, card.querySelector('.q-num').textContent) +
+          '<div class="q-text">' + esc(q.q) + '</div>' + oxHtml(q, pick) + resultHtml(q, pick) + '</article>';
+        card.replaceWith(tmp.firstChild);
+      };
+    });
+    if ($('quizWrong')) $('quizWrong').onclick = function(){ setView('quiz'); buildQueue(true); renderQuiz(); };
+  }
+
+  function render(){
+    if (state.view === 'quiz') renderQuiz();
+    else renderList(state.view === 'wrong');
+  }
+  function setView(view){
+    state.view = view;
+    document.querySelectorAll('.tabs button').forEach(function(b){ b.setAttribute('aria-selected', String(b.dataset.view === view)); });
+  }
+
+  document.querySelectorAll('.tabs button').forEach(function(b){
+    b.addEventListener('click', function(){ setView(b.dataset.view); render(); });
+  });
+  $('scope').addEventListener('change', function(){ state.scope = this.value; buildQueue(false); render(); });
+  $('shuffle').addEventListener('click', function(){
+    state.shuffle = !state.shuffle; this.setAttribute('aria-pressed', String(state.shuffle));
+    this.textContent = state.shuffle ? '섞음 ✓' : '섞기';
+    buildQueue(false); render();
+  });
+  $('resetAll').addEventListener('click', function(){
+    if (!confirm('모든 풀이 기록과 오답노트를 지울까요?')) return;
+    rec = {}; save(); buildQueue(false); stats(); render();
+  });
+
+  addEventListener('keydown', function(e){
+    if (state.view !== 'quiz' || e.target.tagName === 'SELECT' || e.altKey || e.ctrlKey || e.metaKey) return;
+    var k = e.key.toLowerCase();
+    var btn = function(sel){ var b = document.querySelector(sel); if (b && !b.disabled) { e.preventDefault(); b.click(); } };
+    if (k === 'o' || k === '1') btn('.ox .bo');
+    else if (k === 'x' || k === '2') btn('.ox .bx');
+    else if (k === 'enter' || k === 'arrowright') btn('#next');
+    else if (k === 'arrowleft') btn('#prev');
+  });
+
+  // 주소로 범위 지정: ox.html?scope=law-1
+  var m = location.search.match(/scope=([\w-]+)/);
+  if (m && document.querySelector('#scope option[value="' + m[1] + '"]')) { state.scope = m[1]; $('scope').value = m[1]; }
+  buildQueue(false); stats(); render();
+})();
+</script>
+</body>
+</html>
