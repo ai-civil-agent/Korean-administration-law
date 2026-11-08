@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>행정법총론 빈출용어 사전</title>
+<meta name="description" content="공무원 행정법총론 2021~2026 기출 빈출용어를 행정기본법·행정소송법으로 나누어 중학생도 이해할 수 있게 정리한 용어 사전">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script>
+  try { var t = localStorage.getItem('adminlaw-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+<style>
+  :root{
+    --bg:#f5f7fa; --surface:#ffffff; --surface-2:#f0f3f7; --ink:#15191e; --muted:#5b6574; --line:#e1e6ec;
+    --law:#1f56a8; --law-soft:#e9f0fb; --suit:#0b7a62; --suit-soft:#e4f4ee;
+    --star:#cf8600; --star-off:#d9dde3;
+    --ex-bg:#fff8e1; --ex-line:#efb200; --tag-bg:#ffe8a3; --tag-ink:#6f4b00; --hl:#ffe27a;
+    --o:#0b7a62; --x:#c0352b; --shadow:0 1px 2px rgba(16,24,40,.05), 0 4px 16px rgba(16,24,40,.06);
+    --hero-a:#e8f0fc; --hero-b:#e5f5ef;
+    --header-h:60px;
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0e1115; --surface:#161a20; --surface-2:#1d232b; --ink:#e7eaee; --muted:#9aa4b2; --line:#29303a;
+      --law:#86b4ff; --law-soft:#18253a; --suit:#5fd0b2; --suit-soft:#122e27;
+      --star:#f3b437; --star-off:#3a414c;
+      --ex-bg:#272111; --ex-line:#c8961c; --tag-bg:#4a3a0f; --tag-ink:#ffd772; --hl:rgba(255,210,80,.32);
+      --o:#5fd0b2; --x:#ff7b70; --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
+      --hero-a:#142035; --hero-b:#10291f;
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0e1115; --surface:#161a20; --surface-2:#1d232b; --ink:#e7eaee; --muted:#9aa4b2; --line:#29303a;
+    --law:#86b4ff; --law-soft:#18253a; --suit:#5fd0b2; --suit-soft:#122e27;
+    --star:#f3b437; --star-off:#3a414c;
+    --ex-bg:#272111; --ex-line:#c8961c; --tag-bg:#4a3a0f; --tag-ink:#ffd772; --hl:rgba(255,210,80,.32);
+    --o:#5fd0b2; --x:#ff7b70; --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
+    --hero-a:#142035; --hero-b:#10291f;
+    color-scheme:dark;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--bg); color:var(--ink); line-height:1.6;
+    font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
+    -webkit-font-smoothing:antialiased; word-break:keep-all; overflow-wrap:anywhere}
+  a{color:inherit}
+  .wrap{max-width:1240px; margin:0 auto; padding:0 24px}
+  [id]{scroll-margin-top:calc(var(--header-h) + 76px)}
+
+  /* ---------- header ---------- */
+  .site-h{position:sticky; top:0; z-index:30; height:var(--header-h); background:color-mix(in srgb, var(--surface) 88%, transparent);
+    backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+  .site-h .wrap{height:100%; display:flex; align-items:center; gap:18px}
+  .brand{display:flex; align-items:center; gap:10px; text-decoration:none; font-weight:800; font-size:16px; letter-spacing:-.3px; margin-right:auto}
+  .brand-mark{width:32px; height:32px; border-radius:9px; display:grid; place-items:center; color:#fff; font-size:15px;
+    background:linear-gradient(135deg, var(--law), var(--suit))}
+  .site-nav{display:flex; gap:4px}
+  .site-nav a{text-decoration:none; font-size:14px; font-weight:600; color:var(--muted); padding:7px 11px; border-radius:8px}
+  .site-nav a:hover{background:var(--surface-2); color:var(--ink)}
+  .icon-btn{width:36px; height:36px; border-radius:9px; border:1px solid var(--line); background:var(--surface); color:var(--ink); cursor:pointer; display:grid; place-items:center; font-size:16px}
+  .icon-btn:hover{background:var(--surface-2)}
+
+  /* ---------- hero ---------- */
+  .hero{background:linear-gradient(135deg, var(--hero-a), var(--hero-b)); border-bottom:1px solid var(--line)}
+  .hero .wrap{padding-top:56px; padding-bottom:48px}
+  .eyebrow{display:inline-block; font-size:13px; font-weight:700; color:var(--law); background:var(--surface); border:1px solid var(--line); padding:4px 12px; border-radius:99px}
+  .hero h1{font-size:clamp(28px, 4.6vw, 46px); line-height:1.22; letter-spacing:-1.2px; margin:16px 0 12px}
+  .hero h1 em{font-style:normal; background:linear-gradient(90deg, var(--law), var(--suit)); -webkit-background-clip:text; background-clip:text; color:transparent}
+  .hero p.sub{font-size:17px; color:var(--muted); max-width:720px; margin:0 0 24px}
+  .cta{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:34px}
+  .btn{display:inline-flex; align-items:center; gap:6px; text-decoration:none; font-weight:700; font-size:15px; padding:11px 18px; border-radius:10px; border:1px solid var(--line); background:var(--surface)}
+  .btn.primary{background:var(--law); border-color:var(--law); color:#fff}
+  :root[data-theme="dark"] .btn.primary{color:#0e1115}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .btn.primary{color:#0e1115} }
+  .btn:hover{filter:brightness(.97)}
+  .stats{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:12px; max-width:760px}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:12px 14px}
+  .stat b{display:block; font-size:24px; letter-spacing:-.5px; font-variant-numeric:tabular-nums}
+  .stat span{font-size:13px; color:var(--muted)}
+  .kw-box{margin-top:26px}
+  .kw-box h2{font-size:14px; margin:0 0 8px; color:var(--muted); font-weight:700}
+  .kws{display:flex; flex-wrap:wrap; gap:8px}
+  .kw{text-decoration:none; font-size:14px; font-weight:600; padding:6px 13px; border-radius:99px; border:1px solid var(--line); background:var(--surface)}
+  .kw-law{color:var(--law)} .kw-suit{color:var(--suit)}
+  .kw:hover{border-color:currentColor}
+
+  /* ---------- guide ---------- */
+  .guide{padding:44px 0 8px}
+  .sec-title{font-size:22px; letter-spacing:-.5px; margin:0 0 4px}
+  .sec-desc{color:var(--muted); margin:0 0 18px; font-size:15px}
+  .steps{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px}
+  .step{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:18px; box-shadow:var(--shadow)}
+  .step .num{display:inline-grid; place-items:center; width:28px; height:28px; border-radius:8px; background:var(--surface-2); font-weight:800; font-size:14px; margin-bottom:8px}
+  .step h3{margin:0 0 4px; font-size:16px}
+  .step p{margin:0; color:var(--muted); font-size:14px}
+  .info-grid{display:grid; grid-template-columns:1fr 1.4fr; gap:14px; margin-top:14px}
+  .info{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:18px; box-shadow:var(--shadow)}
+  .info h3{margin:0 0 10px; font-size:16px}
+  dl.dict{display:grid; grid-template-columns:auto 1fr; gap:6px 14px; margin:0; font-size:14px}
+  dl.dict dt{font-weight:800}
+  dl.dict dd{margin:0; color:var(--muted)}
+  .legend-line{margin:14px 0 0; font-size:13px; color:var(--muted)}
+
+  /* ---------- layout ---------- */
+  .layout{display:grid; grid-template-columns:250px minmax(0,1fr); gap:32px; padding-top:30px; padding-bottom:60px}
+  .toc{position:sticky; top:calc(var(--header-h) + 16px); align-self:start; max-height:calc(100vh - var(--header-h) - 32px); overflow:auto; padding-right:6px; font-size:13.5px}
+  .toc-part{margin-bottom:16px}
+  .toc-ptitle{display:block; font-weight:800; text-decoration:none; padding:6px 8px; border-radius:8px}
+  .toc-law .toc-ptitle{color:var(--law)} .toc-suit .toc-ptitle{color:var(--suit)}
+  .toc-ch{display:block; text-decoration:none; font-weight:700; padding:5px 8px; margin-top:4px; border-radius:7px; color:var(--ink)}
+  .toc-ch:hover, .toc-ptitle:hover{background:var(--surface-2)}
+  .toc-ch.active{background:var(--surface); box-shadow:inset 3px 0 0 var(--law)}
+  .toc-suit .toc-ch.active{box-shadow:inset 3px 0 0 var(--suit)}
+  .toc-terms{display:none; padding:2px 0 4px 14px}
+  .toc-ch.active + .toc-terms{display:block}
+  .toc-terms a{display:block; text-decoration:none; color:var(--muted); padding:2px 8px; font-size:13px}
+  .toc-terms a:hover{color:var(--ink)}
+  .toc-terms a.dim{opacity:.35}
+
+  /* ---------- toolbar ---------- */
+  .toolbar{position:sticky; top:var(--header-h); z-index:20; background:var(--bg); padding:12px 0; margin-bottom:8px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; border-bottom:1px solid var(--line)}
+  .search{position:relative; flex:1 1 260px}
+  .search input{width:100%; font:inherit; font-size:15px; padding:10px 14px 10px 38px; border-radius:10px; border:1px solid var(--line); background:var(--surface); color:var(--ink)}
+  .search input:focus{outline:2px solid var(--law); outline-offset:-1px}
+  .search svg{position:absolute; left:12px; top:50%; transform:translateY(-50%); color:var(--muted)}
+  .seg{display:inline-flex; background:var(--surface-2); border-radius:10px; padding:3px}
+  .seg button{font:inherit; font-size:13.5px; font-weight:700; border:0; background:transparent; color:var(--muted); padding:7px 12px; border-radius:8px; cursor:pointer}
+  .seg button[aria-pressed="true"]{background:var(--surface); color:var(--ink); box-shadow:var(--shadow)}
+  .count{font-size:13px; color:var(--muted); margin-left:auto}
+  .jump{display:none; font:inherit; font-size:14px; padding:9px 10px; border-radius:10px; border:1px solid var(--line); background:var(--surface); color:var(--ink); flex:1 1 100%}
+
+  /* ---------- part / chapter ---------- */
+  .part{margin-bottom:36px}
+  .part-law{--accent:var(--law); --accent-soft:var(--law-soft)}
+  .part-suit{--accent:var(--suit); --accent-soft:var(--suit-soft)}
+  .part-banner{position:relative; background:var(--accent-soft); border:1px solid var(--line); border-radius:16px; padding:22px 24px; margin:18px 0 8px}
+  .part-no{font-size:12px; font-weight:800; color:#fff; background:var(--accent); padding:3px 10px; border-radius:99px}
+  :root[data-theme="dark"] .part-no{color:#0e1115}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .part-no{color:#0e1115} }
+  .part-banner h2{font-size:28px; letter-spacing:-.8px; margin:8px 0 6px; color:var(--accent)}
+  .part-banner p{margin:0; color:var(--muted); max-width:760px; font-size:15px}
+  .part-count{position:absolute; top:22px; right:24px; font-size:13px; font-weight:700; color:var(--accent)}
+  .chapter{padding-top:22px}
+  .chapter-h{display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 12px}
+  .chapter-h h3{font-size:20px; letter-spacing:-.4px; margin:0}
+  .chapter-sub{margin:0; color:var(--accent); font-size:14px; font-weight:600}
+  .chapter-lead{margin:4px 0 14px; color:var(--muted); font-size:14.5px}
+  .cards{display:grid; gap:14px}
+
+  /* ---------- card ---------- */
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); overflow:hidden; border-top:3px solid var(--accent)}
+  .card:target{outline:2px solid var(--accent); outline-offset:2px}
+  .card-h{display:flex; justify-content:space-between; align-items:flex-start; gap:12px; padding:16px 18px 10px}
+  .card-h h4{margin:0; font-size:19px; letter-spacing:-.4px; color:var(--accent); line-height:1.35}
+  .card-h h4 small{font-size:14px; color:var(--muted); font-weight:600}
+  .card-law{display:inline-block; margin-top:4px; font-size:12.5px; color:var(--muted); background:var(--surface-2); padding:1px 8px; border-radius:6px}
+  .stars{font-size:15px; letter-spacing:1px; white-space:nowrap; color:var(--star)}
+  .card-b{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); gap:0; border-top:1px solid var(--line)}
+  .card-b > div{padding:14px 18px 16px; font-size:14.5px}
+  .col-def{border-right:1px solid var(--line)}
+  .lbl{font-size:12px; font-weight:800; letter-spacing:.5px; color:var(--accent); margin-bottom:6px}
+  .def{margin:0 0 10px}
+  .ex{margin:0; background:var(--ex-bg); border-left:3px solid var(--ex-line); padding:9px 11px; border-radius:6px; font-size:14px}
+  .tag{display:inline-block; font-size:11.5px; font-weight:800; color:var(--tag-ink); background:var(--tag-bg); border-radius:4px; padding:0 6px; margin-right:5px}
+  .col-case ul{margin:0; padding-left:18px}
+  .col-case li{margin:0 0 6px}
+  .col-case li::marker{color:var(--accent)}
+  .hl{background:linear-gradient(transparent 58%, var(--hl) 58%); font-weight:700}
+  .o{color:var(--o); font-weight:800} .x{color:var(--x); font-weight:800}
+  sup.fn a{color:var(--accent); text-decoration:none; font-weight:800; font-size:11px; margin-left:1px}
+  details.more{border-top:1px dashed var(--line); background:var(--surface-2)}
+  details.more summary{cursor:pointer; padding:10px 18px; font-size:14px; font-weight:700; list-style:none; display:flex; align-items:center; gap:8px}
+  details.more summary::-webkit-details-marker{display:none}
+  details.more summary::after{content:"＋"; margin-left:auto; color:var(--muted)}
+  details.more[open] summary::after{content:"－"}
+  .more-tag{font-size:11.5px; font-weight:800; color:var(--accent); border:1px solid var(--accent); border-radius:4px; padding:0 5px}
+  details.more p{margin:0; padding:0 18px 14px; font-size:14px; color:var(--ink)}
+  .empty{display:none; text-align:center; color:var(--muted); padding:60px 0; font-size:15px}
+
+  /* ---------- final ---------- */
+  .final{margin-top:20px}
+  .final-banner{background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:22px 24px; box-shadow:var(--shadow)}
+  .final-banner h2{margin:0 0 4px; font-size:26px; letter-spacing:-.7px}
+  .final-banner > p{margin:0 0 6px; color:var(--muted)}
+  .final h3.sub{font-size:17px; margin:22px 0 8px}
+  .scroll{overflow-x:auto}
+  table.mx{width:100%; border-collapse:collapse; font-size:14px; line-height:1.5}
+  table.mx th, table.mx td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top}
+  table.mx thead th{background:var(--ink); color:var(--bg)}
+  table.mx tbody th{background:var(--surface-2); white-space:nowrap}
+  table.mx td.c{text-align:center}
+
+  /* ---------- footer ---------- */
+  .site-f{border-top:1px solid var(--line); background:var(--surface)}
+  .site-f .wrap{padding-top:26px; padding-bottom:36px; font-size:13px; color:var(--muted)}
+  .site-f p{margin:0 0 6px}
+  .totop{position:fixed; right:20px; bottom:20px; z-index:25; opacity:0; pointer-events:none; transition:opacity .2s}
+  .totop.show{opacity:1; pointer-events:auto}
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 1000px){
+    .layout{grid-template-columns:minmax(0,1fr)}
+    .toc{display:none}
+    .jump{display:block}
+    .info-grid{grid-template-columns:1fr}
+  }
+  @media (max-width: 760px){
+    .wrap{padding:0 16px}
+    .site-nav{display:none}
+    .hero .wrap{padding-top:36px; padding-bottom:34px}
+    .hero p.sub{font-size:15.5px}
+    .stats{grid-template-columns:repeat(2, minmax(0,1fr))}
+    .steps{grid-template-columns:1fr}
+    .card-b{grid-template-columns:minmax(0,1fr)}
+    .col-def{border-right:0; border-bottom:1px solid var(--line)}
+    .card-h{padding:14px 16px 8px}
+    .card-b > div{padding:12px 16px 14px}
+    .part-count{position:static; display:block; margin-top:8px}
+    .count{margin-left:0}
+    .toolbar{position:static}
+    [id]{scroll-margin-top:calc(var(--header-h) + 12px)}
+  }
+  @media print{
+    .site-h, .toolbar, .toc, .totop, .hero .cta{display:none}
+    .layout{display:block}
+    .card{break-inside:avoid; box-shadow:none}
+    details.more p{display:block}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-h">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="brand-mark">法</span>행정법총론 빈출용어</a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="#law">행정기본법</a>
+      <a href="#suit">행정소송법</a>
+      <a href="#final">암기표</a>
+      <a href="print.html">A4 인쇄본</a>
+    </nav>
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="화면 테마 바꾸기" title="라이트/다크 전환">◐</button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">9급 공무원 · 행정법총론</span>
+    <h1>어려운 행정법 용어,<br><em>중학생 눈높이</em>로 정리했습니다</h1>
+    <p class="sub">2021~2026년 국가직·지방직 9급 기출에서 반복된 용어를 <b>행정기본법</b>과 <b>행정소송법</b>으로 나누고, 모든 용어를 <b>개념 → 정의 → 빈출사례</b> 순서로 학교 예시와 함께 설명합니다.</p>
+    <div class="cta">
+      <a class="btn primary" href="#law">용어 공부 시작하기 →</a>
+      <a class="btn" href="#final">시험 직전 암기표</a>
+      <a class="btn" href="print.html">A4 인쇄본 보기</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>48</b><span>빈출 용어</span></div>
+      <div class="stat"><b>25</b><span>★★★ 최빈출</span></div>
+      <div class="stat"><b>16</b><span>추가 설명 주석</span></div>
+      <div class="stat"><b>2021–26</b><span>기출 경향 반영</span></div>
+    </div>
+    <div class="kw-box">
+      <h2>5개년 최다 빈출 키워드 — 눌러서 바로 보기</h2>
+      <div class="kws"><a class="kw kw-suit" href="#t33">처분성</a><a class="kw kw-suit" href="#t34">원고적격</a><a class="kw kw-suit" href="#t35">협의의 소의 이익</a><a class="kw kw-law" href="#t4">신뢰보호의 원칙</a><a class="kw kw-law" href="#t3">비례의 원칙</a><a class="kw kw-law" href="#t9">부관</a><a class="kw kw-law" href="#t13">공정력</a><a class="kw kw-law" href="#t16">하자의 승계</a><a class="kw kw-law" href="#t17">직권취소</a><a class="kw kw-suit" href="#t39">집행정지</a><a class="kw kw-suit" href="#t45">기속력</a><a class="kw kw-law" href="#t26">이의신청</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="guide">
+  <div class="wrap">
+    <h2 class="sec-title">이렇게 공부하세요</h2>
+    <p class="sec-desc">각 용어 카드는 세 부분으로 되어 있어요. 위에서 아래로, 왼쪽에서 오른쪽으로 읽으면 됩니다.</p>
+    <div class="steps">
+      <div class="step"><span class="num">1</span><h3>개념</h3><p>용어 이름, 근거 조문, 출제 빈도(★)를 먼저 확인해요.</p></div>
+      <div class="step"><span class="num">2</span><h3>정의</h3><p>쉬운 말 풀이와 <span class="tag">예시</span>학교 비유로 뜻을 이해해요.</p></div>
+      <div class="step"><span class="num">3</span><h3>빈출사례</h3><p>시험 지문에 반복해서 나온 판례·조문 포인트를 외워요. 더 필요한 내용은 카드 아래 <b>주석</b>을 열어 보세요.</p></div>
+    </div>
+    <div class="info-grid">
+      <div class="info">
+        <h3>학교로 바꿔 생각하기</h3>
+        <dl class="dict">
+          <dt>행정청</dt><dd>선생님·학교 (결정을 내리는 쪽)</dd>
+          <dt>국민</dt><dd>학생 (결정을 받는 쪽)</dd>
+          <dt>법률</dt><dd>교칙</dd>
+          <dt>처분</dt><dd>벌점·정학·상장처럼 한 명에게 내리는 구체적 결정</dd>
+          <dt>법원</dt><dd>학교 밖의 공정한 심판</dd>
+        </dl>
+      </div>
+      <div class="info">
+        <h3>시험 전에 꼭 아는 기초 단어</h3>
+        <dl class="dict">
+          <dt>하자</dt><dd>처분에 있는 잘못·흠. 심하면 '무효', 덜 심하면 '취소'할 수 있음</dd>
+          <dt>기속 / 재량</dt><dd>기속 = 법에 묶여 정답이 하나 / 재량 = 여러 선택지 중 고를 수 있음</dd>
+          <dt>침익적 / 수익적</dt><dd>국민에게 불리한 처분(영업정지) / 유리한 처분(허가)</dd>
+          <dt>각하·기각·인용</dt><dd>조건 미달로 돌려보냄 / 심사 결과 원고 패소 / 원고 승소</dd>
+          <dt>재결</dt><dd>행정심판(행정기관이 하는 심판)의 결론</dd>
+          <dt>판례·전합</dt><dd>대법원 판결 / 대법관 전원이 모인 전원합의체 판결</dd>
+        </dl>
+      </div>
+    </div>
+    <p class="legend-line">빈도 <span class="stars">★★★</span> 거의 매년 · <span class="stars">★★☆</span> 자주 · <span class="stars">★☆☆</span> 신설·간헐 출제 &nbsp;|&nbsp; <span class="o">O</span> 인정 · <span class="x">X</span> 불인정 · <span class="hl">노란 밑줄</span> 시험 함정</p>
+  </div>
+</section>
+
+<div class="wrap layout">
+  <aside class="toc" aria-label="목차">
+    <div class="toc-part toc-law">
+  <a class="toc-ptitle" href="#law">PART Ⅰ 행정기본법</a>
+  <a class="toc-ch" href="#law-1">1. 행정법의 일반원칙</a>
+  <div class="toc-terms"><a href="#t1" data-f="3">법치행정의 원칙</a><a href="#t2" data-f="2">평등의 원칙· 행정의 자기구속</a><a href="#t3" data-f="3">비례의 원칙</a><a href="#t4" data-f="3">신뢰보호의 원칙</a><a href="#t5" data-f="2">부당결부금지의 원칙</a><a href="#t6" data-f="2">법 적용의 기준</a></div>
+  <a class="toc-ch" href="#law-2">2. 처분(행정행위)의 종류와 모습</a>
+  <div class="toc-terms"><a href="#t7" data-f="3">기속행위· 재량행위</a><a href="#t8" data-f="3">허가·특허·인가</a><a href="#t9" data-f="3">부관</a><a href="#t10" data-f="2">수리를 요하는 신고</a><a href="#t11" data-f="2">인허가의제</a><a href="#t12" data-f="1">자동적 처분</a></div>
+  <a class="toc-ch" href="#law-3">3. 처분의 효력·하자·취소와 철회</a>
+  <div class="toc-terms"><a href="#t13" data-f="3">공정력</a><a href="#t14" data-f="2">존속력</a><a href="#t15" data-f="3">무효와 취소</a><a href="#t16" data-f="3">하자의 승계</a><a href="#t17" data-f="3">직권취소</a><a href="#t18" data-f="3">철회</a></div>
+  <a class="toc-ch" href="#law-4">4. 행정입법·제재·행정상 강제</a>
+  <div class="toc-terms"><a href="#t19" data-f="3">법규명령· 행정규칙</a><a href="#t20" data-f="1">공법상 계약</a><a href="#t21" data-f="1">과징금</a><a href="#t22" data-f="2">제재처분의 제척기간</a><a href="#t23" data-f="3">행정대집행</a><a href="#t24" data-f="3">이행강제금</a><a href="#t25" data-f="2">직접강제·강제징수· 즉시강제</a></div>
+  <a class="toc-ch" href="#law-5">5. 처분에 대한 불복</a>
+  <div class="toc-terms"><a href="#t26" data-f="3">이의신청</a><a href="#t27" data-f="2">처분의 재심사</a></div>
+</div>
+<div class="toc-part toc-suit">
+  <a class="toc-ptitle" href="#suit">PART Ⅱ 행정소송법</a>
+  <a class="toc-ch" href="#suit-1">1. 행정소송의 종류</a>
+  <div class="toc-terms"><a href="#t28" data-f="3">항고소송· 취소소송</a><a href="#t29" data-f="2">무효등확인소송</a><a href="#t30" data-f="2">부작위위법확인소송</a><a href="#t31" data-f="3">당사자소송</a><a href="#t32" data-f="1">민중소송· 기관소송</a></div>
+  <a class="toc-ch" href="#suit-2">2. 소송요건</a>
+  <div class="toc-terms"><a href="#t33" data-f="3">처분성</a><a href="#t34" data-f="3">원고적격</a><a href="#t35" data-f="3">협의의 소의 이익</a><a href="#t36" data-f="3">피고적격</a><a href="#t37" data-f="3">제소기간</a><a href="#t38" data-f="2">행정심판 전치주의</a></div>
+  <a class="toc-ch" href="#suit-3">3. 심리와 임시구제</a>
+  <div class="toc-terms"><a href="#t39" data-f="3">집행정지</a><a href="#t40" data-f="2">가처분</a><a href="#t41" data-f="2">처분사유의 추가·변경</a><a href="#t42" data-f="2">위법판단의 기준시</a><a href="#t43" data-f="2">소의 변경· 소송참가</a></div>
+  <a class="toc-ch" href="#suit-4">4. 판결과 그 효력</a>
+  <div class="toc-terms"><a href="#t44" data-f="3">사정판결</a><a href="#t45" data-f="3">기속력</a><a href="#t46" data-f="2">기판력</a><a href="#t47" data-f="2">형성력·제3자효</a><a href="#t48" data-f="2">간접강제</a></div>
+</div><div class="toc-part"><a class="toc-ptitle" href="#final">시험 직전 암기표</a></div>
+  </aside>
+
+  <main>
+    <div class="toolbar">
+      <label class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="용어·판례 검색 (예: 집행정지, 90일, 기부채납)" aria-label="용어 검색">
+      </label>
+      <div class="seg" role="group" aria-label="출제 빈도 필터">
+        <button type="button" data-min="1" aria-pressed="true">전체</button>
+        <button type="button" data-min="2" aria-pressed="false">★★ 이상</button>
+        <button type="button" data-min="3" aria-pressed="false">★★★만</button>
+      </div>
+      <span class="count" id="count"></span>
+      <select class="jump" id="jump" aria-label="단원 바로가기"><option value="">바로가기…</option><optgroup label="PART Ⅰ 행정기본법"><option value="law-1">1. 행정법의 일반원칙</option><option value="law-2">2. 처분(행정행위)의 종류와 모습</option><option value="law-3">3. 처분의 효력·하자·취소와 철회</option><option value="law-4">4. 행정입법·제재·행정상 강제</option><option value="law-5">5. 처분에 대한 불복</option></optgroup><optgroup label="PART Ⅱ 행정소송법"><option value="suit-1">1. 행정소송의 종류</option><option value="suit-2">2. 소송요건</option><option value="suit-3">3. 심리와 임시구제</option><option value="suit-4">4. 판결과 그 효력</option></optgroup><option value="final">시험 직전 암기표</option></select>
+    </div>
+
+    <section class="part part-law" id="law">
+  <div class="part-banner">
+    <span class="part-no">PART Ⅰ</span>
+    <h2>행정기본법</h2>
+    <p>행정이 지켜야 할 원칙, 처분의 모습과 효력, 행정상 강제, 처분에 대한 불복까지. 행정기본법 조문과 그에 직결되는 행정작용 일반이론을 함께 묶었습니다.</p>
+    <span class="part-count">27개 용어</span>
+  </div>
+<section class="chapter" id="law-1" data-part="law">
+  <div class="chapter-h"><h3>1. 행정법의 일반원칙</h3><p class="chapter-sub">"행정이 지켜야 할 기본 매너"</p></div>
+  <p class="chapter-lead">행정청이 무엇을 하든 항상 지켜야 하는 원칙들입니다. 2021년 행정기본법에 대부분 조문으로 들어가면서 '조문 그대로' 묻는 문제가 늘었습니다.</p>
+  <div class="cards">
+<article class="card" id="t1" data-f="3">
+  <header class="card-h">
+    <div><h4>법치행정의 원칙 <small>(법률우위·법률유보)</small></h4><span class="card-law">행정기본법 §8</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">행정은 ① 법을 어기면 안 되고(<b>법률우위</b>) ② 국민의 권리를 줄이거나 의무를 지우는 중요한 일은 반드시 <b>법률에 근거</b>가 있어야 한다(<b>법률유보</b>).</p>
+        <p class="ex"><span class="tag">예시</span>선생님이 교칙에도 없는 "지각 1번에 운동장 10바퀴" 벌을 마음대로 만들 수 없다. 벌을 주려면 교칙에 근거가 있어야 한다.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>법률우위는 <b>모든</b> 행정에 적용, 법률유보는 '중요한 것'에 적용 → <span class="hl">중요사항유보설(본질성설)</span></li>
+        <li>본질적 사항은 국회가 <b>직접</b> 법률로 정해야 함(의회유보)<sup class="fn"><a href="#n1" data-note="1">1</a></sup> — TV 수신료 금액은 국회가 정해야(헌재 1999)</li>
+        <li>§8: 권리 제한·의무 부과 + "그 밖에 국민생활에 중요한 영향을 미치는 경우" 법률 근거 필요</li>
+      </ul></div>
+  </div>
+  <details class="more" id="n1"><summary><span class="more-tag">주석 1</span>의회유보</summary><p><b>의회유보</b> — 법률유보보다 한 단계 더 나아간 개념. "법률에 근거만 있으면 된다"가 아니라 아주 중요한 내용은 국회가 <b>직접</b> 정하고 행정부에 넘기면(위임) 안 된다는 뜻.</p></details>
+</article>
+<article class="card" id="t2" data-f="2">
+  <header class="card-h">
+    <div><h4>평등의 원칙· 행정의 자기구속</h4><span class="card-law">행정기본법 §9</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">같은 것은 같게, 다른 것은 다르게. 합리적 이유 없이 차별하면 안 된다. 같은 일을 계속 같은 방식으로 처리해 왔다면(관행) 특정인에게만 다르게 하면 안 된다(<b>자기구속</b>).</p>
+        <p class="ex"><span class="tag">예시</span>지각한 학생들에게 계속 '반성문 1장'만 시켜 왔는데 유독 철수에게만 '반성문 10장' → 불공평!</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>자기구속은 재량준칙(내부 기준)이 <b>되풀이 시행되어 행정관행</b>이 생긴 경우 인정</li>
+        <li><span class="hl">위법한 관행</span>에는 자기구속 <span class="x">X</span> ("불법에는 평등 없음")</li>
+        <li>재량준칙은 원래 대외적 구속력 <span class="x">X</span> → 평등원칙·자기구속을 통해 간접적으로 국민에게 효과</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t3" data-f="3">
+  <header class="card-h">
+    <div><h4>비례의 원칙 <small>(과잉금지)</small></h4><span class="card-law">행정기본법 §10</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">목적을 이루는 수단은 ① 효과가 있고(<b>적합성</b>) ② 가장 덜 아픈 방법이며(<b>필요성</b>·최소침해) ③ 얻는 이익이 잃는 이익보다 커야 한다(<b>상당성</b>·법익균형).</p>
+        <p class="ex"><span class="tag">예시</span>한 명이 떠들었다고 반 전체를 일주일간 체육 금지 → 너무 과함. "모기 잡으려고 대포 쏘지 마라."</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>3단계는 <b>적합성 → 필요성 → 상당성</b> 순서로 심사, 행정기본법 §10에 3요소 모두 명문화</li>
+        <li>음주운전 면허취소: 교통안전 공익이 커서 일반예방 측면 강조 → 취소가 재량권 일탈·남용 아님(판례 다수)</li>
+        <li>헌법(§37②)의 과잉금지원칙과 같은 뿌리</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t4" data-f="3">
+  <header class="card-h">
+    <div><h4>신뢰보호의 원칙</h4><span class="card-law">행정기본법 §12</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">행정청이 한 말·행동을 국민이 믿고 행동했다면, 그 믿음은 보호받아야 한다.</p>
+        <p class="ex"><span class="tag">예시</span>담임 선생님이 공식적으로 "이번 수행평가는 안 내도 감점 없어"라고 해서 안 냈는데, 나중에 0점 처리 → 신뢰보호 위반.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li><b>판례 5요건</b>: ①<span class="hl">공적 견해표명</span> ②믿은 데 귀책사유 없음 ③그 신뢰로 어떤 행위를 함 ④견해에 반하는 처분으로 이익 침해 ⑤공익·제3자 이익을 현저히 해치지 않음</li>
+        <li>공적 견해표명은 담당자의 형식적 권한이 아니라 <b>조직상 지위·임무, 경위 등 실질</b>로 판단</li>
+        <li>견해표명 후 사정이 바뀌면 별도 취소 없이도 그 견해표명은 효력 상실(판례)</li>
+        <li>§12② <b>실권의 법리</b> 명문화<sup class="fn"><a href="#n2" data-note="2">2</a></sup></li>
+      </ul></div>
+  </div>
+  <details class="more" id="n2"><summary><span class="more-tag">주석 2</span>실권의 법리</summary><p><b>실권의 법리</b> — 행정청이 권한을 쓸 수 있다는 걸 알면서도 오랫동안 쓰지 않아, 국민이 "이제 안 하겠구나" 믿을 만한 정당한 사유가 있으면 그 권한을 행사할 수 없다. 단, 공익이나 제3자 이익을 현저히 해칠 우려가 있으면 예외. 판례: 택시기사의 위반 후 3년 넘게 지나 운전면허를 취소한 것은 위법.</p></details>
+</article>
+<article class="card" id="t5" data-f="2">
+  <header class="card-h">
+    <div><h4>부당결부금지의 원칙</h4><span class="card-law">행정기본법 §13</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">처분을 하면서 그 처분과 <b>실질적 관련이 없는</b> 의무를 끼워 넣으면 안 된다.</p>
+        <p class="ex"><span class="tag">예시</span>"체험학습 허락해 줄게, 대신 교무실 청소 한 달 해." → 체험학습과 청소는 아무 관련이 없음!</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>주택사업계획 승인 + 사업과 무관한 토지 <b>기부채납</b> 부관 → 위법, 다만 <span class="hl">당연무효는 아님</span>(대판 1997)</li>
+        <li>제1종 보통·대형 면허 모두로 운전 가능한 승합차를 음주운전 → 두 면허 모두 취소 <span class="o">O</span></li>
+        <li>제2종 소형면허로만 운전하는 오토바이 운전 중 위반 → 제1종 대형·보통면허 취소 <span class="x">X</span>(관련성 없음)</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t6" data-f="2">
+  <header class="card-h">
+    <div><h4>법 적용의 기준 <small>(소급적용 금지)</small></h4><span class="card-law">행정기본법 §14</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">새 법은 원칙적으로 이미 끝난 일에 거슬러 올라가 적용하지 않는다. 어느 시점의 법을 쓸지 정한 규칙.</p>
+        <p class="ex"><span class="tag">예시</span>1학기에 끝난 시험에 2학기에 새로 만든 "커닝 시 0점" 규칙을 적용할 수 없다.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li><b>신청에 따른 처분</b> → <span class="hl">처분 당시</span> 법령(신청 당시 <span class="x">X</span>) — 특별규정·특별사정 있으면 예외</li>
+        <li><b>제재처분</b> → <span class="hl">위반행위 당시</span> 법령. 단, 법이 바뀌어 위반이 아니게 되거나 제재가 가벼워졌으면 <b>변경된 법령</b></li>
+        <li>진행 중인 일에 새 법 적용(부진정소급)은 원칙 허용<sup class="fn"><a href="#n3" data-note="3">3</a></sup></li>
+      </ul></div>
+  </div>
+  <details class="more" id="n3"><summary><span class="more-tag">주석 3</span>진정소급 vs 부진정소급</summary><p><b>진정소급 vs 부진정소급</b> — 진정소급 = 이미 '끝난' 일에 새 법 적용 → 원칙 금지. 부진정소급 = 아직 '진행 중인' 일에 새 법 적용 → 원칙 허용(다만 신뢰보호와 비교·형량). 예: 졸업한 선배에게 새 교칙 적용(진정) vs 재학생에게 다음 학기부터 새 교칙 적용(부진정).</p></details>
+</article>
+  </div>
+</section>
+<section class="chapter" id="law-2" data-part="law">
+  <div class="chapter-h"><h3>2. 처분(행정행위)의 종류와 모습</h3><p class="chapter-sub">"행정청이 내리는 결정의 생김새"</p></div>
+  <p class="chapter-lead">처분이 어떤 성격인지(기속/재량, 허가/특허/인가)에 따라 붙일 수 있는 조건, 법원이 심사하는 방법이 달라집니다.</p>
+  <div class="cards">
+<article class="card" id="t7" data-f="3">
+  <header class="card-h">
+    <div><h4>기속행위· 재량행위</h4><span class="card-law">행정기본법 §21 (재량행사의 기준)</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def"><b>기속행위</b> = 요건만 갖추면 반드시 그 처분을 해야 함(정답 1개). <b>재량행위</b> = 행정청이 여러 선택지 중 고를 수 있음.</p>
+        <p class="ex"><span class="tag">예시</span>"60점 넘으면 무조건 통과" → 기속. "반장이 청소 당번을 알맞게 정한다" → 재량.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>구별 기준: 근거 법규의 문언·체재 + 행위의 성질·유형을 종합(판례)</li>
+        <li>법원 심사: 기속 = 법원이 스스로 결론 내고 비교 / 재량 = <span class="hl">일탈·남용</span>만 심사<sup class="fn"><a href="#n4" data-note="4">4</a></sup></li>
+        <li>재량 판례: 귀화허가, 개인택시 운송사업면허, 공유수면 점용허가, 주택건설사업계획 승인</li>
+        <li>기속 판례: 일반 건축허가(원칙), 기부금품 모집허가, 일반음식점 영업허가</li>
+      </ul></div>
+  </div>
+  <details class="more" id="n4"><summary><span class="more-tag">주석 4</span>일탈·남용</summary><p><b>일탈·남용</b> — 일탈 = 재량의 범위를 벗어남(최대 3개월 정지인데 6개월 정지). 남용 = 범위 안이지만 목적에 어긋나거나 비례·평등원칙 위반. 이익형량을 아예 하지 않은 경우(재량 불행사)도 위법.</p></details>
+</article>
+<article class="card" id="t8" data-f="3">
+  <header class="card-h">
+    <div><h4>허가·특허·인가</h4><span class="card-law">행정행위 일반이론</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def"><b>허가</b> = 원래 자유인데 위험해서 잠시 막아뒀던 것을 풀어줌. <b>특허</b> = 원래 없던 <b>새 권리</b>를 특정인에게 만들어 줌. <b>인가</b> = 남들끼리 한 법률행위에 도장을 찍어 <b>효력을 완성</b>시켜 줌.</p>
+        <p class="ex"><span class="tag">예시</span>허가 = 운동장 자전거 타기 허락 / 특허 = 특정 학생에게 '매점 운영권'을 새로 줌 / 인가 = 학생들이 정한 동아리 규칙을 선생님이 승인해야 효력 발생</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li><b>허가</b>: 운전면허, 건축허가, 일반음식점 영업허가 → 원칙 기속, 기존 업자의 이익은 <b>반사적 이익</b></li>
+        <li><b>특허</b>: 귀화허가, 공유수면매립면허, 도로점용허가, 개인택시면허, <span class="hl">재개발·재건축 조합설립인가</span>(이름은 인가지만 특허!) → 원칙 재량</li>
+        <li><b>인가</b>: 재단법인 정관변경 허가, 토지거래허가, 사립학교법인 임원 취임승인, 관리처분계획 인가</li>
+        <li>기본행위가 무효면 인가를 받아도 무효 / 기본행위 하자를 이유로 인가 취소를 구할 이익 <span class="x">X</span><sup class="fn"><a href="#n5" data-note="5">5</a></sup></li>
+      </ul></div>
+  </div>
+  <details class="more" id="n5"><summary><span class="more-tag">주석 5</span>인가의 보충성</summary><p><b>인가의 보충성</b> — 인가는 기본행위(정관변경 결의 등)의 효력을 '보충'할 뿐. 기본행위에 문제가 있으면 기본행위 자체를 민사소송 등으로 다퉈야 하고, 인가 자체에 고유한 하자가 있을 때만 인가처분을 다툰다.</p></details>
+</article>
+<article class="card" id="t9" data-f="3">
+  <header class="card-h">
+    <div><h4>부관</h4><span class="card-law">행정기본법 §17</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">처분의 효과를 제한·보충하려고 처분에 덧붙이는 '단서 조항'. 조건, 기한, 부담, 철회권 유보 등.</p>
+        <p class="ex"><span class="tag">예시</span>"놀이공원 가도 돼(처분). 단, 밤 9시까지 와(기한). 그리고 동생 데리고 가(부담)."</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>재량 <span class="o">O</span> → 부관 가능 / 재량 <span class="x">X</span> → <b>법률 근거</b> 있을 때만. 근거 없이 기속행위에 붙인 부관은 무효</li>
+        <li><b>사후부관</b>: ①법률 근거 ②당사자 동의 ③사정변경으로 목적 달성 불가 — 셋 중 하나(§17③)</li>
+        <li>요건: 목적에 맞고, 실질적 관련, 필요 최소한(§17④)</li>
+        <li><span class="hl">부담만</span> 독립하여 행정소송 대상 <span class="o">O</span> / 조건·기한은 독립하여 다툴 수 <span class="x">X</span><sup class="fn"><a href="#n6" data-note="6">6</a></sup></li>
+        <li>부담 불이행 → 처분 철회 사유 / 부담 이행으로 맺은 증여계약 등은 부담과 <b>별개의 법률행위</b></li>
+      </ul></div>
+  </div>
+  <details class="more" id="n6"><summary><span class="more-tag">주석 6</span>부담 vs 조건</summary><p><b>부담 vs 조건</b> — 조건: 조건이 이뤄져야 효과 발생("도로 공사가 끝나면 영업 시작"). 부담: 효과는 바로 생기고 의무만 따로 붙음("영업은 지금부터, 대신 주차장 설치"). 부담은 그 자체가 하나의 처분이라 따로 다툴 수 있다. 둘이 헷갈리면 국민에게 덜 불리한 <b>부담</b>으로 본다(통설).</p></details>
+</article>
+<article class="card" id="t10" data-f="2">
+  <header class="card-h">
+    <div><h4>수리를 요하는 신고</h4><span class="card-law">행정기본법 §34</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def"><b>자기완결적 신고</b> = 신고서가 도착하면 끝(그냥 알림). <b>수리를 요하는 신고</b> = 행정청이 받아들여야(수리) 효력이 생김.</p>
+        <p class="ex"><span class="tag">예시</span>"아파서 결석합니다" 문자 → 보내면 끝. "축구부 가입 신청서" → 감독님이 받아줘야 가입.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>§34: 법률에 '수리가 필요하다'고 <b>명시</b>된 신고는 수리해야 효력(행정 내부 업무처리 절차로 수리를 정한 경우 제외)</li>
+        <li><span class="hl">건축신고 반려</span>도 처분 <span class="o">O</span>(대판 2010 전합)</li>
+        <li><b>인허가의제</b> 효과가 따르는 건축신고 = 수리를 요하는 신고(대판 2011 전합)</li>
+        <li>영업양도에 따른 지위승계신고 수리 = 처분 <span class="o">O</span></li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t11" data-f="2">
+  <header class="card-h">
+    <div><h4>인허가의제</h4><span class="card-law">행정기본법 §24~§26</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">주된 인허가 하나만 받으면, 법률이 정한 다른 관련 인허가도 받은 것으로 <b>간주</b>해 주는 원스톱 제도.</p>
+        <p class="ex"><span class="tag">예시</span>놀이공원 '자유이용권' 한 장이면 놀이기구 표를 하나하나 살 필요가 없다.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>신청 시 관련 인허가 서류도 함께 제출(§24②)</li>
+        <li>관련 행정청은 협의 요청 받은 날부터 <span class="hl">20일</span> 이내 의견 제출, 안 내면 <b>협의된 것으로 봄</b>(§24④)</li>
+        <li>의제 효과는 주된 인허가 법률에 규정된 관련 인허가에 <b>한정</b>(§25②)</li>
+        <li>의제된 인허가는 관련 행정청이 <b>직접 한 것</b>으로 보고 관리(§26) → 의제된 인허가만 따로 취소·철회, 따로 소송 가능<sup class="fn"><a href="#n7" data-note="7">7</a></sup></li>
+      </ul></div>
+  </div>
+  <details class="more" id="n7"><summary><span class="more-tag">주석 7</span>의제된 인허가 다투기</summary><p><b>의제된 인허가 다투기</b> — 주민이 주택건설사업계획 승인 때문에 함께 의제된 '지구단위계획 결정'이 위법하다고 다투려면, 주된 승인이 아니라 그 <b>의제된 인허가</b>의 취소를 구해야 한다(대판 2018).</p></details>
+</article>
+<article class="card" id="t12" data-f="1">
+  <header class="card-h">
+    <div><h4>자동적 처분</h4><span class="card-law">행정기본법 §20</span></div>
+    <span class="stars s1" title="출제 빈도">★☆☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">AI 같은 완전 자동화 시스템이 사람 대신 처분하는 것. 단, 재량이 있는 처분은 자동으로 못 한다.</p>
+        <p class="ex"><span class="tag">예시</span>OMR 자동 채점기는 OK(정답이 정해져 있으니까). 하지만 '봉사상을 누구에게 줄지'는 기계가 정하면 안 됨.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>"<b>법률로 정하는 바에 따라</b>" 가능 → 법률 근거 필요</li>
+        <li>인공지능 기술을 적용한 시스템 포함(명문)</li>
+        <li><span class="hl">재량 있는 처분은 불가</span> → 기속행위만 가능</li>
+      </ul></div>
+  </div>
+  
+</article>
+  </div>
+</section>
+<section class="chapter" id="law-3" data-part="law">
+  <div class="chapter-h"><h3>3. 처분의 효력·하자·취소와 철회</h3><p class="chapter-sub">"잘못된 결정은 어떻게 되나"</p></div>
+  <p class="chapter-lead">행정법총론에서 가장 문제 수가 많은 영역입니다. '무효냐 취소냐'가 거의 모든 판례의 출발점이 됩니다.</p>
+  <div class="cards">
+<article class="card" id="t13" data-f="3">
+  <header class="card-h">
+    <div><h4>공정력</h4><span class="card-law">행정기본법 §15 (처분의 효력)</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">처분에 잘못이 있어도 '무효'만큼 심각하지 않으면, 권한 있는 기관이 취소하기 전까지는 <b>일단 유효한 것으로 통한다</b>.</p>
+        <p class="ex"><span class="tag">예시</span>축구 심판이 오심을 해도 경기 중엔 판정을 따라야 한다. 비디오 판독(취소)으로 바뀌기 전까지는 유효!</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>§15: 취소·철회되거나 기간 경과 등으로 소멸되기 전까지 유효한 것으로 통용. <b>무효인 처분은 처음부터 효력 <span class="x">X</span></b></li>
+        <li>민사<sup class="fn"><a href="#n8" data-note="8">8</a></sup>: 당연무효 아닌 과세처분 → 부당이득반환청구로 돈 돌려받기 <span class="x">X</span> / 국가배상청구는 취소 없이도 위법 판단 <span class="o">O</span></li>
+        <li>형사: 나이 미달자가 속여 받은 운전면허 → 당연무효 아님 → <span class="hl">무면허운전 <span class="x">X</span></span> / 위법한 시정명령을 어긴 것 → 처벌 <span class="x">X</span></li>
+      </ul></div>
+  </div>
+  <details class="more" id="n8"><summary><span class="more-tag">주석 8</span>선결문제</summary><p><b>선결문제</b> — 민사·형사 재판을 하려면 먼저 답을 내야 하는 '처분이 유효한가/위법한가' 문제. 핵심 공식: 처분의 <b>효력을 없애는 것</b>(취소)은 행정소송만 할 수 있어 민사·형사 법원이 못 하지만, <b>위법한지 판단만 하는 것</b>은 민사·형사 법원도 할 수 있다.</p></details>
+</article>
+<article class="card" id="t14" data-f="2">
+  <header class="card-h">
+    <div><h4>존속력 <small>(불가쟁력·불가변력)</small></h4><span class="card-law">행정행위 일반이론</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def"><b>불가쟁력</b> = 다툴 기간이 지나서 국민이 더 이상 소송으로 못 다툼. <b>불가변력</b> = 행정청 스스로도 함부로 바꿀 수 없는 힘(재판 같은 결정).</p>
+        <p class="ex"><span class="tag">예시</span>성적 이의신청 기간이 지나면 학생은 더 못 따짐(불가쟁력). 징계위원회가 정식 심의로 내린 결정은 담임이 혼자 못 바꿈(불가변력).</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>불가쟁력이 생겨도 행정청은 <b>직권취소 가능</b> / 불가변력이 생겨도 국민은 기간 내 쟁송 가능 → <span class="hl">서로 별개</span></li>
+        <li>불가쟁력이 생긴 처분이라도 국가배상청구 <span class="o">O</span></li>
+        <li>불가변력: 행정심판 재결, 토지수용재결 같은 준사법적 행위에 인정</li>
+        <li>불가쟁력 생긴 처분의 변경 신청권은 원칙 <span class="x">X</span> → '처분의 재심사'(§37)로 보완</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t15" data-f="3">
+  <header class="card-h">
+    <div><h4>무효와 취소 <small>(중대명백설)</small></h4><span class="card-law">행정행위의 하자</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">처분의 잘못이 <b>중대하고 동시에 명백</b>하면 무효(처음부터 효력 없음). 그 정도가 아니면 취소할 수 있는 처분(취소 전까지 유효).</p>
+        <p class="ex"><span class="tag">예시</span>벌점을 이미 전학 간 학생에게 줌 → 누가 봐도 큰 잘못(무효). 벌점 점수 계산을 조금 틀림 → 고치기 전까진 유효(취소).</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>판례: <b>중대명백설</b> — 중대 + 명백 <b>둘 다</b> 필요</li>
+        <li>위헌결정 <b>전</b> 그 법률로 한 처분 → 원칙 <span class="hl">취소사유</span>(당시엔 명백하지 않음)</li>
+        <li>위헌결정 <b>후</b> 그 처분을 집행(체납처분 등) → 당연무효(대판 2012 전합)</li>
+        <li>무효는: 제소기간 <span class="x">X</span>, 사정판결 <span class="x">X</span>, 하자 치유 <span class="x">X</span></li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t16" data-f="3">
+  <header class="card-h">
+    <div><h4>하자의 승계</h4><span class="card-law">행정행위의 하자</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">앞 처분의 잘못을 이유로 뒤 처분이 위법하다고 다툴 수 있는가? 둘이 <b>하나의 목적</b>을 위한 연속 절차면 <span class="o">O</span>, <b>서로 다른 목적</b>이면 <span class="x">X</span>.</p>
+        <p class="ex"><span class="tag">예시</span>'예선 → 본선'은 우승자를 뽑는 하나의 과정 → 예선 판정 잘못을 본선에서도 따질 수 있음. '중간고사'와 '체육대회'는 별개 → 연결해서 못 따짐.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>전제: 선행처분에 불가쟁력 + 선행 하자는 <b>취소사유</b>(무효면 당연히 다툴 수 있음)</li>
+        <li><span class="o">승계 O</span>: 대집행 계고→통지→실행→비용징수 / 안경사 시험합격 취소→면허취소 / 개별공시지가→과세처분(예측가능성·수인한도 넘을 때) / 표준지공시지가→수용재결</li>
+        <li><span class="x">승계 X</span>: 과세처분→체납처분 / 직위해제→직권면직 / 철거명령→대집행 계고 / 사업인정→수용재결 / 표준지공시지가→과세처분</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t17" data-f="3">
+  <header class="card-h">
+    <div><h4>직권취소</h4><span class="card-law">행정기본법 §18</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">처음부터 위법·부당했던 처분을 행정청이 <b>스스로</b> 없애는 것. 원칙은 처음으로 거슬러 올라가(<b>소급</b>) 없앤다.</p>
+        <p class="ex"><span class="tag">예시</span>채점 실수로 잘못 준 '우수상'을 학교가 발견하고 처음부터 없던 일로 함.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>위법뿐 아니라 <b>부당</b>도 취소 사유 / 원칙 소급, 신뢰보호 등 정당한 사유 있으면 장래를 향해 취소</li>
+        <li>수익적 처분 취소 → 이익형량 필요. 단 ①<b>거짓·부정한 방법</b> ②위법을 <b>알았거나 중대한 과실로 몰랐던</b> 경우는 형량 불필요(§18②)</li>
+        <li>처분청은 별도 법적 근거 없이도 취소 가능</li>
+        <li>국민의 직권취소 '신청권'은 원칙 <span class="x">X</span> → 거부해도 처분 아님</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t18" data-f="3">
+  <header class="card-h">
+    <div><h4>철회</h4><span class="card-law">행정기본법 §19</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">처음엔 <b>적법</b>했지만, 나중에 사정이 바뀌어 처분을 <b>앞으로</b> 효력 없게 하는 것.<sup class="fn"><a href="#n9" data-note="9">9</a></sup></p>
+        <p class="ex"><span class="tag">예시</span>동아리실 사용 허가를 받았는데 동아리가 활동을 멈춤 → 다음 달부터 허가를 거둠(지난 사용은 그대로 인정).</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>철회 사유(§19①): ①법률에서 정한 철회 사유 ②법령 변경·사정변경으로 존속 필요 없음 ③<b>중대한 공익</b></li>
+        <li>효과는 <span class="hl">장래효만</span> / 수익적 처분 철회 시 이익형량 필요(§19②)</li>
+        <li>처분청은 법적 근거 없어도 철회 가능 / 부담 불이행은 철회 사유</li>
+        <li>철회도 그 자체로 처분 → 침익적이면 사전통지·의견청취 대상</li>
+      </ul></div>
+  </div>
+  <details class="more" id="n9"><summary><span class="more-tag">주석 9</span>직권취소 vs 철회 한 줄 비교</summary><p><b>직권취소 vs 철회 한 줄 비교</b> — 원인: 취소 = 처음부터 있던 잘못(원시적 하자) / 철회 = 나중에 생긴 사정(후발적 사유). 효과: 취소 = 원칙 소급 / 철회 = 장래. 둘 다 처분청은 법률 근거 없이 할 수 있고, 수익적 처분이면 이익형량이 필요하다.</p></details>
+</article>
+  </div>
+</section>
+<section class="chapter" id="law-4" data-part="law">
+  <div class="chapter-h"><h3>4. 행정입법·제재·행정상 강제</h3><p class="chapter-sub">"규칙 만들기와 지키게 만들기"</p></div>
+  <p class="chapter-lead">행정기본법이 행정상 강제 5가지를 한 조문(§30)에 정리하면서 '정의 맞히기' 문제가 매년 나옵니다.</p>
+  <div class="cards">
+<article class="card" id="t19" data-f="3">
+  <header class="card-h">
+    <div><h4>법규명령· 행정규칙</h4><span class="card-law">헌법 §75·§95, 행정기본법 §38~</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def"><b>법규명령</b> = 법률이 맡긴 내용을 행정부가 정한 규칙으로 국민·법원까지 구속(대통령령·총리령·부령). <b>행정규칙</b> = 행정 내부에서만 쓰는 업무 지침(훈령·예규·고시) → 원칙적으로 국민 구속 <span class="x">X</span>.</p>
+        <p class="ex"><span class="tag">예시</span>학생 모두에게 적용되는 '교칙 시행세칙' = 법규명령 / 교무실 내부 '업무 매뉴얼' = 행정규칙.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>위임명령은 법률의 <b>구체적</b> 위임 필요(포괄위임금지)</li>
+        <li><span class="hl">법령보충적 행정규칙</span>: 고시·훈령이라도 상위법령의 위임을 받아 내용을 보충하면 → 대외적 구속력 <span class="o">O</span><sup class="fn"><a href="#n10" data-note="10">10</a></sup></li>
+        <li>제재처분 기준이 <b>부령</b>(시행규칙) 형식 → 행정규칙 / <b>대통령령</b>(시행령) 형식 → 법규명령(단, 과징금 액수는 '최고한도')</li>
+        <li>처분적 조례(두밀분교 폐지 조례) → 항고소송 대상 <span class="o">O</span>, 피고는 지자체장(교육 관련은 교육감)</li>
+      </ul></div>
+  </div>
+  <details class="more" id="n10"><summary><span class="more-tag">주석 10</span>법령보충적 행정규칙</summary><p><b>법령보충적 행정규칙</b> — 법령이 전문적·기술적이거나 경미한 사항을 '고시' 등에 맡긴 경우, 그 고시는 상위법령과 합쳐져 국민을 구속한다(행정규제기본법 §4② 단서). 다만 위임받은 범위를 벗어난 부분은 구속력이 없다.</p></details>
+</article>
+<article class="card" id="t20" data-f="1">
+  <header class="card-h">
+    <div><h4>공법상 계약</h4><span class="card-law">행정기본법 §27</span></div>
+    <span class="stars s1" title="출제 빈도">★☆☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">행정청과 국민이 <b>서로 합의</b>해서 공법상 법률관계를 만드는 계약. 일방적으로 명령하는 '처분'과 다르다.</p>
+        <p class="ex"><span class="tag">예시</span>학교가 일방적으로 정하는 '벌점'(처분) vs 학교와 강사가 합의해서 쓰는 '방과후 강사 계약서'(계약).</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>법령 위반 <span class="x">X</span>, <b>서면</b>(계약서) 필수, 공공성·제3자 이해관계 고려(§27)</li>
+        <li>계약직 공무원 채용계약 해지 → 처분 <span class="x">X</span>, <span class="hl">공법상 당사자소송</span>으로 다툼</li>
+        <li>서울시립무용단원 위촉·해촉 → 공법상 계약 → 당사자소송</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t21" data-f="1">
+  <header class="card-h">
+    <div><h4>과징금</h4><span class="card-law">행정기본법 §28·§29</span></div>
+    <span class="stars s1" title="출제 빈도">★☆☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">법을 어긴 사업자에게 <b>돈</b>으로 내리는 제재. 영업정지를 하면 이용자가 불편할 때 대신 부과하는 경우가 많다.</p>
+        <p class="ex"><span class="tag">예시</span>학교 매점이 규칙을 어김 → 문을 닫게 하면 학생들이 불편하니 대신 '제재금'을 내게 함.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li><b>법률 근거</b> 필요 — 부과·징수 주체, 사유, 상한액 등을 법률에 명확히(§28②)</li>
+        <li><b>한꺼번에 납부</b>가 원칙, 재해·경영 위기 등이면 납부기한 연기·분할 납부 가능(§29)</li>
+        <li>형벌(벌금)과 함께 부과해도 이중처벌 <span class="x">X</span></li>
+        <li>위반자의 고의·과실 없어도 부과 가능(정당한 사유 있으면 예외)</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t22" data-f="2">
+  <header class="card-h">
+    <div><h4>제재처분의 제척기간</h4><span class="card-law">행정기본법 §23</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">법 위반 후 <b>5년</b>이 지나면 영업정지·취소 같은 제재처분을 할 수 없게 하는 기간.</p>
+        <p class="ex"><span class="tag">예시</span>5년 전에 지각한 걸 이제 와서 벌점 주면 안 됨 — 일정 시간이 지나면 끝.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>대상: 인허가 정지·취소·철회, 등록 말소, 영업소 폐쇄, 정지를 갈음하는 과징금</li>
+        <li>기산점: 위반행위가 <span class="hl">종료된 날</span>부터 5년</li>
+        <li>예외(5년 지나도 가능): ①거짓·부정한 방법 ②위법을 알았거나 중과실로 모름 ③정당한 사유 없이 조사·검사 방해 ④국민 안전·생명·환경을 심각하게 해칠 우려</li>
+        <li>재결·판결로 제재처분이 취소된 경우 → 확정일부터 <b>1년</b>(합의제 행정기관 2년) 안에 새 제재처분 가능</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t23" data-f="3">
+  <header class="card-h">
+    <div><h4>행정대집행</h4><span class="card-law">행정기본법 §30①1, 행정대집행법</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">의무자가 <b>남이 대신 할 수 있는 일</b>(대체적 작위의무)<sup class="fn"><a href="#n11" data-note="11">11</a></sup>을 안 하면, 행정청이 대신 하고 그 <b>비용</b>을 의무자에게 받는 것.</p>
+        <p class="ex"><span class="tag">예시</span>치우라는 불법 창고를 안 치우면 → 구청이 업체를 불러 철거하고 철거비를 주인에게 청구.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>절차: <b>계고 → 대집행영장 통지 → 실행 → 비용징수</b> (하자의 승계 <span class="o">O</span>)</li>
+        <li><span class="hl">토지·건물 인도(명도) 의무</span>는 대신할 수 없음 → 대집행 <span class="x">X</span></li>
+        <li>공법상 의무여야 함 → 협의취득 때 한 철거 약정(사법상 의무)은 대집행 <span class="x">X</span></li>
+        <li>철거명령과 계고를 한 문서로 동시에 가능 / 반복된 2·3차 계고는 새로운 처분 <span class="x">X</span></li>
+      </ul></div>
+  </div>
+  <details class="more" id="n11"><summary><span class="more-tag">주석 11</span>대체적 작위의무</summary><p><b>대체적 작위의무</b> — '작위'는 무언가를 하는 것, '대체적'은 남이 대신해도 결과가 같다는 뜻. 건물 철거는 누가 해도 같으니 대체적 / 건물에서 나가는 것(인도)·하지 말라는 의무(부작위)는 본인만 할 수 있어 대집행 대상이 아니다.</p></details>
+</article>
+<article class="card" id="t24" data-f="3">
+  <header class="card-h">
+    <div><h4>이행강제금</h4><span class="card-law">행정기본법 §30①2·§31</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">의무를 안 지키면 <b>이행할 때까지</b> 돈을 반복해서 부과해 압박하는 수단. 과거 위반에 대한 벌이 아니라 앞으로 지키게 하는 게 목적.</p>
+        <p class="ex"><span class="tag">예시</span>빌린 책을 반납할 때까지 하루마다 연체료가 쌓이는 것.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li><b>반복 부과</b> 가능(형벌이 아니므로 이중처벌 <span class="x">X</span>) / 부과 전 문서로 <b>계고</b> 필요(§31③)</li>
+        <li>의무를 이행하면 새 부과는 중지, <span class="hl">이미 부과한 것은 징수</span>(§31⑤)</li>
+        <li>대체적 작위의무 위반에도 부과 가능(헌재 2004)</li>
+        <li><b>일신전속적</b> → 의무자가 사망하면 상속 <span class="x">X</span></li>
+        <li>이행기간이 지났어도 부과 전에 이행했으면 부과 <span class="x">X</span>(대판 2016)</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t25" data-f="2">
+  <header class="card-h">
+    <div><h4>직접강제·강제징수· 즉시강제</h4><span class="card-law">행정기본법 §30①3~5·§32·§33</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def"><b>직접강제</b> = 의무 불이행 시 신체·재산에 직접 힘을 써 이행된 상태를 만듦. <b>강제징수</b> = 돈을 안 내면 재산을 압류·매각해 받음. <b>즉시강제</b> = 의무를 명할 시간도 없이 <b>급박할 때</b> 바로 힘을 씀.</p>
+        <p class="ex"><span class="tag">예시</span>영업정지 무시하고 장사 → 가게 문 봉인(직접강제). 세금 체납 → 자동차 압류(강제징수). 불난 골목을 막은 차를 소방관이 바로 치움(즉시강제).</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>직접강제는 대집행·이행강제금으로 안 될 때만(<b>보충성</b>, §32①)</li>
+        <li>즉시강제는 '의무 부과 → 불이행'이 <span class="hl">전제되지 않는다</span>는 점이 다른 강제와 차이</li>
+        <li>즉시강제: 다른 수단이 없을 때 최소한으로(§33①), 현장에서 증표 제시 + 이유·내용 고지</li>
+        <li>불법게임물 즉시 수거·폐기 → 영장주의 적용 <span class="x">X</span>(헌재 2002)</li>
+      </ul></div>
+  </div>
+  
+</article>
+  </div>
+</section>
+<section class="chapter" id="law-5" data-part="law">
+  <div class="chapter-h"><h3>5. 처분에 대한 불복</h3><p class="chapter-sub">"결정이 억울할 때 행정기관에 다시 묻기"</p></div>
+  <p class="chapter-lead">2023년 3월 24일부터 시행된 신설 제도입니다. 시행 이후 거의 매 시험 출제되며 <b>기간 숫자</b>를 묻는 문제가 많습니다.</p>
+  <div class="cards">
+<article class="card" id="t26" data-f="3">
+  <header class="card-h">
+    <div><h4>이의신청</h4><span class="card-law">행정기본법 §36</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">처분이 억울할 때, 그 처분을 한 <b>바로 그 행정청</b>에 다시 생각해 달라고 요청하는 것.<sup class="fn"><a href="#n12" data-note="12">12</a></sup></p>
+        <p class="ex"><span class="tag">예시</span>성적표를 받고 채점한 담임 선생님께 "다시 확인해 주세요"라고 요청.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>처분을 받은 날부터 <span class="hl">30일</span> 이내 처분청에 신청</li>
+        <li>처분청은 신청 받은 날부터 <b>14일</b> 이내 결과 통지(부득이하면 <b>10일</b> 범위에서 1회 연장)</li>
+        <li>이의신청을 했든 안 했든 행정심판·행정소송 제기 가능</li>
+        <li>이의신청 후 행정심판·소송: 결과를 통지받은 날(통지기간 만료 시 그 다음 날)부터 <span class="hl">90일</span> 이내</li>
+        <li>적용 제외: 공무원 인사 징계, 국가인권위 진정, 노동위원회 의결, 형사·행형·보안처분, 외국인 출입국·난민·귀화·국적, <b>과태료</b></li>
+        <li>이의신청 기각결정은 원칙적으로 새로운 처분 <span class="x">X</span> → 원래 처분을 다퉈야</li>
+      </ul></div>
+  </div>
+  <details class="more" id="n12"><summary><span class="more-tag">주석 12</span>이의신청 vs 행정심판 vs 처분의 재심사</summary><p><b>이의신청 vs 행정심판 vs 처분의 재심사</b> — 이의신청: 처분한 <b>같은 기관</b>에, 처분 직후(30일). 행정심판: 상급 기관 등 <b>행정심판위원회</b>에, 안 날부터 90일·있은 날부터 180일. 처분의 재심사: 이미 <b>확정된</b> 처분을 처분청에, 새 증거 등이 있을 때. 학교로 치면 담임께 재확인(이의신청) → 학교 심의위원회에 청구(행정심판) → 졸업 후 새 증거로 재검토 요청(재심사).</p></details>
+</article>
+<article class="card" id="t27" data-f="2">
+  <header class="card-h">
+    <div><h4>처분의 재심사</h4><span class="card-law">행정기본법 §37</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">다툴 기간이 지나 확정된 처분(불가쟁력)이라도, 새로운 증거 등 특별한 사정이 생기면 처분청에 <b>다시 심사</b>해 달라고 하는 제도.</p>
+        <p class="ex"><span class="tag">예시</span>이미 확정된 '지각 처리'가 사실은 학교 시계 고장 때문이었다는 CCTV를 나중에 발견 → 다시 판단해 달라고 요청.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>대상: <span class="hl">제재처분·행정상 강제는 제외</span></li>
+        <li>사유: ①사실·법률관계가 유리하게 바뀜 ②유리한 새 증거 ③민사소송법상 재심사유에 준하는 사유</li>
+        <li>이전 쟁송에서 <b>중대한 과실 없이</b> 그 사유를 주장 못 했어야 함</li>
+        <li>기간: 사유를 안 날부터 <b>60일</b>, 처분이 있은 날부터 <b>5년</b> 지나면 신청 <span class="x">X</span></li>
+        <li>결과 통지: <b>90일</b>(합의제 행정기관 180일) 이내, 1회 연장 가능</li>
+        <li>'처분 유지' 결과는 행정심판·행정소송으로 불복 <span class="x">X</span> / 재심사와 별개로 직권취소·철회 가능</li>
+      </ul></div>
+  </div>
+  
+</article>
+  </div>
+</section>
+</section>
+    <section class="part part-suit" id="suit">
+  <div class="part-banner">
+    <span class="part-no">PART Ⅱ</span>
+    <h2>행정소송법</h2>
+    <p>어떤 소송을 고르고(종류), 문을 열고(소송요건), 재판이 진행되고(심리·임시구제), 판결이 나면 어떻게 되는지(판결의 효력)의 순서입니다.</p>
+    <span class="part-count">21개 용어</span>
+  </div>
+<section class="chapter" id="suit-1" data-part="suit">
+  <div class="chapter-h"><h3>1. 행정소송의 종류</h3><p class="chapter-sub">"어떤 소송을 골라야 하나"</p></div>
+  <p class="chapter-lead">행정소송은 '처분을 다투는가(항고소송)', '권리관계를 다투는가(당사자소송)', '공익을 위해 다투는가(민중·기관소송)'로 나뉩니다.</p>
+  <div class="cards">
+<article class="card" id="t28" data-f="3">
+  <header class="card-h">
+    <div><h4>항고소송· 취소소송</h4><span class="card-law">행정소송법 §3①·§4①</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def"><b>항고소송</b> = 행정청의 처분(또는 무응답)에 불복해 다투는 소송. 그중 대표가 '위법한 처분을 없애 달라'는 <b>취소소송</b>.</p>
+        <p class="ex"><span class="tag">예시</span>부당한 정학 처분을 받은 학생이 "그 정학을 없애 주세요"라고 심판에 청구.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>법이 정한 항고소송 3종: <b>취소소송 · 무효등확인소송 · 부작위위법확인소송</b></li>
+        <li><span class="hl">의무이행소송·예방적 금지소송</span>은 판례상 인정 <span class="x">X</span></li>
+        <li>취소소송이 기본형 → 다른 소송은 취소소송 규정을 '준용'</li>
+        <li>무효인 처분에 '무효선언을 구하는 취소소송'도 가능 → 이때는 제소기간 등 취소소송 요건을 갖춰야</li>
+        <li>법원은 <b>위법</b>만 판단, 단순 '부당'은 행정심판에서</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t29" data-f="2">
+  <header class="card-h">
+    <div><h4>무효등확인소송</h4><span class="card-law">행정소송법 §4②·§35·§38①</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">처분이 처음부터 효력이 없음(무효)이나, 처분이 존재하는지 등을 <b>확인</b>해 달라는 소송.</p>
+        <p class="ex"><span class="tag">예시</span>"그 징계는 다른 학생 이름으로 내려진 거라 처음부터 무효예요. 확인해 주세요."</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>제소기간 <span class="x">X</span>, 행정심판 전치 <span class="x">X</span>, 사정판결 <span class="x">X</span>, 간접강제 <span class="x">X</span> / 집행정지 <span class="o">O</span></li>
+        <li><span class="hl">보충성 불요</span>: 민사소송으로 구제받을 수 있어도 바로 무효확인소송 가능(대판 2008 전합)</li>
+        <li>무효확인 청구에는 취소 청구가 포함 → 취소소송 요건을 갖췄으면 취소 판결도 가능</li>
+        <li>무효 사유는 <b>원고</b>가 주장·증명</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t30" data-f="2">
+  <header class="card-h">
+    <div><h4>부작위위법확인소송</h4><span class="card-law">행정소송법 §4③·§36·§38②</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">국민이 신청했는데 행정청이 <b>아무 답도 안 하고</b> 미루는 것이 위법임을 확인해 달라는 소송.</p>
+        <p class="ex"><span class="tag">예시</span>동아리 창설 신청서를 냈는데 몇 달째 아무 대답이 없음 → "답을 안 주는 건 잘못이다" 확인.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>요건: ①신청 ②상당한 기간 경과 ③처분할 법률상 의무 ④아무 처분도 안 함 → <b>신청권</b> 없으면 각하</li>
+        <li>판결은 '응답하라'는 뜻뿐 → 행정청이 <span class="hl">거부처분을 해도</span> 판결을 따른 것</li>
+        <li>소송 중 행정청이 처분(거부 포함)을 하면 소의 이익 없어져 각하</li>
+        <li>제소기간: 행정심판을 거친 경우에만 적용 / 위법판단 기준시: <b>판결 시</b></li>
+        <li>간접강제 <span class="o">O</span> / 집행정지 <span class="x">X</span></li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t31" data-f="3">
+  <header class="card-h">
+    <div><h4>당사자소송</h4><span class="card-law">행정소송법 §3②·§39~§44</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">처분 자체가 아니라 공법상 <b>권리·의무 관계</b>(돈, 지위 등)를 대등한 당사자끼리 다투는 소송. 피고는 행정청이 아니라 <b>국가·지자체 등 권리주체</b>.</p>
+        <p class="ex"><span class="tag">예시</span>학교가 이미 정해진 장학금을 안 줌 → "장학금 결정 취소"가 아니라 "정해진 장학금을 주세요"라고 청구.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>피고: 국가·공공단체 그 밖의 권리주체(§39)</li>
+        <li>사례: 공무원 보수·미지급 퇴직연금 청구 / <span class="hl">부가가치세 환급세액 지급청구</span>(대판 2013 전합) / 계약직 공무원 채용계약 해지 / 공무원 지위확인</li>
+        <li>퇴직연금: 처음 지급 <b>결정</b>을 다투면 항고소송, 법령 개정으로 깎인 <b>미지급분 청구</b>는 당사자소송</li>
+        <li>민사집행법상 <b>가처분 준용 <span class="o">O</span></b> / 국가 상대 가집행 금지 조항(§43)은 위헌(헌재 2022)</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t32" data-f="1">
+  <header class="card-h">
+    <div><h4>민중소송· 기관소송</h4><span class="card-law">행정소송법 §3③④·§45</span></div>
+    <span class="stars s1" title="출제 빈도">★☆☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def"><b>민중소송</b> = 내 이익과 직접 관계없어도 국가기관의 위법을 '시민 자격'으로 바로잡아 달라는 소송. <b>기관소송</b> = 국가·공공단체 <b>기관끼리</b>의 권한 다툼.</p>
+        <p class="ex"><span class="tag">예시</span>학생회 선거 부정을 일반 학생이 무효로 해 달라고 함(민중소송). 학생회와 선도부가 "이건 우리 권한!"이라고 다툼(기관소송).</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>둘 다 <span class="hl">법률이 정한 경우, 법률이 정한 사람만</span> 제기(§45 법정주의)</li>
+        <li>민중소송 예: 선거소송, 국민투표무효소송, 주민소송</li>
+        <li>기관소송 예: 지방의회 재의결에 대한 지자체장의 대법원 제소</li>
+        <li>헌법재판소 권한쟁의심판 사항은 기관소송에서 제외(§3④ 단서)</li>
+      </ul></div>
+  </div>
+  
+</article>
+  </div>
+</section>
+<section class="chapter" id="suit-2" data-part="suit">
+  <div class="chapter-h"><h3>2. 소송요건</h3><p class="chapter-sub">"소송의 문을 여는 6개의 열쇠"</p></div>
+  <p class="chapter-lead">하나라도 빠지면 내용 심사 없이 <b>각하</b>됩니다. 행정소송법 파트에서 출제 비중이 가장 큽니다.</p>
+  <div class="cards">
+<article class="card" id="t33" data-f="3">
+  <header class="card-h">
+    <div><h4>처분성 <small>(처분 등)</small></h4><span class="card-law">행정소송법 §2①1·§19</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">취소소송은 '처분 등'만 대상. 처분 = 행정청이 구체적 사실에 대해 법을 집행하며 하는 <b>공권력 행사·거부</b> + 이에 준하는 작용 + 행정심판 <b>재결</b>.</p>
+        <p class="ex"><span class="tag">예시</span>철수에게 내린 '정학'(처분 O) vs 교무회의에서 "내년 축제 계획을 검토하자"는 내부 논의(처분 X).</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li><span class="o">처분 O</span>: 건축신고 반려 / 지목변경신청 반려 / 개별·표준지공시지가 결정 / 국가인권위 성희롱 결정·시정권고 / 지방의회 의장 선임 의결 / 조달청 나라장터 거래정지</li>
+        <li><span class="x">처분 X</span>: 공정위 <span class="hl">고발조치</span> / 운전면허 <span class="hl">벌점</span> 부과 / 국세환급금 결정 / 단순 사실·관념의 통지 / 행정 내부 행위</li>
+        <li>거부가 처분이 되려면 국민에게 법규상·조리상 <b>신청권</b>이 있어야</li>
+        <li>재결은 <b>재결 자체에 고유한 위법</b>이 있을 때만 대상(원처분주의)<sup class="fn"><a href="#n13" data-note="13">13</a></sup></li>
+      </ul></div>
+  </div>
+  <details class="more" id="n13"><summary><span class="more-tag">주석 13</span>원처분주의</summary><p><b>원처분주의</b> — 행정심판에서 기각재결을 받았어도 원칙적으로 <b>처음 처분(원처분)</b>을 다툰다. 재결은 권한 없는 위원회의 재결처럼 재결 자체에 고유한 하자가 있을 때만 대상. 예외(재결주의): 중앙노동위원회 재심판정, 감사원 재심의 판정은 재결을 대상으로 다툰다.</p></details>
+</article>
+<article class="card" id="t34" data-f="3">
+  <header class="card-h">
+    <div><h4>원고적격</h4><span class="card-law">행정소송법 §12 전문</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">소송을 걸 수 있는 '자격'. 처분의 취소를 구할 <b>법률상 이익</b>이 있는 사람만 가능(단순히 기분 나쁨·사실상 이익은 X).<sup class="fn"><a href="#n14" data-note="14">14</a></sup></p>
+        <p class="ex"><span class="tag">예시</span>내 정학은 내가 다툴 수 있지만, 옆 반 친구가 "그 정학 마음에 안 들어"라며 대신 소송할 수는 없다.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li><b>경업자</b>: 기존 업자가 <b>특허</b>사업자면 <span class="o">O</span>(시외버스·화물자동차 사업자, 거리제한 있는 담배 일반소매인) / <b>허가</b>사업자면 <span class="x">X</span>(목욕장)</li>
+        <li><b>경원자</b>: 한 자리를 두고 경쟁하다 떨어진 사람 <span class="o">O</span>(LPG 충전소, 법학전문대학원 인가)</li>
+        <li><b>인근 주민</b>: 환경영향평가 대상지역 <span class="hl">안</span> 주민은 환경상 이익 침해 사실상 추정 / <span class="hl">밖</span> 주민은 침해 우려를 스스로 증명(새만금, 대판 2006 전합)</li>
+        <li>상수원보호구역 주민의 '깨끗한 물 마실 이익' → 반사적 이익 <span class="x">X</span></li>
+      </ul></div>
+  </div>
+  <details class="more" id="n14"><summary><span class="more-tag">주석 14</span>반사적 이익</summary><p><b>반사적 이익</b> — 법이 공익을 위해 정한 규정 덕분에 '우연히' 얻는 이익. 예: 목욕탕 사이 거리 제한 덕에 손님이 많았던 것은 반사적 이익이라 새 목욕탕 허가를 다툴 수 없다. 반면 법이 개인을 보호하려는 목적까지 있으면 '법률상 이익'.</p></details>
+</article>
+<article class="card" id="t35" data-f="3">
+  <header class="card-h">
+    <div><h4>협의의 소의 이익</h4><span class="card-law">행정소송법 §12 후문</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">자격(원고적격)이 있어도, 판결로 <b>실제로 얻을 이익</b>이 남아 있어야 한다. 처분 효과가 이미 사라졌으면 원칙적으로 소의 이익 X.</p>
+        <p class="ex"><span class="tag">예시</span>3일 체육 금지를 다투는 사이 3일이 지남 → 지금 취소해도 얻을 게 없다. 단, 그 기록 때문에 다음에 더 큰 벌을 받게 된다면 다툴 이익 O.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>영업정지 기간 경과 → 원칙 <span class="x">X</span>, 그러나 <b>시행규칙에 가중처분 기준</b>이 있으면 <span class="o">O</span>(대판 2006 전합)</li>
+        <li>건축허가 취소소송 중 건물 완공 → 이웃 주민 소익 <span class="x">X</span></li>
+        <li>현역병 입영통지 후 입영 <span class="o">O</span> / 고교 퇴학 후 검정고시 합격 <span class="o">O</span> / 파면 후 정년 지남 <span class="o">O</span>(급여 청구)</li>
+        <li>같은 위법 처분이 <span class="hl">반복될 위험</span>이 있으면 예외적으로 소익 <span class="o">O</span></li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t36" data-f="3">
+  <header class="card-h">
+    <div><h4>피고적격</h4><span class="card-law">행정소송법 §13·§14</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">누구를 상대로 소송을 거나? 원칙: 그 처분을 <b>자기 이름으로 한 행정청</b>. 국가·지자체가 아님에 주의.<sup class="fn"><a href="#n15" data-note="15">15</a></sup></p>
+        <p class="ex"><span class="tag">예시</span>담임 선생님 이름으로 벌점이 나왔으면 '학교'가 아니라 '담임 선생님'을 상대로.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>권한 <b>위임</b> → 위임받은 수임청 / <b>내부위임</b> → 누구 이름으로 했나 기준(수임기관 명의면 수임기관)</li>
+        <li>대통령 처분 → <b>소속 장관</b> / 국회의장 → 국회사무총장 / 대법원장 → 법원행정처장 / 헌재소장 → 헌재 사무처장</li>
+        <li>조례 → 지방의회가 아니라 <span class="hl">지자체장</span>(교육 조례는 교육감) / 지방의회 의원 징계·의장 불신임 → 지방의회</li>
+        <li>피고를 잘못 지정하면 원고 신청으로 <b>피고 경정</b> 가능(§14)</li>
+      </ul></div>
+  </div>
+  <details class="more" id="n15"><summary><span class="more-tag">주석 15</span>재판관할(§9)</summary><p><b>재판관할(§9)</b> — 1심은 피고 소재지 행정법원. 중앙행정기관·그 장이 피고면 대법원 소재지 행정법원(서울행정법원)에도 낼 수 있고, 토지수용 등 부동산 관련 처분은 그 부동산 소재지 행정법원에도 낼 수 있다.</p></details>
+</article>
+<article class="card" id="t37" data-f="3">
+  <header class="card-h">
+    <div><h4>제소기간</h4><span class="card-law">행정소송법 §20</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">소송을 낼 수 있는 <b>마감 기한</b>. 놓치면 처분이 아무리 위법해도(무효가 아니면) 다툴 수 없다.</p>
+        <p class="ex"><span class="tag">예시</span>수행평가 이의제기 기간이 '공지 후 일주일'인데 한 달 뒤에 가면 받아주지 않는다.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>처분이 있음을 <b>안 날</b>부터 <span class="hl">90일</span>(불변기간) / 처분이 <b>있은 날</b>부터 <span class="hl">1년</span>(정당한 사유 있으면 예외) — 하나라도 지나면 <span class="x">X</span></li>
+        <li>행정심판을 거친 경우 → 재결서 정본을 <b>송달받은 날</b>부터 90일</li>
+        <li>불특정 다수에 대한 고시·공고 → 효력 발생일에 안 것으로 봄</li>
+        <li>무효등확인소송 → 제소기간 <span class="x">X</span></li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t38" data-f="2">
+  <header class="card-h">
+    <div><h4>행정심판 전치주의</h4><span class="card-law">행정소송법 §18</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">법원에 가기 전에 행정심판을 <b>먼저 거쳐야</b> 하는가? 원칙은 선택(<b>임의적</b>), 예외적으로 필수(<b>필요적</b>).</p>
+        <p class="ex"><span class="tag">예시</span>보통은 교육청 심판을 먼저 갈지 바로 법원에 갈지 학생이 고른다. 하지만 어떤 문제는 반드시 학교 심의위원회를 먼저 거쳐야 한다.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>필요적 전치 3대 예: <span class="hl">조세</span>(국세기본법) / <span class="hl">공무원 징계</span> 등(소청심사) / <span class="hl">운전면허</span> 취소·정지(도로교통법)</li>
+        <li>필요적이어도 재결 없이 소송 가능: 심판청구 후 <b>60일</b> 지나도 재결 없음, 긴급한 필요 등(§18②)</li>
+        <li>심판청구조차 필요 없는 경우: 같은 종류 사건에 기각재결이 있음 등(§18③)</li>
+        <li>무효등확인소송 <span class="x">X</span> / 전치 요건은 사실심 변론종결 시까지만 갖추면 됨</li>
+      </ul></div>
+  </div>
+  
+</article>
+  </div>
+</section>
+<section class="chapter" id="suit-3" data-part="suit">
+  <div class="chapter-h"><h3>3. 심리와 임시구제</h3><p class="chapter-sub">"재판이 진행되는 동안"</p></div>
+  <p class="chapter-lead">재판은 오래 걸립니다. 그동안 처분을 멈출 수 있는지(집행정지), 무엇을 기준으로 판단하는지가 핵심입니다.</p>
+  <div class="cards">
+<article class="card" id="t39" data-f="3">
+  <header class="card-h">
+    <div><h4>집행정지</h4><span class="card-law">행정소송법 §23·§24</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">소송이 끝날 때까지 처분의 효력·집행을 <b>잠시 멈추는</b> 것. 원칙은 소송을 내도 처분은 그대로 진행(<b>집행부정지</b>).<sup class="fn"><a href="#n16" data-note="16">16</a></sup></p>
+        <p class="ex"><span class="tag">예시</span>동아리 해체 처분을 다투는 동안 동아리실이 철거되면 이겨도 소용없음 → "판결 날 때까지 철거 잠깐 멈춰!"</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>요건: ①적법한 본안소송 계속 ②처분 존재 ③<b>회복하기 어려운 손해</b> ④<b>긴급한 필요</b> ⑤공공복리에 중대한 영향 없음 ⑥본안 청구가 이유 없음이 명백하지 않을 것</li>
+        <li><span class="hl">거부처분</span> → 집행정지 대상 <span class="x">X</span>(멈춰도 신청 전 상태일 뿐)</li>
+        <li>집행·절차속행 정지로 목적을 이룰 수 있으면 효력정지는 불허(§23② 단서)</li>
+        <li>무효등확인 <span class="o">O</span> / 부작위위법확인 <span class="x">X</span> / 즉시항고해도 집행정지 결정의 효력은 그대로(§23⑤)</li>
+      </ul></div>
+  </div>
+  <details class="more" id="n16"><summary><span class="more-tag">주석 16</span>왜 '집행부정지'가 원칙일까?</summary><p><b>왜 '집행부정지'가 원칙일까?</b> — 소송만 내면 처분이 다 멈춘다면, 일단 소송부터 걸고 보는 일이 많아져 행정이 마비되기 때문. 그래서 원칙은 계속 진행, 꼭 필요한 경우에만 법원이 멈춘다. 집행정지 결정도 판결처럼 <b>제3자에게 효력</b>이 있다(§29②).</p></details>
+</article>
+<article class="card" id="t40" data-f="2">
+  <header class="card-h">
+    <div><h4>가처분</h4><span class="card-law">민사집행법 준용 여부</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">민사소송의 '임시 조치'(임시로 지위를 정하거나 현상 유지)를 행정소송에도 쓸 수 있는지의 문제.</p>
+        <p class="ex"><span class="tag">예시</span>"판결 날 때까지 임시로 동아리실을 쓰게 해 주세요"처럼 임시로 무언가를 '해 달라'는 요청.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li><b>항고소송</b>: 가처분 준용 <span class="x">X</span>(판례) → 집행정지로만 임시구제</li>
+        <li><b>당사자소송</b>: 가처분 준용 <span class="o">O</span>(대결 2015)</li>
+        <li>그래서 거부처분에 대해서는 항고소송에서 임시구제 수단이 사실상 없다는 비판</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t41" data-f="2">
+  <header class="card-h">
+    <div><h4>처분사유의 추가·변경</h4><span class="card-law">판례 이론</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">소송 중에 행정청이 처음에 말하지 않은 <b>다른 이유</b>를 덧붙이거나 바꾸는 것. 처음 이유와 <b>기본적 사실관계가 같은</b> 범위에서만 허용.</p>
+        <p class="ex"><span class="tag">예시</span>'지각 3회'로 벌점을 줬다가 소송에서 지각 날짜만 바로잡음 → OK. 갑자기 '복장 불량'이라는 전혀 다른 이유를 추가 → X.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>기준: <span class="hl">기본적 사실관계의 동일성</span></li>
+        <li>사실심 변론종결 시까지 가능</li>
+        <li>처분 당시 이미 있던 사유만 가능(처분 후 생긴 새 사유 <span class="x">X</span>)</li>
+        <li>사실은 같고 <b>법령 근거만</b> 바꾸는 것은 허용</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t42" data-f="2">
+  <header class="card-h">
+    <div><h4>위법판단의 기준시</h4><span class="card-law">판례 이론</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">처분이 위법한지 판단할 때 '언제의 법과 사실'을 기준으로 하나? 판례는 <b>처분할 때</b>(처분시설).</p>
+        <p class="ex"><span class="tag">예시</span>3월에 받은 벌점이 맞는지는 3월 당시 교칙으로 판단. 6월에 교칙이 바뀌어도 상관없다.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>취소·무효확인소송 → <b>처분 시</b></li>
+        <li>부작위위법확인소송 → <span class="hl">판결 시</span>(사실심 변론종결 시)</li>
+        <li>사정판결: 위법성 판단은 처분 시, 사정판결 필요성은 판결 시</li>
+        <li>법원은 변론종결 때까지 제출된 모든 자료로 '처분 당시' 사실을 확정해 판단 가능</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t43" data-f="2">
+  <header class="card-h">
+    <div><h4>소의 변경· 소송참가</h4><span class="card-law">행정소송법 §21·§22·§16·§17</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def"><b>소의 변경</b> = 소송 도중 소의 종류나 대상을 바꾸는 것. <b>소송참가</b> = 판결로 영향을 받는 제3자나 다른 행정청이 소송에 끼어드는 것.</p>
+        <p class="ex"><span class="tag">예시</span>'정학 취소' 청구를 '정학 무효확인'으로 바꿈(소의 변경). 정학 덕분에 반장 자리를 얻은 친구가 소송에 참가(소송참가).</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>소 종류 변경(§21): 취소소송 ↔ 당사자소송·다른 항고소송, 청구의 기초가 같을 것, 사실심 변론종결 시까지, 피고가 달라져도 가능</li>
+        <li>처분변경으로 인한 소 변경(§22): 처분 변경을 <b>안 날부터 60일</b> 이내</li>
+        <li>제3자 소송참가(§16): 당사자·제3자 신청 또는 <b>직권</b></li>
+        <li>행정청 소송참가(§17): 당사자·해당 행정청 신청 또는 직권</li>
+      </ul></div>
+  </div>
+  
+</article>
+  </div>
+</section>
+<section class="chapter" id="suit-4" data-part="suit">
+  <div class="chapter-h"><h3>4. 판결과 그 효력</h3><p class="chapter-sub">"판결이 나면 무슨 일이 생기나"</p></div>
+  <p class="chapter-lead">기속력과 기판력은 이름이 비슷해 매년 함정으로 나옵니다. 마지막 장의 비교표와 함께 보세요.</p>
+  <div class="cards">
+<article class="card" id="t44" data-f="3">
+  <header class="card-h">
+    <div><h4>사정판결</h4><span class="card-law">행정소송법 §28·§32</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">처분이 위법해서 원래는 취소해야 하지만, 취소하면 <b>공공복리</b>를 크게 해칠 때 법원이 원고 청구를 <b>기각</b>하는 예외 판결.</p>
+        <p class="ex"><span class="tag">예시</span>체육관 건축 허가 절차가 잘못됐지만 이미 다 지어져 전교생이 쓰는 중 → 허물기보다 "잘못은 인정, 대신 보상"으로 정리.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>판결 <b>주문</b>(결론 부분)에 처분이 <span class="hl">위법함을 명시</span>(§28①)</li>
+        <li>법원은 원고의 손해 정도·배상 방법 등을 미리 조사(§28②) / 원고는 손해배상 등 청구를 병합 가능(§28③)</li>
+        <li><b>무효등확인소송에는 <span class="x">X</span></b>, 부작위위법확인소송 <span class="x">X</span></li>
+        <li>당사자 주장 없어도 법원이 <b>직권</b>으로 가능 / 소송비용은 <b>피고</b> 부담(§32)</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t45" data-f="3">
+  <header class="card-h">
+    <div><h4>기속력</h4><span class="card-law">행정소송법 §30</span></div>
+    <span class="stars s3" title="출제 빈도">★★★</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">취소판결이 확정되면 행정청이 판결 취지를 <b>따라야 하는</b> 힘. ①같은 잘못 반복 금지 ②거부처분이 취소되면 다시 처분할 의무 ③위법 상태 원상회복 의무.</p>
+        <p class="ex"><span class="tag">예시</span>심판이 "정학은 잘못"이라고 판정했는데 학교가 똑같은 이유로 다시 정학 → 안 됨(반복금지).</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>당사자 행정청 + 관계 행정청을 구속 / <span class="hl">인용판결에만</span> 인정(기각판결 <span class="x">X</span>)</li>
+        <li>범위: 판결 주문 + <b>판결 이유</b> 중 위법사유 판단</li>
+        <li>거부처분 취소 → 판결 취지대로 <b>재처분 의무</b>(§30②) / 절차 위법으로 취소 → 적법 절차로 같은 내용 처분 가능(§30③)</li>
+        <li>기본적 사실관계가 <b>다른 새 사유</b>, 또는 <b>개정된 법령</b>으로 다시 거부 → 기속력 위반 <span class="x">X</span></li>
+        <li>기속력에 위반한 처분 → <b>당연무효</b></li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t46" data-f="2">
+  <header class="card-h">
+    <div><h4>기판력</h4><span class="card-law">행정소송법 §8② → 민사소송법 준용</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">판결이 확정되면 같은 당사자가 같은 문제로 다시 소송해도 앞 판결과 다르게 판단할 수 없는 힘. "한 번 끝난 건 다시 안 다툰다."</p>
+        <p class="ex"><span class="tag">예시</span>이미 판정이 확정된 경기 결과로 재경기를 요구할 수 없다.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>행정소송법에 명문 규정 <span class="x">X</span> → 민사소송법 준용</li>
+        <li><span class="hl">인용·기각판결 모두</span> 발생(기속력은 인용판결만 — 비교!)</li>
+        <li>범위: 판결 <b>주문</b>에 한정 / 당사자·승계인 + 피고 행정청이 속한 국가·공공단체 / 기준 시점은 사실심 변론종결 시</li>
+        <li>취소소송 기각이 확정된 뒤 같은 처분의 무효확인 청구 → 기판력에 저촉</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t47" data-f="2">
+  <header class="card-h">
+    <div><h4>형성력·제3자효</h4><span class="card-law">행정소송법 §29·§31</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def"><b>형성력</b> = 취소판결이 확정되면 따로 취소하지 않아도 처분이 <b>처음부터</b> 효력을 잃는 힘. <b>제3자효</b> = 그 효력이 소송 당사자가 아닌 사람에게도 미침.</p>
+        <p class="ex"><span class="tag">예시</span>심판이 "그 퇴장 판정은 무효"로 확정하면 퇴장은 자동으로 사라지고, 다른 팀 선수들에게도 똑같이 적용된다.</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>취소판결 → 처분은 <b>소급하여 소멸</b>(행정청의 별도 취소 불필요)</li>
+        <li>제3자효(§29①) → 집행정지 결정에도 준용(§29②)</li>
+        <li><b>제3자 재심청구</b>(§31): 자기 탓 없이 소송에 참가 못 한 제3자 → 확정판결을 안 날부터 <span class="hl">30일</span>, 판결 확정일부터 <span class="hl">1년</span> 이내</li>
+      </ul></div>
+  </div>
+  
+</article>
+<article class="card" id="t48" data-f="2">
+  <header class="card-h">
+    <div><h4>간접강제</h4><span class="card-law">행정소송법 §34</span></div>
+    <span class="stars s2" title="출제 빈도">★★☆</span>
+  </header>
+  <div class="card-b">
+    <div class="col-def"><div class="lbl">정의</div><p class="def">거부처분 취소판결이 났는데도 행정청이 다시 처분(재처분)을 안 하면, 법원이 <b>늦어지는 만큼 돈을 내라</b>고 명령해 압박하는 제도.</p>
+        <p class="ex"><span class="tag">예시</span>판정 후에도 학교가 재심사를 안 하면 "하루 늦을 때마다 ○○원씩 배상하세요."</p></div>
+    <div class="col-case"><div class="lbl">빈출사례</div><ul>
+        <li>당사자가 <b>제1심 수소법원</b>에 신청 → 상당한 기간을 정해 불이행 시 지연 배상 또는 즉시 손해배상 명령</li>
+        <li>부작위위법확인소송 준용 <span class="o">O</span> / <span class="hl">무효등확인판결 준용 <span class="x">X</span></span>(판례)</li>
+        <li>배상금은 심리적 압박 수단 → 기간이 지난 뒤라도 재처분하면 더 이상 추심 <span class="x">X</span></li>
+        <li>재처분이 기속력에 위반해 무효라면 재처분을 안 한 것과 같아 간접강제 가능</li>
+      </ul></div>
+  </div>
+  
+</article>
+  </div>
+</section>
+</section>
+
+    <p class="empty" id="empty">검색 결과가 없어요. 다른 단어로 찾아보세요.</p>
+
+    <section class="final" id="final">
+      <div class="final-banner">
+        <h2>시험 직전 1분 암기표</h2>
+        <p>기간 숫자, 소송 종류별 O/X, 헷갈리는 쌍둥이 개념만 따로 모았습니다.</p>
+        <h3 class="sub">① 꼭 외울 기간 숫자</h3>
+  <div class="scroll">
+  <table class="mx">
+    <thead><tr><th>제도</th><th>기간</th><th>근거</th></tr></thead>
+    <tbody>
+      <tr><th>취소소송 제소기간</th><td>안 날부터 <b>90일</b> / 있은 날부터 <b>1년</b></td><td>행소법 §20</td></tr>
+      <tr><th>행정심판 거친 뒤 소송</th><td>재결서 정본 송달받은 날부터 <b>90일</b></td><td>행소법 §20①</td></tr>
+      <tr><th>(참고) 행정심판 청구기간</th><td>안 날부터 <b>90일</b> / 있은 날부터 <b>180일</b></td><td>행정심판법 §27</td></tr>
+      <tr><th>필요적 전치의 예외</th><td>심판청구 후 <b>60일</b> 지나도 재결 없으면 바로 소송</td><td>행소법 §18②</td></tr>
+      <tr><th>처분변경에 따른 소 변경</th><td>처분 변경을 안 날부터 <b>60일</b></td><td>행소법 §22②</td></tr>
+      <tr><th>제3자 재심청구</th><td>안 날부터 <b>30일</b> / 확정된 날부터 <b>1년</b></td><td>행소법 §31</td></tr>
+      <tr><th>이의신청</th><td>신청 <b>30일</b> → 결과 통지 <b>14일</b>(+10일 1회) → 이후 심판·소송 <b>90일</b></td><td>기본법 §36</td></tr>
+      <tr><th>처분의 재심사</th><td>안 날부터 <b>60일</b> / 있은 날부터 <b>5년</b> / 통지 <b>90일</b>(합의제 180일)</td><td>기본법 §37</td></tr>
+      <tr><th>제재처분 제척기간</th><td>위반 종료일부터 <b>5년</b> / 재결·판결로 취소 시 확정일부터 <b>1년</b>(합의제 2년)</td><td>기본법 §23</td></tr>
+      <tr><th>인허가의제 협의</th><td>요청 받은 날부터 <b>20일</b> 안에 의견 없으면 협의 간주</td><td>기본법 §24④</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">② 소송 종류별 O/X 매트릭스</h3>
+  <div class="scroll">
+  <table class="mx">
+    <thead><tr><th>제도</th><th>취소소송</th><th>무효등확인</th><th>부작위위법확인</th><th>당사자소송</th></tr></thead>
+    <tbody>
+      <tr><th>제소기간</th><td class="c"><span class="o">O</span></td><td class="c"><span class="x">X</span></td><td class="c">심판 거친 경우만</td><td class="c">법령에 정한 경우만</td></tr>
+      <tr><th>행정심판 전치(예외적 필요)</th><td class="c"><span class="o">O</span></td><td class="c"><span class="x">X</span></td><td class="c"><span class="o">O</span></td><td class="c"><span class="x">X</span></td></tr>
+      <tr><th>집행정지</th><td class="c"><span class="o">O</span></td><td class="c"><span class="o">O</span></td><td class="c"><span class="x">X</span></td><td class="c"><span class="x">X</span> (가처분 O)</td></tr>
+      <tr><th>사정판결</th><td class="c"><span class="o">O</span></td><td class="c"><span class="x">X</span></td><td class="c"><span class="x">X</span></td><td class="c"><span class="x">X</span></td></tr>
+      <tr><th>제3자효(§29)</th><td class="c"><span class="o">O</span></td><td class="c"><span class="o">O</span></td><td class="c"><span class="o">O</span></td><td class="c"><span class="x">X</span></td></tr>
+      <tr><th>기속력(§30)</th><td class="c"><span class="o">O</span></td><td class="c"><span class="o">O</span></td><td class="c"><span class="o">O</span></td><td class="c"><span class="o">O</span> (§30①만)</td></tr>
+      <tr><th>간접강제(§34)</th><td class="c"><span class="o">O</span></td><td class="c"><span class="x">X</span></td><td class="c"><span class="o">O</span></td><td class="c"><span class="x">X</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub">③ 헷갈리는 쌍둥이 개념</h3>
+  <div class="scroll">
+  <table class="mx">
+    <thead><tr><th>비교</th><th>A</th><th>B</th></tr></thead>
+    <tbody>
+      <tr><th>직권취소 vs 철회</th><td><b>처음부터</b> 위법·부당 → 원칙 <b>소급</b></td><td>처음엔 적법, <b>나중에</b> 사정변경 → <b>장래</b>만</td></tr>
+      <tr><th>기속력 vs 기판력</th><td><b>인용판결만</b> · 행정청을 구속 · 주문 + 이유</td><td><b>인용·기각 모두</b> · 법원·당사자를 구속 · 주문만</td></tr>
+      <tr><th>집행정지 vs 가처분</th><td>항고소송의 임시구제 · 거부처분엔 <span class="x">X</span></td><td>항고소송 <span class="x">X</span> · 당사자소송 <span class="o">O</span></td></tr>
+      <tr><th>불가쟁력 vs 불가변력</th><td><b>국민</b>이 더 못 다툼 (기간 경과)</td><td><b>행정청</b>이 못 바꿈 (재결 등 준사법적 행위)</td></tr>
+      <tr><th>원고적격 vs 협의의 소익</th><td>소송을 걸 <b>자격</b>(법률상 이익)</td><td>판결로 얻을 <b>실익</b>이 남아 있는가</td></tr>
+      <tr><th>이의신청 vs 재심사</th><td>처분 직후 30일 · 처분청 · 제재처분도 가능</td><td>확정 후 새 사유 · 처분청 · 제재처분·행정상 강제 <span class="x">X</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="site-f">
+  <div class="wrap">
+    <p><b>분석 범위</b> · 2021~2026년 국가직·지방직 9급 행정법총론 기출(일부 7급·군무원·소방 포함)에서 반복된 주제를 기준으로 했습니다. ★ 표시는 반복 출제 정도를 3단계로 나타낸 경향 지표이며 정확한 문항 수 집계는 아닙니다.</p>
+    <p><b>법령 기준</b> · 행정기본법(이의신청·재심사 2023.3.24. 시행 포함), 행정소송법 현행. 최신 개정 여부와 세부 문구는 <a href="https://www.law.go.kr" target="_blank" rel="noopener">국가법령정보센터</a>와 기본서로 확인하세요.</p>
+    <p>인쇄해서 보려면 <a href="print.html">A4 인쇄본</a>을 이용하세요.</p>
+  </div>
+</footer>
+
+<button class="icon-btn totop" id="totop" type="button" aria-label="맨 위로">↑</button>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var KEY = 'adminlaw-theme';
+  function store(k, v){ try { localStorage.setItem(k, v); } catch(e){} }
+  function read(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+
+  // 테마 전환
+  document.getElementById('themeBtn').addEventListener('click', function(){
+    var cur = root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next); store(KEY, next);
+  });
+
+  // 검색·빈도 필터
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var chapters = Array.prototype.slice.call(document.querySelectorAll('.chapter'));
+  var parts = Array.prototype.slice.call(document.querySelectorAll('.part'));
+  var q = document.getElementById('q');
+  var segBtns = Array.prototype.slice.call(document.querySelectorAll('.seg button'));
+  var countEl = document.getElementById('count');
+  var emptyEl = document.getElementById('empty');
+  var minF = 1;
+  var norm = function(s){ return s.toLowerCase().replace(/\s+/g, ''); };
+  cards.forEach(function(c){ c._text = norm(c.textContent); });
+
+  function apply(){
+    var term = norm(q.value);
+    var shown = 0;
+    cards.forEach(function(c){
+      var ok = (+c.dataset.f >= minF) && (!term || c._text.indexOf(term) !== -1);
+      c.hidden = !ok; if (ok) shown++;
+      var link = document.querySelector('.toc-terms a[href="#' + c.id + '"]');
+      if (link) link.classList.toggle('dim', !ok);
+    });
+    chapters.forEach(function(ch){ ch.hidden = !ch.querySelector('.card:not([hidden])'); });
+    parts.forEach(function(p){ p.hidden = !p.querySelector('.chapter:not([hidden])'); });
+    countEl.textContent = shown === cards.length ? '용어 ' + shown + '개' : cards.length + '개 중 ' + shown + '개';
+    emptyEl.style.display = shown ? 'none' : 'block';
+  }
+  q.addEventListener('input', apply);
+  segBtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      minF = +b.dataset.min;
+      segBtns.forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      apply(); store('adminlaw-min', String(minF));
+    });
+  });
+  var savedMin = +read('adminlaw-min');
+  if (savedMin > 1) { segBtns.forEach(function(b){ if (+b.dataset.min === savedMin) b.click(); }); } else apply();
+
+  // 숨겨진 카드로 이동하면 필터 해제
+  function reveal(id){
+    var el = document.getElementById(id);
+    if (!el) return;
+    var card = el.closest ? (el.closest('.card') || el) : el;
+    if (card.hidden || (card.closest && card.closest('[hidden]'))) {
+      q.value = ''; minF = 1;
+      segBtns.forEach(function(x){ x.setAttribute('aria-pressed', x.dataset.min === '1' ? 'true' : 'false'); });
+      apply();
+    }
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    if (!id) return;
+    reveal(id);
+    if (a.dataset.note) { var d = document.getElementById('n' + a.dataset.note); if (d) d.open = true; }
+  });
+
+  // 모바일 단원 바로가기
+  document.getElementById('jump').addEventListener('change', function(){
+    if (!this.value) return;
+    reveal(this.value);
+    document.getElementById(this.value).scrollIntoView({behavior:'smooth'});
+    this.selectedIndex = 0;
+  });
+
+  // 현재 단원 목차 강조
+  var tocLinks = {};
+  Array.prototype.forEach.call(document.querySelectorAll('.toc-ch'), function(a){ tocLinks[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) {
+          Object.keys(tocLinks).forEach(function(k){ tocLinks[k].classList.toggle('active', k === en.target.id); });
+        }
+      });
+    }, {rootMargin:'-140px 0px -60% 0px'});
+    chapters.forEach(function(ch){ io.observe(ch); });
+  }
+
+  // 맨 위로
+  var totop = document.getElementById('totop');
+  addEventListener('scroll', function(){ totop.classList.toggle('show', scrollY > 800); }, {passive:true});
+  totop.addEventListener('click', function(){ scrollTo({top:0, behavior:'smooth'}); });
+
+  // "/" 키로 검색창
+  addEventListener('keydown', function(e){
+    if (e.key === '/' && document.activeElement !== q) { e.preventDefault(); q.focus(); }
+  });
+
+  // 주소에 #주석이 있으면 열기
+  if (location.hash.indexOf('#n') === 0) { var d = document.querySelector(location.hash); if (d) d.open = true; }
+})();
+</script>
+</body>
+</html>
