@@ -2,7 +2,10 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161a20" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
 <title>행정법총론 빈출용어 사전</title>
 <meta name="description" content="공무원 행정법총론 2021~2026 기출 빈출용어를 행정기본법·행정소송법으로 나누어 중학생도 이해할 수 있게 정리한 용어 사전">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
@@ -13,69 +16,69 @@
   :root{
     --bg:#f5f7fa; --surface:#ffffff; --surface-2:#f0f3f7; --ink:#15191e; --muted:#5b6574; --line:#e1e6ec;
     --law:#1f56a8; --law-soft:#e9f0fb; --suit:#0b7a62; --suit-soft:#e4f4ee;
-    --star:#cf8600; --star-off:#d9dde3;
+    --star:#cf8600;
     --ex-bg:#fff8e1; --ex-line:#efb200; --tag-bg:#ffe8a3; --tag-ink:#6f4b00; --hl:#ffe27a;
     --o:#0b7a62; --x:#c0352b; --shadow:0 1px 2px rgba(16,24,40,.05), 0 4px 16px rgba(16,24,40,.06);
-    --hero-a:#e8f0fc; --hero-b:#e5f5ef;
-    --header-h:60px;
+    --hero-a:#e8f0fc; --hero-b:#e5f5ef; --scrim:rgba(10,14,20,.45);
+    --header-h:60px; --toolbar-h:66px; --bnav-h:0px;
+    --safe-b:env(safe-area-inset-bottom, 0px);
     color-scheme:light;
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
       --bg:#0e1115; --surface:#161a20; --surface-2:#1d232b; --ink:#e7eaee; --muted:#9aa4b2; --line:#29303a;
-      --law:#86b4ff; --law-soft:#18253a; --suit:#5fd0b2; --suit-soft:#122e27;
-      --star:#f3b437; --star-off:#3a414c;
+      --law:#86b4ff; --law-soft:#18253a; --suit:#5fd0b2; --suit-soft:#122e27; --star:#f3b437;
       --ex-bg:#272111; --ex-line:#c8961c; --tag-bg:#4a3a0f; --tag-ink:#ffd772; --hl:rgba(255,210,80,.32);
       --o:#5fd0b2; --x:#ff7b70; --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
-      --hero-a:#142035; --hero-b:#10291f;
+      --hero-a:#142035; --hero-b:#10291f; --scrim:rgba(0,0,0,.6);
       color-scheme:dark;
     }
   }
   :root[data-theme="dark"]{
     --bg:#0e1115; --surface:#161a20; --surface-2:#1d232b; --ink:#e7eaee; --muted:#9aa4b2; --line:#29303a;
-    --law:#86b4ff; --law-soft:#18253a; --suit:#5fd0b2; --suit-soft:#122e27;
-    --star:#f3b437; --star-off:#3a414c;
+    --law:#86b4ff; --law-soft:#18253a; --suit:#5fd0b2; --suit-soft:#122e27; --star:#f3b437;
     --ex-bg:#272111; --ex-line:#c8961c; --tag-bg:#4a3a0f; --tag-ink:#ffd772; --hl:rgba(255,210,80,.32);
     --o:#5fd0b2; --x:#ff7b70; --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
-    --hero-a:#142035; --hero-b:#10291f;
+    --hero-a:#142035; --hero-b:#10291f; --scrim:rgba(0,0,0,.6);
     color-scheme:dark;
   }
 
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%; text-size-adjust:100%}
   body{margin:0; background:var(--bg); color:var(--ink); line-height:1.6;
     font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
-    -webkit-font-smoothing:antialiased; word-break:keep-all; overflow-wrap:anywhere}
+    -webkit-font-smoothing:antialiased; -webkit-tap-highlight-color:transparent; word-break:keep-all; overflow-wrap:anywhere}
   a{color:inherit}
+  button, select, input{font:inherit; color:inherit}
   .wrap{max-width:1240px; margin:0 auto; padding:0 24px}
-  [id]{scroll-margin-top:calc(var(--header-h) + 76px)}
+  [id]{scroll-margin-top:calc(var(--header-h) + var(--toolbar-h) + 12px)}
+  .sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
 
   /* ---------- header ---------- */
-  .site-h{position:sticky; top:0; z-index:30; height:var(--header-h); background:color-mix(in srgb, var(--surface) 88%, transparent);
-    backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+  .site-h{position:sticky; top:0; z-index:30; height:var(--header-h); background:color-mix(in srgb, var(--surface) 90%, transparent);
+    backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
   .site-h .wrap{height:100%; display:flex; align-items:center; gap:18px}
-  .brand{display:flex; align-items:center; gap:10px; text-decoration:none; font-weight:800; font-size:16px; letter-spacing:-.3px; margin-right:auto}
-  .brand-mark{width:32px; height:32px; border-radius:9px; display:grid; place-items:center; color:#fff; font-size:15px;
+  .brand{display:flex; align-items:center; gap:10px; text-decoration:none; font-weight:800; font-size:16px; letter-spacing:-.3px; margin-right:auto; min-width:0}
+  .brand-mark{flex:none; width:32px; height:32px; border-radius:9px; display:grid; place-items:center; color:#fff; font-size:15px;
     background:linear-gradient(135deg, var(--law), var(--suit))}
   .site-nav{display:flex; gap:4px}
   .site-nav a{text-decoration:none; font-size:14px; font-weight:600; color:var(--muted); padding:7px 11px; border-radius:8px}
   .site-nav a:hover{background:var(--surface-2); color:var(--ink)}
-  .icon-btn{width:36px; height:36px; border-radius:9px; border:1px solid var(--line); background:var(--surface); color:var(--ink); cursor:pointer; display:grid; place-items:center; font-size:16px}
+  .icon-btn{flex:none; width:40px; height:40px; border-radius:10px; border:1px solid var(--line); background:var(--surface); cursor:pointer; display:grid; place-items:center; font-size:16px}
   .icon-btn:hover{background:var(--surface-2)}
 
   /* ---------- hero ---------- */
   .hero{background:linear-gradient(135deg, var(--hero-a), var(--hero-b)); border-bottom:1px solid var(--line)}
   .hero .wrap{padding-top:56px; padding-bottom:48px}
   .eyebrow{display:inline-block; font-size:13px; font-weight:700; color:var(--law); background:var(--surface); border:1px solid var(--line); padding:4px 12px; border-radius:99px}
-  .hero h1{font-size:clamp(28px, 4.6vw, 46px); line-height:1.22; letter-spacing:-1.2px; margin:16px 0 12px}
+  .hero h1{font-size:clamp(27px, 4.6vw, 46px); line-height:1.25; letter-spacing:-1px; margin:16px 0 12px}
   .hero h1 em{font-style:normal; background:linear-gradient(90deg, var(--law), var(--suit)); -webkit-background-clip:text; background-clip:text; color:transparent}
   .hero p.sub{font-size:17px; color:var(--muted); max-width:720px; margin:0 0 24px}
-  .cta{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:34px}
-  .btn{display:inline-flex; align-items:center; gap:6px; text-decoration:none; font-weight:700; font-size:15px; padding:11px 18px; border-radius:10px; border:1px solid var(--line); background:var(--surface)}
+  .cta{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:30px}
+  .btn{display:inline-flex; align-items:center; justify-content:center; gap:6px; min-height:46px; text-decoration:none; font-weight:700; font-size:15px; padding:10px 18px; border-radius:11px; border:1px solid var(--line); background:var(--surface)}
   .btn.primary{background:var(--law); border-color:var(--law); color:#fff}
   :root[data-theme="dark"] .btn.primary{color:#0e1115}
   @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .btn.primary{color:#0e1115} }
-  .btn:hover{filter:brightness(.97)}
   .stats{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:12px; max-width:760px}
   .stat{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:12px 14px}
   .stat b{display:block; font-size:24px; letter-spacing:-.5px; font-variant-numeric:tabular-nums}
@@ -83,7 +86,7 @@
   .kw-box{margin-top:26px}
   .kw-box h2{font-size:14px; margin:0 0 8px; color:var(--muted); font-weight:700}
   .kws{display:flex; flex-wrap:wrap; gap:8px}
-  .kw{text-decoration:none; font-size:14px; font-weight:600; padding:6px 13px; border-radius:99px; border:1px solid var(--line); background:var(--surface)}
+  .kw{display:inline-flex; align-items:center; min-height:38px; text-decoration:none; font-size:14px; font-weight:600; padding:6px 14px; border-radius:99px; border:1px solid var(--line); background:var(--surface); white-space:nowrap}
   .kw-law{color:var(--law)} .kw-suit{color:var(--suit)}
   .kw:hover{border-color:currentColor}
 
@@ -96,9 +99,13 @@
   .step .num{display:inline-grid; place-items:center; width:28px; height:28px; border-radius:8px; background:var(--surface-2); font-weight:800; font-size:14px; margin-bottom:8px}
   .step h3{margin:0 0 4px; font-size:16px}
   .step p{margin:0; color:var(--muted); font-size:14px}
-  .info-grid{display:grid; grid-template-columns:1fr 1.4fr; gap:14px; margin-top:14px}
-  .info{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:18px; box-shadow:var(--shadow)}
-  .info h3{margin:0 0 10px; font-size:16px}
+  .info-grid{display:grid; grid-template-columns:1fr 1.4fr; gap:14px; margin-top:14px; align-items:start}
+  details.info{background:var(--surface); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow)}
+  details.info summary{list-style:none; cursor:pointer; padding:16px 18px; font-weight:800; font-size:16px; display:flex; align-items:center; gap:8px}
+  details.info summary::-webkit-details-marker{display:none}
+  details.info summary::after{content:""; margin-left:auto; width:9px; height:9px; border-right:2px solid var(--muted); border-bottom:2px solid var(--muted); transform:rotate(45deg); transition:transform .2s}
+  details.info[open] summary::after{transform:rotate(-135deg)}
+  details.info .info-b{padding:0 18px 18px}
   dl.dict{display:grid; grid-template-columns:auto 1fr; gap:6px 14px; margin:0; font-size:14px}
   dl.dict dt{font-weight:800}
   dl.dict dd{margin:0; color:var(--muted)}
@@ -107,10 +114,11 @@
   /* ---------- layout ---------- */
   .layout{display:grid; grid-template-columns:250px minmax(0,1fr); gap:32px; padding-top:30px; padding-bottom:60px}
   .toc{position:sticky; top:calc(var(--header-h) + 16px); align-self:start; max-height:calc(100vh - var(--header-h) - 32px); overflow:auto; padding-right:6px; font-size:13.5px}
+  .toc-head{display:none}
   .toc-part{margin-bottom:16px}
   .toc-ptitle{display:block; font-weight:800; text-decoration:none; padding:6px 8px; border-radius:8px}
   .toc-law .toc-ptitle{color:var(--law)} .toc-suit .toc-ptitle{color:var(--suit)}
-  .toc-ch{display:block; text-decoration:none; font-weight:700; padding:5px 8px; margin-top:4px; border-radius:7px; color:var(--ink)}
+  .toc-ch{display:block; text-decoration:none; font-weight:700; padding:5px 8px; margin-top:4px; border-radius:7px}
   .toc-ch:hover, .toc-ptitle:hover{background:var(--surface-2)}
   .toc-ch.active{background:var(--surface); box-shadow:inset 3px 0 0 var(--law)}
   .toc-suit .toc-ch.active{box-shadow:inset 3px 0 0 var(--suit)}
@@ -119,18 +127,23 @@
   .toc-terms a{display:block; text-decoration:none; color:var(--muted); padding:2px 8px; font-size:13px}
   .toc-terms a:hover{color:var(--ink)}
   .toc-terms a.dim{opacity:.35}
+  .scrim{display:none}
 
   /* ---------- toolbar ---------- */
-  .toolbar{position:sticky; top:var(--header-h); z-index:20; background:var(--bg); padding:12px 0; margin-bottom:8px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; border-bottom:1px solid var(--line)}
-  .search{position:relative; flex:1 1 260px}
-  .search input{width:100%; font:inherit; font-size:15px; padding:10px 14px 10px 38px; border-radius:10px; border:1px solid var(--line); background:var(--surface); color:var(--ink)}
+  .toolbar{position:sticky; top:var(--header-h); z-index:20; background:var(--bg); padding:12px 0; margin-bottom:8px; display:flex; gap:10px; align-items:center; border-bottom:1px solid var(--line)}
+  .search{position:relative; flex:1 1 auto; min-width:0}
+  .search input{width:100%; font-size:16px; height:44px; padding:0 38px 0 38px; border-radius:11px; border:1px solid var(--line); background:var(--surface); -webkit-appearance:none; appearance:none}
+  .search input::-webkit-search-cancel-button{display:none}
   .search input:focus{outline:2px solid var(--law); outline-offset:-1px}
-  .search svg{position:absolute; left:12px; top:50%; transform:translateY(-50%); color:var(--muted)}
-  .seg{display:inline-flex; background:var(--surface-2); border-radius:10px; padding:3px}
-  .seg button{font:inherit; font-size:13.5px; font-weight:700; border:0; background:transparent; color:var(--muted); padding:7px 12px; border-radius:8px; cursor:pointer}
+  .search svg{position:absolute; left:12px; top:50%; transform:translateY(-50%); color:var(--muted); pointer-events:none}
+  .clear{position:absolute; right:4px; top:50%; transform:translateY(-50%); width:36px; height:36px; border:0; background:transparent; color:var(--muted); font-size:18px; cursor:pointer; display:none; border-radius:8px}
+  .search.has-q .clear{display:block}
+  .seg{display:inline-flex; flex:none; background:var(--surface-2); border-radius:11px; padding:3px}
+  .seg button{font-size:13.5px; font-weight:700; border:0; background:transparent; color:var(--muted); height:38px; padding:0 12px; border-radius:9px; cursor:pointer; white-space:nowrap}
   .seg button[aria-pressed="true"]{background:var(--surface); color:var(--ink); box-shadow:var(--shadow)}
-  .count{font-size:13px; color:var(--muted); margin-left:auto}
-  .jump{display:none; font:inherit; font-size:14px; padding:9px 10px; border-radius:10px; border:1px solid var(--line); background:var(--surface); color:var(--ink); flex:1 1 100%}
+  .freq-sel{display:none; flex:none; height:44px; font-size:15px; font-weight:700; padding:0 10px; border-radius:11px; border:1px solid var(--line); background:var(--surface)}
+  .expand-btn{display:none; flex:none; height:44px; padding:0 12px; border-radius:11px; border:1px solid var(--line); background:var(--surface); font-size:14px; font-weight:700; cursor:pointer; white-space:nowrap}
+  .count{flex:none; font-size:13px; color:var(--muted)}
 
   /* ---------- part / chapter ---------- */
   .part{margin-bottom:36px}
@@ -157,8 +170,10 @@
   .card-h h4{margin:0; font-size:19px; letter-spacing:-.4px; color:var(--accent); line-height:1.35}
   .card-h h4 small{font-size:14px; color:var(--muted); font-weight:600}
   .card-law{display:inline-block; margin-top:4px; font-size:12.5px; color:var(--muted); background:var(--surface-2); padding:1px 8px; border-radius:6px}
+  .card-side{display:flex; align-items:center; gap:10px; flex:none}
   .stars{font-size:15px; letter-spacing:1px; white-space:nowrap; color:var(--star)}
-  .card-b{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); gap:0; border-top:1px solid var(--line)}
+  .chev{display:none; width:10px; height:10px; border-right:2px solid var(--muted); border-bottom:2px solid var(--muted); transform:rotate(45deg); margin:0 4px 4px; transition:transform .2s}
+  .card-b{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); border-top:1px solid var(--line)}
   .card-b > div{padding:14px 18px 16px; font-size:14.5px}
   .col-def{border-right:1px solid var(--line)}
   .lbl{font-size:12px; font-weight:800; letter-spacing:.5px; color:var(--accent); margin-bottom:6px}
@@ -170,14 +185,14 @@
   .col-case li::marker{color:var(--accent)}
   .hl{background:linear-gradient(transparent 58%, var(--hl) 58%); font-weight:700}
   .o{color:var(--o); font-weight:800} .x{color:var(--x); font-weight:800}
-  sup.fn a{color:var(--accent); text-decoration:none; font-weight:800; font-size:11px; margin-left:1px}
+  sup.fn a{display:inline-block; color:var(--accent); text-decoration:none; font-weight:800; font-size:11px; padding:0 3px}
   details.more{border-top:1px dashed var(--line); background:var(--surface-2)}
-  details.more summary{cursor:pointer; padding:10px 18px; font-size:14px; font-weight:700; list-style:none; display:flex; align-items:center; gap:8px}
+  details.more summary{cursor:pointer; min-height:46px; padding:10px 18px; font-size:14px; font-weight:700; list-style:none; display:flex; align-items:center; gap:8px}
   details.more summary::-webkit-details-marker{display:none}
   details.more summary::after{content:"＋"; margin-left:auto; color:var(--muted)}
   details.more[open] summary::after{content:"－"}
-  .more-tag{font-size:11.5px; font-weight:800; color:var(--accent); border:1px solid var(--accent); border-radius:4px; padding:0 5px}
-  details.more p{margin:0; padding:0 18px 14px; font-size:14px; color:var(--ink)}
+  .more-tag{flex:none; font-size:11.5px; font-weight:800; color:var(--accent); border:1px solid var(--accent); border-radius:4px; padding:0 5px}
+  details.more p{margin:0; padding:0 18px 14px; font-size:14px}
   .empty{display:none; text-align:center; color:var(--muted); padding:60px 0; font-size:15px}
 
   /* ---------- final ---------- */
@@ -186,48 +201,170 @@
   .final-banner h2{margin:0 0 4px; font-size:26px; letter-spacing:-.7px}
   .final-banner > p{margin:0 0 6px; color:var(--muted)}
   .final h3.sub{font-size:17px; margin:22px 0 8px}
-  .scroll{overflow-x:auto}
+  .scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
   table.mx{width:100%; border-collapse:collapse; font-size:14px; line-height:1.5}
   table.mx th, table.mx td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top}
   table.mx thead th{background:var(--ink); color:var(--bg)}
   table.mx tbody th{background:var(--surface-2); white-space:nowrap}
   table.mx td.c{text-align:center}
+  .swipe-hint{display:none; font-size:12.5px; color:var(--muted); margin:0 0 6px}
 
-  /* ---------- footer ---------- */
+  /* ---------- footer / floating ---------- */
   .site-f{border-top:1px solid var(--line); background:var(--surface)}
   .site-f .wrap{padding-top:26px; padding-bottom:36px; font-size:13px; color:var(--muted)}
   .site-f p{margin:0 0 6px}
-  .totop{position:fixed; right:20px; bottom:20px; z-index:25; opacity:0; pointer-events:none; transition:opacity .2s}
+  .totop{position:fixed; right:20px; bottom:calc(20px + var(--bnav-h) + var(--safe-b)); z-index:25; opacity:0; pointer-events:none; transition:opacity .2s; box-shadow:var(--shadow)}
   .totop.show{opacity:1; pointer-events:auto}
+  .bnav{display:none}
 
-  /* ---------- responsive ---------- */
+  /* ================= 태블릿 (≤1000px) ================= */
   @media (max-width: 1000px){
+    :root{--bnav-h:62px}
+    body{padding-bottom:calc(var(--bnav-h) + var(--safe-b))}
     .layout{grid-template-columns:minmax(0,1fr)}
-    .toc{display:none}
-    .jump{display:block}
     .info-grid{grid-template-columns:1fr}
-  }
-  @media (max-width: 760px){
-    .wrap{padding:0 16px}
     .site-nav{display:none}
-    .hero .wrap{padding-top:36px; padding-bottom:34px}
-    .hero p.sub{font-size:15.5px}
-    .stats{grid-template-columns:repeat(2, minmax(0,1fr))}
-    .steps{grid-template-columns:1fr}
+
+    /* 하단 탭 바 */
+    .bnav{display:grid; grid-template-columns:repeat(5, 1fr); position:fixed; left:0; right:0; bottom:0; z-index:32;
+      height:calc(var(--bnav-h) + var(--safe-b)); padding-bottom:var(--safe-b);
+      background:color-mix(in srgb, var(--surface) 94%, transparent); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-top:1px solid var(--line)}
+    .bnav a, .bnav button{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; border:0; background:none; text-decoration:none;
+      font-size:11.5px; font-weight:700; color:var(--muted); cursor:pointer; padding:0}
+    .bnav svg{width:22px; height:22px}
+    .bnav .on{color:var(--ink)}
+    .bnav .on.law{color:var(--law)} .bnav .on.suit{color:var(--suit)}
+
+    /* 목차 → 바텀시트 */
+    .toc{position:fixed; top:auto; left:0; right:0; bottom:0; z-index:41; max-height:78vh; max-height:78dvh; padding:0 16px calc(16px + var(--safe-b));
+      background:var(--surface); border-radius:18px 18px 0 0; box-shadow:0 -8px 30px rgba(0,0,0,.18); overscroll-behavior:contain;
+      transform:translateY(105%); transition:transform .25s ease; visibility:hidden; font-size:15px}
+    .toc.open{transform:none; visibility:visible}
+    .toc-head{display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; background:var(--surface); padding:14px 0 10px; margin-bottom:6px; border-bottom:1px solid var(--line); z-index:1}
+    .toc-head b{font-size:17px}
+    .toc-head::before{content:""; position:absolute; top:6px; left:50%; width:38px; height:4px; margin-left:-19px; border-radius:4px; background:var(--line)}
+    .toc-ptitle{padding:10px 8px; font-size:15.5px}
+    .toc-ch{padding:10px 8px; font-size:15px}
+    .toc-terms, .toc-ch.active + .toc-terms{display:grid; grid-template-columns:1fr 1fr; gap:0 6px; padding:0 0 6px 10px}
+    .toc-terms a{padding:8px 8px; font-size:14px}
+    .scrim{display:block; position:fixed; inset:0; z-index:40; background:var(--scrim); opacity:0; pointer-events:none; transition:opacity .25s}
+    .scrim.open{opacity:1; pointer-events:auto}
+    body.lock{overflow:hidden}
+  }
+
+  /* ================= 휴대폰 (≤760px) ================= */
+  @media (max-width: 760px){
+    :root{--header-h:54px; --toolbar-h:64px}
+    .wrap{padding:0 16px}
+    .brand{font-size:15.5px}
+    .brand-mark{width:30px; height:30px}
+
+    .hero .wrap{padding-top:28px; padding-bottom:28px}
+    .eyebrow{font-size:12px}
+    .hero h1{margin:12px 0 10px}
+    .hero p.sub{font-size:15.5px; margin-bottom:18px}
+    .cta{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:20px}
+    .cta .primary{grid-column:1 / -1}
+    .btn{font-size:14.5px; padding:10px 12px}
+    .stats{grid-template-columns:repeat(4, minmax(0,1fr)); gap:6px}
+    .stat{padding:10px 6px; text-align:center; border-radius:10px}
+    .stat b{font-size:18px}
+    .stat span{font-size:11.5px; line-height:1.3; display:block}
+    .kw-box{margin-top:20px}
+    .kws{flex-wrap:nowrap; overflow-x:auto; margin:0 -16px; padding:0 16px 4px; scrollbar-width:none; -webkit-overflow-scrolling:touch;
+      -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 24px), transparent 100%);
+              mask-image:linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 24px), transparent 100%)}
+    .kws::-webkit-scrollbar{display:none}
+
+    .guide{padding:28px 0 4px}
+    .sec-title{font-size:20px}
+    .sec-desc{font-size:14.5px; margin-bottom:12px}
+    .steps{grid-template-columns:1fr; gap:0; background:var(--surface); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); overflow:hidden}
+    .step{display:grid; grid-template-columns:28px 1fr; gap:0 12px; border:0; border-radius:0; box-shadow:none; padding:12px 14px; border-bottom:1px solid var(--line)}
+    .step:last-child{border-bottom:0}
+    .step .num{grid-row:span 2; margin:0}
+    .step h3{font-size:15px; margin:0}
+    .step p{font-size:13.5px}
+    .info-grid{gap:10px; margin-top:10px}
+    details.info summary{padding:14px 16px; font-size:15.5px; min-height:52px}
+    details.info .info-b{padding:0 16px 16px}
+    dl.dict{font-size:14px; gap:8px 12px}
+    .legend-line{font-size:12.5px; line-height:1.8}
+
+    .layout{padding-top:14px; padding-bottom:30px}
+    .toolbar{padding:10px 0; gap:8px; margin:0 -16px 6px; padding-left:16px; padding-right:16px}
+    .seg{display:none}
+    .freq-sel{display:block}
+    .expand-btn{display:block}
+    .count{display:none}
+
+    .part{margin-bottom:24px}
+    .part-banner{padding:18px 16px; border-radius:14px; margin-top:12px}
+    .part-banner h2{font-size:24px}
+    .part-banner p{font-size:14.5px}
+    .part-count{position:static; display:inline-block; margin-top:8px}
+    .chapter{padding-top:18px}
+    .chapter-h h3{font-size:18.5px}
+    .chapter-sub{font-size:13.5px}
+    .chapter-lead{font-size:14px; margin-bottom:10px}
+    .cards{gap:10px}
+
+    /* 카드: 접고 펴는 아코디언 */
+    .card{border-radius:13px}
+    .card-h{padding:14px 14px 12px; cursor:pointer; -webkit-user-select:none; user-select:none}
+    .card-h h4{font-size:17.5px}
+    .card-h h4 small{font-size:13px; display:block; margin-top:1px}
+    .card-law{font-size:12px}
+    .stars{font-size:13px}
+    .chev{display:block}
+    .card:not(.collapsed) .chev{transform:rotate(-135deg); margin-bottom:0; margin-top:4px}
     .card-b{grid-template-columns:minmax(0,1fr)}
+    .card-b > div{padding:12px 14px 14px; font-size:15px; line-height:1.68}
     .col-def{border-right:0; border-bottom:1px solid var(--line)}
-    .card-h{padding:14px 16px 8px}
-    .card-b > div{padding:12px 16px 14px}
-    .part-count{position:static; display:block; margin-top:8px}
-    .count{margin-left:0}
-    .toolbar{position:static}
-    [id]{scroll-margin-top:calc(var(--header-h) + 12px)}
+    .ex{font-size:14.5px}
+    .col-case ul{padding-left:17px}
+    .col-case li{margin-bottom:8px}
+    details.more summary{padding:10px 14px}
+    details.more p{padding:0 14px 14px; font-size:14.5px; line-height:1.68}
+    /* 접힌 상태: 정의 첫 문단만 미리보기 */
+    .card.collapsed .card-b{border-top:0}
+    .card.collapsed .col-def{border-bottom:0; padding-top:0}
+    .card.collapsed .col-def .lbl, .card.collapsed .ex, .card.collapsed .col-case, .card.collapsed details.more{display:none}
+    .card.collapsed .def{margin:0; color:var(--muted); font-size:14px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
+
+    /* 암기표 */
+    .final-banner{padding:18px 14px; border-radius:14px}
+    .final-banner h2{font-size:22px}
+    .final h3.sub{font-size:16px}
+    .swipe-hint{display:block}
+    table.mx{font-size:13.5px}
+    table.mx.matrix th, table.mx.matrix td{padding:7px 8px}
+    table.mx.matrix tbody th{position:sticky; left:0; z-index:1}
+    table.mx.matrix thead th:first-child{position:sticky; left:0; z-index:2}
+    table.mx.stack, table.mx.stack tbody, table.mx.stack tr, table.mx.stack th, table.mx.stack td{display:block; width:100%}
+    table.mx.stack thead{display:none}
+    table.mx.stack tr{border:1px solid var(--line); border-radius:10px; overflow:hidden; margin-bottom:8px}
+    table.mx.stack th, table.mx.stack td{border:0}
+    table.mx.stack tbody th{white-space:normal; font-size:14px}
+    table.mx.stack td{border-top:1px solid var(--line); position:relative; padding-left:62px}
+    table.mx.stack td::before{content:attr(data-label); position:absolute; left:10px; top:9px; font-size:12px; font-weight:800; color:var(--muted)}
+    table.mx.stack td[data-label=""]{padding-left:10px}
+    table.mx.stack td[data-label=""]::before{display:none}
+
+    .site-f .wrap{padding-top:20px; padding-bottom:24px; font-size:12.5px}
+    .totop{right:14px; width:44px; height:44px}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .toc, .scrim, .chev, .totop{transition:none}
   }
   @media print{
-    .site-h, .toolbar, .toc, .totop, .hero .cta{display:none}
+    .site-h, .toolbar, .toc, .totop, .hero .cta, .bnav, .scrim{display:none !important}
+    body{padding:0}
     .layout{display:block}
     .card{break-inside:avoid; box-shadow:none}
-    details.more p{display:block}
+    .card.collapsed .card-b > *, .card.collapsed details.more{display:block !important}
   }
 </style>
 </head>
@@ -254,16 +391,16 @@
     <div class="cta">
       <a class="btn primary" href="#law">용어 공부 시작하기 →</a>
       <a class="btn" href="#final">시험 직전 암기표</a>
-      <a class="btn" href="print.html">A4 인쇄본 보기</a>
+      <a class="btn" href="print.html">A4 인쇄본</a>
     </div>
     <div class="stats">
       <div class="stat"><b>48</b><span>빈출 용어</span></div>
       <div class="stat"><b>25</b><span>★★★ 최빈출</span></div>
-      <div class="stat"><b>16</b><span>추가 설명 주석</span></div>
-      <div class="stat"><b>2021–26</b><span>기출 경향 반영</span></div>
+      <div class="stat"><b>16</b><span>추가 주석</span></div>
+      <div class="stat"><b>5개년</b><span>2021–26 기출</span></div>
     </div>
     <div class="kw-box">
-      <h2>5개년 최다 빈출 키워드 — 눌러서 바로 보기</h2>
+      <h2>최다 빈출 키워드 — 눌러서 바로 보기</h2>
       <div class="kws"><a class="kw kw-suit" href="#t33">처분성</a><a class="kw kw-suit" href="#t34">원고적격</a><a class="kw kw-suit" href="#t35">협의의 소의 이익</a><a class="kw kw-law" href="#t4">신뢰보호의 원칙</a><a class="kw kw-law" href="#t3">비례의 원칙</a><a class="kw kw-law" href="#t9">부관</a><a class="kw kw-law" href="#t13">공정력</a><a class="kw kw-law" href="#t16">하자의 승계</a><a class="kw kw-law" href="#t17">직권취소</a><a class="kw kw-suit" href="#t39">집행정지</a><a class="kw kw-suit" href="#t45">기속력</a><a class="kw kw-law" href="#t26">이의신청</a></div>
     </div>
   </div>
@@ -272,41 +409,46 @@
 <section class="guide">
   <div class="wrap">
     <h2 class="sec-title">이렇게 공부하세요</h2>
-    <p class="sec-desc">각 용어 카드는 세 부분으로 되어 있어요. 위에서 아래로, 왼쪽에서 오른쪽으로 읽으면 됩니다.</p>
+    <p class="sec-desc">용어 카드는 세 부분으로 되어 있어요. 휴대폰에서는 카드를 눌러 펼쳐 보세요.</p>
     <div class="steps">
       <div class="step"><span class="num">1</span><h3>개념</h3><p>용어 이름, 근거 조문, 출제 빈도(★)를 먼저 확인해요.</p></div>
       <div class="step"><span class="num">2</span><h3>정의</h3><p>쉬운 말 풀이와 <span class="tag">예시</span>학교 비유로 뜻을 이해해요.</p></div>
-      <div class="step"><span class="num">3</span><h3>빈출사례</h3><p>시험 지문에 반복해서 나온 판례·조문 포인트를 외워요. 더 필요한 내용은 카드 아래 <b>주석</b>을 열어 보세요.</p></div>
+      <div class="step"><span class="num">3</span><h3>빈출사례</h3><p>시험에 반복해 나온 판례·조문을 외워요. 더 필요한 내용은 카드 아래 <b>주석</b>을 열어 보세요.</p></div>
     </div>
     <div class="info-grid">
-      <div class="info">
-        <h3>학교로 바꿔 생각하기</h3>
-        <dl class="dict">
-          <dt>행정청</dt><dd>선생님·학교 (결정을 내리는 쪽)</dd>
-          <dt>국민</dt><dd>학생 (결정을 받는 쪽)</dd>
-          <dt>법률</dt><dd>교칙</dd>
-          <dt>처분</dt><dd>벌점·정학·상장처럼 한 명에게 내리는 구체적 결정</dd>
-          <dt>법원</dt><dd>학교 밖의 공정한 심판</dd>
-        </dl>
-      </div>
-      <div class="info">
-        <h3>시험 전에 꼭 아는 기초 단어</h3>
-        <dl class="dict">
-          <dt>하자</dt><dd>처분에 있는 잘못·흠. 심하면 '무효', 덜 심하면 '취소'할 수 있음</dd>
-          <dt>기속 / 재량</dt><dd>기속 = 법에 묶여 정답이 하나 / 재량 = 여러 선택지 중 고를 수 있음</dd>
-          <dt>침익적 / 수익적</dt><dd>국민에게 불리한 처분(영업정지) / 유리한 처분(허가)</dd>
-          <dt>각하·기각·인용</dt><dd>조건 미달로 돌려보냄 / 심사 결과 원고 패소 / 원고 승소</dd>
-          <dt>재결</dt><dd>행정심판(행정기관이 하는 심판)의 결론</dd>
-          <dt>판례·전합</dt><dd>대법원 판결 / 대법관 전원이 모인 전원합의체 판결</dd>
-        </dl>
-      </div>
+      <details class="info" open>
+        <summary>학교로 바꿔 생각하기</summary>
+        <div class="info-b">
+          <dl class="dict">
+            <dt>행정청</dt><dd>선생님·학교 (결정을 내리는 쪽)</dd>
+            <dt>국민</dt><dd>학생 (결정을 받는 쪽)</dd>
+            <dt>법률</dt><dd>교칙</dd>
+            <dt>처분</dt><dd>벌점·정학·상장처럼 한 명에게 내리는 구체적 결정</dd>
+            <dt>법원</dt><dd>학교 밖의 공정한 심판</dd>
+          </dl>
+        </div>
+      </details>
+      <details class="info" open>
+        <summary>시험 전에 꼭 아는 기초 단어</summary>
+        <div class="info-b">
+          <dl class="dict">
+            <dt>하자</dt><dd>처분에 있는 잘못·흠. 심하면 '무효', 덜 심하면 '취소'할 수 있음</dd>
+            <dt>기속 / 재량</dt><dd>기속 = 법에 묶여 정답이 하나 / 재량 = 여러 선택지 중 고를 수 있음</dd>
+            <dt>침익적 / 수익적</dt><dd>국민에게 불리한 처분(영업정지) / 유리한 처분(허가)</dd>
+            <dt>각하·기각·인용</dt><dd>조건 미달로 돌려보냄 / 심사 결과 원고 패소 / 원고 승소</dd>
+            <dt>재결</dt><dd>행정심판(행정기관이 하는 심판)의 결론</dd>
+            <dt>판례·전합</dt><dd>대법원 판결 / 대법관 전원이 모인 전원합의체 판결</dd>
+          </dl>
+        </div>
+      </details>
     </div>
-    <p class="legend-line">빈도 <span class="stars">★★★</span> 거의 매년 · <span class="stars">★★☆</span> 자주 · <span class="stars">★☆☆</span> 신설·간헐 출제 &nbsp;|&nbsp; <span class="o">O</span> 인정 · <span class="x">X</span> 불인정 · <span class="hl">노란 밑줄</span> 시험 함정</p>
+    <p class="legend-line">빈도 <span class="stars">★★★</span> 거의 매년 · <span class="stars">★★☆</span> 자주 · <span class="stars">★☆☆</span> 신설·간헐 &nbsp;|&nbsp; <span class="o">O</span> 인정 · <span class="x">X</span> 불인정 · <span class="hl">노란 밑줄</span> 시험 함정</p>
   </div>
 </section>
 
 <div class="wrap layout">
-  <aside class="toc" aria-label="목차">
+  <aside class="toc" id="toc" aria-label="목차">
+    <div class="toc-head"><b>목차</b><button class="icon-btn" type="button" id="tocClose" aria-label="목차 닫기">✕</button></div>
     <div class="toc-part toc-law">
   <a class="toc-ptitle" href="#law">PART Ⅰ 행정기본법</a>
   <a class="toc-ch" href="#law-1">1. 행정법의 일반원칙</a>
@@ -332,20 +474,28 @@
   <div class="toc-terms"><a href="#t44" data-f="3">사정판결</a><a href="#t45" data-f="3">기속력</a><a href="#t46" data-f="2">기판력</a><a href="#t47" data-f="2">형성력·제3자효</a><a href="#t48" data-f="2">간접강제</a></div>
 </div><div class="toc-part"><a class="toc-ptitle" href="#final">시험 직전 암기표</a></div>
   </aside>
+  <div class="scrim" id="scrim"></div>
 
   <main>
     <div class="toolbar">
-      <label class="search">
+      <div class="search" id="searchBox">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input id="q" type="search" placeholder="용어·판례 검색 (예: 집행정지, 90일, 기부채납)" aria-label="용어 검색">
-      </label>
+        <input id="q" type="search" enterkeyhint="search" autocomplete="off" placeholder="용어·판례 검색" aria-label="용어 검색">
+        <button class="clear" id="clearQ" type="button" aria-label="검색어 지우기">✕</button>
+      </div>
       <div class="seg" role="group" aria-label="출제 빈도 필터">
         <button type="button" data-min="1" aria-pressed="true">전체</button>
         <button type="button" data-min="2" aria-pressed="false">★★ 이상</button>
         <button type="button" data-min="3" aria-pressed="false">★★★만</button>
       </div>
-      <span class="count" id="count"></span>
-      <select class="jump" id="jump" aria-label="단원 바로가기"><option value="">바로가기…</option><optgroup label="PART Ⅰ 행정기본법"><option value="law-1">1. 행정법의 일반원칙</option><option value="law-2">2. 처분(행정행위)의 종류와 모습</option><option value="law-3">3. 처분의 효력·하자·취소와 철회</option><option value="law-4">4. 행정입법·제재·행정상 강제</option><option value="law-5">5. 처분에 대한 불복</option></optgroup><optgroup label="PART Ⅱ 행정소송법"><option value="suit-1">1. 행정소송의 종류</option><option value="suit-2">2. 소송요건</option><option value="suit-3">3. 심리와 임시구제</option><option value="suit-4">4. 판결과 그 효력</option></optgroup><option value="final">시험 직전 암기표</option></select>
+      <label class="sr" for="freqSel">출제 빈도</label>
+      <select class="freq-sel" id="freqSel">
+        <option value="1">전체</option>
+        <option value="2">★★+</option>
+        <option value="3">★★★</option>
+      </select>
+      <button class="expand-btn" id="expandBtn" type="button" aria-pressed="false">펼치기</button>
+      <span class="count" id="count" aria-live="polite"></span>
     </div>
 
     <section class="part part-law" id="law">
@@ -362,7 +512,7 @@
 <article class="card" id="t1" data-f="3">
   <header class="card-h">
     <div><h4>법치행정의 원칙 <small>(법률우위·법률유보)</small></h4><span class="card-law">행정기본법 §8</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">행정은 ① 법을 어기면 안 되고(<b>법률우위</b>) ② 국민의 권리를 줄이거나 의무를 지우는 중요한 일은 반드시 <b>법률에 근거</b>가 있어야 한다(<b>법률유보</b>).</p>
@@ -378,7 +528,7 @@
 <article class="card" id="t2" data-f="2">
   <header class="card-h">
     <div><h4>평등의 원칙· 행정의 자기구속</h4><span class="card-law">행정기본법 §9</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">같은 것은 같게, 다른 것은 다르게. 합리적 이유 없이 차별하면 안 된다. 같은 일을 계속 같은 방식으로 처리해 왔다면(관행) 특정인에게만 다르게 하면 안 된다(<b>자기구속</b>).</p>
@@ -394,7 +544,7 @@
 <article class="card" id="t3" data-f="3">
   <header class="card-h">
     <div><h4>비례의 원칙 <small>(과잉금지)</small></h4><span class="card-law">행정기본법 §10</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">목적을 이루는 수단은 ① 효과가 있고(<b>적합성</b>) ② 가장 덜 아픈 방법이며(<b>필요성</b>·최소침해) ③ 얻는 이익이 잃는 이익보다 커야 한다(<b>상당성</b>·법익균형).</p>
@@ -410,7 +560,7 @@
 <article class="card" id="t4" data-f="3">
   <header class="card-h">
     <div><h4>신뢰보호의 원칙</h4><span class="card-law">행정기본법 §12</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">행정청이 한 말·행동을 국민이 믿고 행동했다면, 그 믿음은 보호받아야 한다.</p>
@@ -427,7 +577,7 @@
 <article class="card" id="t5" data-f="2">
   <header class="card-h">
     <div><h4>부당결부금지의 원칙</h4><span class="card-law">행정기본법 §13</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">처분을 하면서 그 처분과 <b>실질적 관련이 없는</b> 의무를 끼워 넣으면 안 된다.</p>
@@ -443,7 +593,7 @@
 <article class="card" id="t6" data-f="2">
   <header class="card-h">
     <div><h4>법 적용의 기준 <small>(소급적용 금지)</small></h4><span class="card-law">행정기본법 §14</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">새 법은 원칙적으로 이미 끝난 일에 거슬러 올라가 적용하지 않는다. 어느 시점의 법을 쓸지 정한 규칙.</p>
@@ -465,7 +615,7 @@
 <article class="card" id="t7" data-f="3">
   <header class="card-h">
     <div><h4>기속행위· 재량행위</h4><span class="card-law">행정기본법 §21 (재량행사의 기준)</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def"><b>기속행위</b> = 요건만 갖추면 반드시 그 처분을 해야 함(정답 1개). <b>재량행위</b> = 행정청이 여러 선택지 중 고를 수 있음.</p>
@@ -482,7 +632,7 @@
 <article class="card" id="t8" data-f="3">
   <header class="card-h">
     <div><h4>허가·특허·인가</h4><span class="card-law">행정행위 일반이론</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def"><b>허가</b> = 원래 자유인데 위험해서 잠시 막아뒀던 것을 풀어줌. <b>특허</b> = 원래 없던 <b>새 권리</b>를 특정인에게 만들어 줌. <b>인가</b> = 남들끼리 한 법률행위에 도장을 찍어 <b>효력을 완성</b>시켜 줌.</p>
@@ -499,7 +649,7 @@
 <article class="card" id="t9" data-f="3">
   <header class="card-h">
     <div><h4>부관</h4><span class="card-law">행정기본법 §17</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">처분의 효과를 제한·보충하려고 처분에 덧붙이는 '단서 조항'. 조건, 기한, 부담, 철회권 유보 등.</p>
@@ -517,7 +667,7 @@
 <article class="card" id="t10" data-f="2">
   <header class="card-h">
     <div><h4>수리를 요하는 신고</h4><span class="card-law">행정기본법 §34</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def"><b>자기완결적 신고</b> = 신고서가 도착하면 끝(그냥 알림). <b>수리를 요하는 신고</b> = 행정청이 받아들여야(수리) 효력이 생김.</p>
@@ -534,7 +684,7 @@
 <article class="card" id="t11" data-f="2">
   <header class="card-h">
     <div><h4>인허가의제</h4><span class="card-law">행정기본법 §24~§26</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">주된 인허가 하나만 받으면, 법률이 정한 다른 관련 인허가도 받은 것으로 <b>간주</b>해 주는 원스톱 제도.</p>
@@ -551,7 +701,7 @@
 <article class="card" id="t12" data-f="1">
   <header class="card-h">
     <div><h4>자동적 처분</h4><span class="card-law">행정기본법 §20</span></div>
-    <span class="stars s1" title="출제 빈도">★☆☆</span>
+    <span class="card-side"><span class="stars s1" title="출제 빈도" aria-label="출제 빈도 1단계">★☆☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">AI 같은 완전 자동화 시스템이 사람 대신 처분하는 것. 단, 재량이 있는 처분은 자동으로 못 한다.</p>
@@ -573,7 +723,7 @@
 <article class="card" id="t13" data-f="3">
   <header class="card-h">
     <div><h4>공정력</h4><span class="card-law">행정기본법 §15 (처분의 효력)</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">처분에 잘못이 있어도 '무효'만큼 심각하지 않으면, 권한 있는 기관이 취소하기 전까지는 <b>일단 유효한 것으로 통한다</b>.</p>
@@ -589,7 +739,7 @@
 <article class="card" id="t14" data-f="2">
   <header class="card-h">
     <div><h4>존속력 <small>(불가쟁력·불가변력)</small></h4><span class="card-law">행정행위 일반이론</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def"><b>불가쟁력</b> = 다툴 기간이 지나서 국민이 더 이상 소송으로 못 다툼. <b>불가변력</b> = 행정청 스스로도 함부로 바꿀 수 없는 힘(재판 같은 결정).</p>
@@ -606,7 +756,7 @@
 <article class="card" id="t15" data-f="3">
   <header class="card-h">
     <div><h4>무효와 취소 <small>(중대명백설)</small></h4><span class="card-law">행정행위의 하자</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">처분의 잘못이 <b>중대하고 동시에 명백</b>하면 무효(처음부터 효력 없음). 그 정도가 아니면 취소할 수 있는 처분(취소 전까지 유효).</p>
@@ -623,7 +773,7 @@
 <article class="card" id="t16" data-f="3">
   <header class="card-h">
     <div><h4>하자의 승계</h4><span class="card-law">행정행위의 하자</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">앞 처분의 잘못을 이유로 뒤 처분이 위법하다고 다툴 수 있는가? 둘이 <b>하나의 목적</b>을 위한 연속 절차면 <span class="o">O</span>, <b>서로 다른 목적</b>이면 <span class="x">X</span>.</p>
@@ -639,7 +789,7 @@
 <article class="card" id="t17" data-f="3">
   <header class="card-h">
     <div><h4>직권취소</h4><span class="card-law">행정기본법 §18</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">처음부터 위법·부당했던 처분을 행정청이 <b>스스로</b> 없애는 것. 원칙은 처음으로 거슬러 올라가(<b>소급</b>) 없앤다.</p>
@@ -656,7 +806,7 @@
 <article class="card" id="t18" data-f="3">
   <header class="card-h">
     <div><h4>철회</h4><span class="card-law">행정기본법 §19</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">처음엔 <b>적법</b>했지만, 나중에 사정이 바뀌어 처분을 <b>앞으로</b> 효력 없게 하는 것.<sup class="fn"><a href="#n9" data-note="9">9</a></sup></p>
@@ -679,7 +829,7 @@
 <article class="card" id="t19" data-f="3">
   <header class="card-h">
     <div><h4>법규명령· 행정규칙</h4><span class="card-law">헌법 §75·§95, 행정기본법 §38~</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def"><b>법규명령</b> = 법률이 맡긴 내용을 행정부가 정한 규칙으로 국민·법원까지 구속(대통령령·총리령·부령). <b>행정규칙</b> = 행정 내부에서만 쓰는 업무 지침(훈령·예규·고시) → 원칙적으로 국민 구속 <span class="x">X</span>.</p>
@@ -696,7 +846,7 @@
 <article class="card" id="t20" data-f="1">
   <header class="card-h">
     <div><h4>공법상 계약</h4><span class="card-law">행정기본법 §27</span></div>
-    <span class="stars s1" title="출제 빈도">★☆☆</span>
+    <span class="card-side"><span class="stars s1" title="출제 빈도" aria-label="출제 빈도 1단계">★☆☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">행정청과 국민이 <b>서로 합의</b>해서 공법상 법률관계를 만드는 계약. 일방적으로 명령하는 '처분'과 다르다.</p>
@@ -712,7 +862,7 @@
 <article class="card" id="t21" data-f="1">
   <header class="card-h">
     <div><h4>과징금</h4><span class="card-law">행정기본법 §28·§29</span></div>
-    <span class="stars s1" title="출제 빈도">★☆☆</span>
+    <span class="card-side"><span class="stars s1" title="출제 빈도" aria-label="출제 빈도 1단계">★☆☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">법을 어긴 사업자에게 <b>돈</b>으로 내리는 제재. 영업정지를 하면 이용자가 불편할 때 대신 부과하는 경우가 많다.</p>
@@ -729,7 +879,7 @@
 <article class="card" id="t22" data-f="2">
   <header class="card-h">
     <div><h4>제재처분의 제척기간</h4><span class="card-law">행정기본법 §23</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">법 위반 후 <b>5년</b>이 지나면 영업정지·취소 같은 제재처분을 할 수 없게 하는 기간.</p>
@@ -746,7 +896,7 @@
 <article class="card" id="t23" data-f="3">
   <header class="card-h">
     <div><h4>행정대집행</h4><span class="card-law">행정기본법 §30①1, 행정대집행법</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">의무자가 <b>남이 대신 할 수 있는 일</b>(대체적 작위의무)<sup class="fn"><a href="#n11" data-note="11">11</a></sup>을 안 하면, 행정청이 대신 하고 그 <b>비용</b>을 의무자에게 받는 것.</p>
@@ -763,7 +913,7 @@
 <article class="card" id="t24" data-f="3">
   <header class="card-h">
     <div><h4>이행강제금</h4><span class="card-law">행정기본법 §30①2·§31</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">의무를 안 지키면 <b>이행할 때까지</b> 돈을 반복해서 부과해 압박하는 수단. 과거 위반에 대한 벌이 아니라 앞으로 지키게 하는 게 목적.</p>
@@ -781,7 +931,7 @@
 <article class="card" id="t25" data-f="2">
   <header class="card-h">
     <div><h4>직접강제·강제징수· 즉시강제</h4><span class="card-law">행정기본법 §30①3~5·§32·§33</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def"><b>직접강제</b> = 의무 불이행 시 신체·재산에 직접 힘을 써 이행된 상태를 만듦. <b>강제징수</b> = 돈을 안 내면 재산을 압류·매각해 받음. <b>즉시강제</b> = 의무를 명할 시간도 없이 <b>급박할 때</b> 바로 힘을 씀.</p>
@@ -804,7 +954,7 @@
 <article class="card" id="t26" data-f="3">
   <header class="card-h">
     <div><h4>이의신청</h4><span class="card-law">행정기본법 §36</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">처분이 억울할 때, 그 처분을 한 <b>바로 그 행정청</b>에 다시 생각해 달라고 요청하는 것.<sup class="fn"><a href="#n12" data-note="12">12</a></sup></p>
@@ -823,7 +973,7 @@
 <article class="card" id="t27" data-f="2">
   <header class="card-h">
     <div><h4>처분의 재심사</h4><span class="card-law">행정기본법 §37</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">다툴 기간이 지나 확정된 처분(불가쟁력)이라도, 새로운 증거 등 특별한 사정이 생기면 처분청에 <b>다시 심사</b>해 달라고 하는 제도.</p>
@@ -856,7 +1006,7 @@
 <article class="card" id="t28" data-f="3">
   <header class="card-h">
     <div><h4>항고소송· 취소소송</h4><span class="card-law">행정소송법 §3①·§4①</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def"><b>항고소송</b> = 행정청의 처분(또는 무응답)에 불복해 다투는 소송. 그중 대표가 '위법한 처분을 없애 달라'는 <b>취소소송</b>.</p>
@@ -874,7 +1024,7 @@
 <article class="card" id="t29" data-f="2">
   <header class="card-h">
     <div><h4>무효등확인소송</h4><span class="card-law">행정소송법 §4②·§35·§38①</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">처분이 처음부터 효력이 없음(무효)이나, 처분이 존재하는지 등을 <b>확인</b>해 달라는 소송.</p>
@@ -891,7 +1041,7 @@
 <article class="card" id="t30" data-f="2">
   <header class="card-h">
     <div><h4>부작위위법확인소송</h4><span class="card-law">행정소송법 §4③·§36·§38②</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">국민이 신청했는데 행정청이 <b>아무 답도 안 하고</b> 미루는 것이 위법임을 확인해 달라는 소송.</p>
@@ -909,7 +1059,7 @@
 <article class="card" id="t31" data-f="3">
   <header class="card-h">
     <div><h4>당사자소송</h4><span class="card-law">행정소송법 §3②·§39~§44</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">처분 자체가 아니라 공법상 <b>권리·의무 관계</b>(돈, 지위 등)를 대등한 당사자끼리 다투는 소송. 피고는 행정청이 아니라 <b>국가·지자체 등 권리주체</b>.</p>
@@ -926,7 +1076,7 @@
 <article class="card" id="t32" data-f="1">
   <header class="card-h">
     <div><h4>민중소송· 기관소송</h4><span class="card-law">행정소송법 §3③④·§45</span></div>
-    <span class="stars s1" title="출제 빈도">★☆☆</span>
+    <span class="card-side"><span class="stars s1" title="출제 빈도" aria-label="출제 빈도 1단계">★☆☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def"><b>민중소송</b> = 내 이익과 직접 관계없어도 국가기관의 위법을 '시민 자격'으로 바로잡아 달라는 소송. <b>기관소송</b> = 국가·공공단체 <b>기관끼리</b>의 권한 다툼.</p>
@@ -949,7 +1099,7 @@
 <article class="card" id="t33" data-f="3">
   <header class="card-h">
     <div><h4>처분성 <small>(처분 등)</small></h4><span class="card-law">행정소송법 §2①1·§19</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">취소소송은 '처분 등'만 대상. 처분 = 행정청이 구체적 사실에 대해 법을 집행하며 하는 <b>공권력 행사·거부</b> + 이에 준하는 작용 + 행정심판 <b>재결</b>.</p>
@@ -966,7 +1116,7 @@
 <article class="card" id="t34" data-f="3">
   <header class="card-h">
     <div><h4>원고적격</h4><span class="card-law">행정소송법 §12 전문</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">소송을 걸 수 있는 '자격'. 처분의 취소를 구할 <b>법률상 이익</b>이 있는 사람만 가능(단순히 기분 나쁨·사실상 이익은 X).<sup class="fn"><a href="#n14" data-note="14">14</a></sup></p>
@@ -983,7 +1133,7 @@
 <article class="card" id="t35" data-f="3">
   <header class="card-h">
     <div><h4>협의의 소의 이익</h4><span class="card-law">행정소송법 §12 후문</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">자격(원고적격)이 있어도, 판결로 <b>실제로 얻을 이익</b>이 남아 있어야 한다. 처분 효과가 이미 사라졌으면 원칙적으로 소의 이익 X.</p>
@@ -1000,7 +1150,7 @@
 <article class="card" id="t36" data-f="3">
   <header class="card-h">
     <div><h4>피고적격</h4><span class="card-law">행정소송법 §13·§14</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">누구를 상대로 소송을 거나? 원칙: 그 처분을 <b>자기 이름으로 한 행정청</b>. 국가·지자체가 아님에 주의.<sup class="fn"><a href="#n15" data-note="15">15</a></sup></p>
@@ -1017,7 +1167,7 @@
 <article class="card" id="t37" data-f="3">
   <header class="card-h">
     <div><h4>제소기간</h4><span class="card-law">행정소송법 §20</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">소송을 낼 수 있는 <b>마감 기한</b>. 놓치면 처분이 아무리 위법해도(무효가 아니면) 다툴 수 없다.</p>
@@ -1034,7 +1184,7 @@
 <article class="card" id="t38" data-f="2">
   <header class="card-h">
     <div><h4>행정심판 전치주의</h4><span class="card-law">행정소송법 §18</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">법원에 가기 전에 행정심판을 <b>먼저 거쳐야</b> 하는가? 원칙은 선택(<b>임의적</b>), 예외적으로 필수(<b>필요적</b>).</p>
@@ -1057,7 +1207,7 @@
 <article class="card" id="t39" data-f="3">
   <header class="card-h">
     <div><h4>집행정지</h4><span class="card-law">행정소송법 §23·§24</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">소송이 끝날 때까지 처분의 효력·집행을 <b>잠시 멈추는</b> 것. 원칙은 소송을 내도 처분은 그대로 진행(<b>집행부정지</b>).<sup class="fn"><a href="#n16" data-note="16">16</a></sup></p>
@@ -1074,7 +1224,7 @@
 <article class="card" id="t40" data-f="2">
   <header class="card-h">
     <div><h4>가처분</h4><span class="card-law">민사집행법 준용 여부</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">민사소송의 '임시 조치'(임시로 지위를 정하거나 현상 유지)를 행정소송에도 쓸 수 있는지의 문제.</p>
@@ -1090,7 +1240,7 @@
 <article class="card" id="t41" data-f="2">
   <header class="card-h">
     <div><h4>처분사유의 추가·변경</h4><span class="card-law">판례 이론</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">소송 중에 행정청이 처음에 말하지 않은 <b>다른 이유</b>를 덧붙이거나 바꾸는 것. 처음 이유와 <b>기본적 사실관계가 같은</b> 범위에서만 허용.</p>
@@ -1107,7 +1257,7 @@
 <article class="card" id="t42" data-f="2">
   <header class="card-h">
     <div><h4>위법판단의 기준시</h4><span class="card-law">판례 이론</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">처분이 위법한지 판단할 때 '언제의 법과 사실'을 기준으로 하나? 판례는 <b>처분할 때</b>(처분시설).</p>
@@ -1124,7 +1274,7 @@
 <article class="card" id="t43" data-f="2">
   <header class="card-h">
     <div><h4>소의 변경· 소송참가</h4><span class="card-law">행정소송법 §21·§22·§16·§17</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def"><b>소의 변경</b> = 소송 도중 소의 종류나 대상을 바꾸는 것. <b>소송참가</b> = 판결로 영향을 받는 제3자나 다른 행정청이 소송에 끼어드는 것.</p>
@@ -1147,7 +1297,7 @@
 <article class="card" id="t44" data-f="3">
   <header class="card-h">
     <div><h4>사정판결</h4><span class="card-law">행정소송법 §28·§32</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">처분이 위법해서 원래는 취소해야 하지만, 취소하면 <b>공공복리</b>를 크게 해칠 때 법원이 원고 청구를 <b>기각</b>하는 예외 판결.</p>
@@ -1164,7 +1314,7 @@
 <article class="card" id="t45" data-f="3">
   <header class="card-h">
     <div><h4>기속력</h4><span class="card-law">행정소송법 §30</span></div>
-    <span class="stars s3" title="출제 빈도">★★★</span>
+    <span class="card-side"><span class="stars s3" title="출제 빈도" aria-label="출제 빈도 3단계">★★★</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">취소판결이 확정되면 행정청이 판결 취지를 <b>따라야 하는</b> 힘. ①같은 잘못 반복 금지 ②거부처분이 취소되면 다시 처분할 의무 ③위법 상태 원상회복 의무.</p>
@@ -1182,7 +1332,7 @@
 <article class="card" id="t46" data-f="2">
   <header class="card-h">
     <div><h4>기판력</h4><span class="card-law">행정소송법 §8② → 민사소송법 준용</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">판결이 확정되면 같은 당사자가 같은 문제로 다시 소송해도 앞 판결과 다르게 판단할 수 없는 힘. "한 번 끝난 건 다시 안 다툰다."</p>
@@ -1199,7 +1349,7 @@
 <article class="card" id="t47" data-f="2">
   <header class="card-h">
     <div><h4>형성력·제3자효</h4><span class="card-law">행정소송법 §29·§31</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def"><b>형성력</b> = 취소판결이 확정되면 따로 취소하지 않아도 처분이 <b>처음부터</b> 효력을 잃는 힘. <b>제3자효</b> = 그 효력이 소송 당사자가 아닌 사람에게도 미침.</p>
@@ -1215,7 +1365,7 @@
 <article class="card" id="t48" data-f="2">
   <header class="card-h">
     <div><h4>간접강제</h4><span class="card-law">행정소송법 §34</span></div>
-    <span class="stars s2" title="출제 빈도">★★☆</span>
+    <span class="card-side"><span class="stars s2" title="출제 빈도" aria-label="출제 빈도 2단계">★★☆</span><span class="chev" aria-hidden="true"></span></span>
   </header>
   <div class="card-b">
     <div class="col-def"><div class="lbl">정의</div><p class="def">거부처분 취소판결이 났는데도 행정청이 다시 처분(재처분)을 안 하면, 법원이 <b>늦어지는 만큼 돈을 내라</b>고 명령해 압박하는 제도.</p>
@@ -1240,27 +1390,24 @@
         <h2>시험 직전 1분 암기표</h2>
         <p>기간 숫자, 소송 종류별 O/X, 헷갈리는 쌍둥이 개념만 따로 모았습니다.</p>
         <h3 class="sub">① 꼭 외울 기간 숫자</h3>
-  <div class="scroll">
-  <table class="mx">
+  <div class="scroll"><table class="mx stack">
     <thead><tr><th>제도</th><th>기간</th><th>근거</th></tr></thead>
     <tbody>
-      <tr><th>취소소송 제소기간</th><td>안 날부터 <b>90일</b> / 있은 날부터 <b>1년</b></td><td>행소법 §20</td></tr>
-      <tr><th>행정심판 거친 뒤 소송</th><td>재결서 정본 송달받은 날부터 <b>90일</b></td><td>행소법 §20①</td></tr>
-      <tr><th>(참고) 행정심판 청구기간</th><td>안 날부터 <b>90일</b> / 있은 날부터 <b>180일</b></td><td>행정심판법 §27</td></tr>
-      <tr><th>필요적 전치의 예외</th><td>심판청구 후 <b>60일</b> 지나도 재결 없으면 바로 소송</td><td>행소법 §18②</td></tr>
-      <tr><th>처분변경에 따른 소 변경</th><td>처분 변경을 안 날부터 <b>60일</b></td><td>행소법 §22②</td></tr>
-      <tr><th>제3자 재심청구</th><td>안 날부터 <b>30일</b> / 확정된 날부터 <b>1년</b></td><td>행소법 §31</td></tr>
-      <tr><th>이의신청</th><td>신청 <b>30일</b> → 결과 통지 <b>14일</b>(+10일 1회) → 이후 심판·소송 <b>90일</b></td><td>기본법 §36</td></tr>
-      <tr><th>처분의 재심사</th><td>안 날부터 <b>60일</b> / 있은 날부터 <b>5년</b> / 통지 <b>90일</b>(합의제 180일)</td><td>기본법 §37</td></tr>
-      <tr><th>제재처분 제척기간</th><td>위반 종료일부터 <b>5년</b> / 재결·판결로 취소 시 확정일부터 <b>1년</b>(합의제 2년)</td><td>기본법 §23</td></tr>
-      <tr><th>인허가의제 협의</th><td>요청 받은 날부터 <b>20일</b> 안에 의견 없으면 협의 간주</td><td>기본법 §24④</td></tr>
+      <tr><th>취소소송 제소기간</th><td data-label="기간">안 날부터 <b>90일</b> / 있은 날부터 <b>1년</b></td><td data-label="근거">행소법 §20</td></tr>
+      <tr><th>행정심판 거친 뒤 소송</th><td data-label="기간">재결서 정본 송달받은 날부터 <b>90일</b></td><td data-label="근거">행소법 §20①</td></tr>
+      <tr><th>(참고) 행정심판 청구기간</th><td data-label="기간">안 날부터 <b>90일</b> / 있은 날부터 <b>180일</b></td><td data-label="근거">행정심판법 §27</td></tr>
+      <tr><th>필요적 전치의 예외</th><td data-label="기간">심판청구 후 <b>60일</b> 지나도 재결 없으면 바로 소송</td><td data-label="근거">행소법 §18②</td></tr>
+      <tr><th>처분변경에 따른 소 변경</th><td data-label="기간">처분 변경을 안 날부터 <b>60일</b></td><td data-label="근거">행소법 §22②</td></tr>
+      <tr><th>제3자 재심청구</th><td data-label="기간">안 날부터 <b>30일</b> / 확정된 날부터 <b>1년</b></td><td data-label="근거">행소법 §31</td></tr>
+      <tr><th>이의신청</th><td data-label="기간">신청 <b>30일</b> → 결과 통지 <b>14일</b>(+10일 1회) → 이후 심판·소송 <b>90일</b></td><td data-label="근거">기본법 §36</td></tr>
+      <tr><th>처분의 재심사</th><td data-label="기간">안 날부터 <b>60일</b> / 있은 날부터 <b>5년</b> / 통지 <b>90일</b>(합의제 180일)</td><td data-label="근거">기본법 §37</td></tr>
+      <tr><th>제재처분 제척기간</th><td data-label="기간">위반 종료일부터 <b>5년</b> / 재결·판결로 취소 시 확정일부터 <b>1년</b>(합의제 2년)</td><td data-label="근거">기본법 §23</td></tr>
+      <tr><th>인허가의제 협의</th><td data-label="기간">요청 받은 날부터 <b>20일</b> 안에 의견 없으면 협의 간주</td><td data-label="근거">기본법 §24④</td></tr>
     </tbody>
-  </table>
-  </div>
+  </table></div>
 
   <h3 class="sub">② 소송 종류별 O/X 매트릭스</h3>
-  <div class="scroll">
-  <table class="mx">
+  <p class="swipe-hint">← 표를 옆으로 밀어서 보세요</p><div class="scroll"><table class="mx matrix">
     <thead><tr><th>제도</th><th>취소소송</th><th>무효등확인</th><th>부작위위법확인</th><th>당사자소송</th></tr></thead>
     <tbody>
       <tr><th>제소기간</th><td class="c"><span class="o">O</span></td><td class="c"><span class="x">X</span></td><td class="c">심판 거친 경우만</td><td class="c">법령에 정한 경우만</td></tr>
@@ -1271,23 +1418,20 @@
       <tr><th>기속력(§30)</th><td class="c"><span class="o">O</span></td><td class="c"><span class="o">O</span></td><td class="c"><span class="o">O</span></td><td class="c"><span class="o">O</span> (§30①만)</td></tr>
       <tr><th>간접강제(§34)</th><td class="c"><span class="o">O</span></td><td class="c"><span class="x">X</span></td><td class="c"><span class="o">O</span></td><td class="c"><span class="x">X</span></td></tr>
     </tbody>
-  </table>
-  </div>
+  </table></div>
 
   <h3 class="sub">③ 헷갈리는 쌍둥이 개념</h3>
-  <div class="scroll">
-  <table class="mx">
+  <div class="scroll"><table class="mx stack">
     <thead><tr><th>비교</th><th>A</th><th>B</th></tr></thead>
     <tbody>
-      <tr><th>직권취소 vs 철회</th><td><b>처음부터</b> 위법·부당 → 원칙 <b>소급</b></td><td>처음엔 적법, <b>나중에</b> 사정변경 → <b>장래</b>만</td></tr>
-      <tr><th>기속력 vs 기판력</th><td><b>인용판결만</b> · 행정청을 구속 · 주문 + 이유</td><td><b>인용·기각 모두</b> · 법원·당사자를 구속 · 주문만</td></tr>
-      <tr><th>집행정지 vs 가처분</th><td>항고소송의 임시구제 · 거부처분엔 <span class="x">X</span></td><td>항고소송 <span class="x">X</span> · 당사자소송 <span class="o">O</span></td></tr>
-      <tr><th>불가쟁력 vs 불가변력</th><td><b>국민</b>이 더 못 다툼 (기간 경과)</td><td><b>행정청</b>이 못 바꿈 (재결 등 준사법적 행위)</td></tr>
-      <tr><th>원고적격 vs 협의의 소익</th><td>소송을 걸 <b>자격</b>(법률상 이익)</td><td>판결로 얻을 <b>실익</b>이 남아 있는가</td></tr>
-      <tr><th>이의신청 vs 재심사</th><td>처분 직후 30일 · 처분청 · 제재처분도 가능</td><td>확정 후 새 사유 · 처분청 · 제재처분·행정상 강제 <span class="x">X</span></td></tr>
+      <tr><th>직권취소 vs 철회</th><td data-label=""><b>처음부터</b> 위법·부당 → 원칙 <b>소급</b></td><td data-label="">처음엔 적법, <b>나중에</b> 사정변경 → <b>장래</b>만</td></tr>
+      <tr><th>기속력 vs 기판력</th><td data-label=""><b>인용판결만</b> · 행정청을 구속 · 주문 + 이유</td><td data-label=""><b>인용·기각 모두</b> · 법원·당사자를 구속 · 주문만</td></tr>
+      <tr><th>집행정지 vs 가처분</th><td data-label="">항고소송의 임시구제 · 거부처분엔 <span class="x">X</span></td><td data-label="">항고소송 <span class="x">X</span> · 당사자소송 <span class="o">O</span></td></tr>
+      <tr><th>불가쟁력 vs 불가변력</th><td data-label=""><b>국민</b>이 더 못 다툼 (기간 경과)</td><td data-label=""><b>행정청</b>이 못 바꿈 (재결 등 준사법적 행위)</td></tr>
+      <tr><th>원고적격 vs 협의의 소익</th><td data-label="">소송을 걸 <b>자격</b>(법률상 이익)</td><td data-label="">판결로 얻을 <b>실익</b>이 남아 있는가</td></tr>
+      <tr><th>이의신청 vs 재심사</th><td data-label="">처분 직후 30일 · 처분청 · 제재처분도 가능</td><td data-label="">확정 후 새 사유 · 처분청 · 제재처분·행정상 강제 <span class="x">X</span></td></tr>
     </tbody>
-  </table>
-  </div>
+  </table></div>
       </div>
     </section>
   </main>
@@ -1303,35 +1447,62 @@
 
 <button class="icon-btn totop" id="totop" type="button" aria-label="맨 위로">↑</button>
 
+<nav class="bnav" aria-label="하단 메뉴">
+  <a href="#top" data-sec="top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>홈</a>
+  <a href="#law" data-sec="law" class="law"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5"/><path d="M9 8h6"/></svg>기본법</a>
+  <a href="#suit" data-sec="suit" class="suit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 21h14"/><path d="M4 8h16"/><path d="m4 8-2 6a3 3 0 0 0 4 0z"/><path d="m20 8-2 6a3 3 0 0 0 4 0z"/></svg>소송법</a>
+  <button type="button" id="tocBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="3.5" cy="6" r="1"/><circle cx="3.5" cy="12" r="1"/><circle cx="3.5" cy="18" r="1"/></svg>목차</button>
+  <a href="#final" data-sec="final"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>암기표</a>
+</nav>
+
 <script>
 (function(){
   var root = document.documentElement;
-  var KEY = 'adminlaw-theme';
   function store(k, v){ try { localStorage.setItem(k, v); } catch(e){} }
   function read(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+  var $ = function(id){ return document.getElementById(id); };
+  var all = function(sel){ return Array.prototype.slice.call(document.querySelectorAll(sel)); };
+  var phone = matchMedia('(max-width: 760px)');
+  var tablet = matchMedia('(max-width: 1000px)');
 
-  // 테마 전환
-  document.getElementById('themeBtn').addEventListener('click', function(){
+  // 테마
+  $('themeBtn').addEventListener('click', function(){
     var cur = root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     var next = cur === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next); store(KEY, next);
+    root.setAttribute('data-theme', next); store('adminlaw-theme', next);
   });
 
-  // 검색·빈도 필터
-  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
-  var chapters = Array.prototype.slice.call(document.querySelectorAll('.chapter'));
-  var parts = Array.prototype.slice.call(document.querySelectorAll('.part'));
-  var q = document.getElementById('q');
-  var segBtns = Array.prototype.slice.call(document.querySelectorAll('.seg button'));
-  var countEl = document.getElementById('count');
-  var emptyEl = document.getElementById('empty');
-  var minF = 1;
+  // 요소
+  var cards = all('.card'), chapters = all('.chapter'), parts = all('.part');
+  var q = $('q'), segBtns = all('.seg button'), freqSel = $('freqSel'), expandBtn = $('expandBtn');
+  var minF = 1, expandAll = false;
   var norm = function(s){ return s.toLowerCase().replace(/\s+/g, ''); };
   cards.forEach(function(c){ c._text = norm(c.textContent); });
 
-  function apply(){
+  // 휴대폰 아코디언
+  function setCollapsed(){
     var term = norm(q.value);
-    var shown = 0;
+    cards.forEach(function(c){ c.classList.toggle('collapsed', phone.matches && !expandAll && !term); });
+    cards.forEach(function(c){ var h = c.querySelector('.card-h'); h.setAttribute('aria-expanded', String(!c.classList.contains('collapsed'))); });
+  }
+  cards.forEach(function(c){
+    var h = c.querySelector('.card-h');
+    h.setAttribute('role', 'button'); h.setAttribute('tabindex', '0');
+    function toggle(){ if (phone.matches) { c.classList.toggle('collapsed'); h.setAttribute('aria-expanded', String(!c.classList.contains('collapsed'))); } }
+    h.addEventListener('click', toggle);
+    h.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+  });
+  expandBtn.addEventListener('click', function(){
+    expandAll = !expandAll;
+    expandBtn.setAttribute('aria-pressed', String(expandAll));
+    expandBtn.textContent = expandAll ? '접기' : '펼치기';
+    setCollapsed();
+  });
+
+  // 검색·필터
+  function apply(){
+    var term = norm(q.value), shown = 0;
+    $('searchBox').classList.toggle('has-q', !!q.value);
     cards.forEach(function(c){
       var ok = (+c.dataset.f >= minF) && (!term || c._text.indexOf(term) !== -1);
       c.hidden = !ok; if (ok) shown++;
@@ -1340,74 +1511,97 @@
     });
     chapters.forEach(function(ch){ ch.hidden = !ch.querySelector('.card:not([hidden])'); });
     parts.forEach(function(p){ p.hidden = !p.querySelector('.chapter:not([hidden])'); });
-    countEl.textContent = shown === cards.length ? '용어 ' + shown + '개' : cards.length + '개 중 ' + shown + '개';
-    emptyEl.style.display = shown ? 'none' : 'block';
+    $('count').textContent = shown === cards.length ? '용어 ' + shown + '개' : cards.length + '개 중 ' + shown + '개';
+    $('empty').style.display = shown ? 'none' : 'block';
+    setCollapsed();
+  }
+  function setMin(v){
+    minF = v;
+    segBtns.forEach(function(x){ x.setAttribute('aria-pressed', String(+x.dataset.min === v)); });
+    freqSel.value = String(v);
+    store('adminlaw-min', String(v));
+    apply();
   }
   q.addEventListener('input', apply);
-  segBtns.forEach(function(b){
-    b.addEventListener('click', function(){
-      minF = +b.dataset.min;
-      segBtns.forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-      apply(); store('adminlaw-min', String(minF));
-    });
-  });
-  var savedMin = +read('adminlaw-min');
-  if (savedMin > 1) { segBtns.forEach(function(b){ if (+b.dataset.min === savedMin) b.click(); }); } else apply();
+  q.addEventListener('keydown', function(e){ if (e.key === 'Enter') q.blur(); });
+  $('clearQ').addEventListener('click', function(){ q.value = ''; apply(); q.focus(); });
+  segBtns.forEach(function(b){ b.addEventListener('click', function(){ setMin(+b.dataset.min); }); });
+  freqSel.addEventListener('change', function(){ setMin(+freqSel.value); });
+  setMin(+read('adminlaw-min') || 1);
+  phone.addEventListener ? phone.addEventListener('change', setCollapsed) : phone.addListener(setCollapsed);
 
-  // 숨겨진 카드로 이동하면 필터 해제
+  // 휴대폰에서는 안내 상자 접어 두기
+  function syncInfo(){ all('details.info').forEach(function(d){ d.open = !phone.matches; }); }
+  syncInfo();
+  phone.addEventListener ? phone.addEventListener('change', syncInfo) : phone.addListener(syncInfo);
+
+  // 목차 바텀시트
+  var toc = $('toc'), scrim = $('scrim');
+  function openToc(v){
+    toc.classList.toggle('open', v); scrim.classList.toggle('open', v);
+    document.body.classList.toggle('lock', v);
+    if (v) { var a = toc.querySelector('.toc-ch.active'); if (a) a.scrollIntoView({block:'center'}); }
+  }
+  $('tocBtn').addEventListener('click', function(){ openToc(true); });
+  $('tocClose').addEventListener('click', function(){ openToc(false); });
+  scrim.addEventListener('click', function(){ openToc(false); });
+  addEventListener('keydown', function(e){ if (e.key === 'Escape') openToc(false); });
+
+  // 링크 이동: 숨은 카드 보이기 + 펼치기 + 주석 열기
   function reveal(id){
-    var el = document.getElementById(id);
-    if (!el) return;
-    var card = el.closest ? (el.closest('.card') || el) : el;
-    if (card.hidden || (card.closest && card.closest('[hidden]'))) {
-      q.value = ''; minF = 1;
-      segBtns.forEach(function(x){ x.setAttribute('aria-pressed', x.dataset.min === '1' ? 'true' : 'false'); });
-      apply();
-    }
+    var el = $(id); if (!el) return;
+    if (el.closest('[hidden]')) { q.value = ''; setMin(1); }
+    var card = el.closest('.card'); if (card) card.classList.remove('collapsed');
   }
   document.addEventListener('click', function(e){
     var a = e.target.closest && e.target.closest('a[href^="#"]');
     if (!a) return;
     var id = a.getAttribute('href').slice(1);
-    if (!id) return;
+    var target = id && $(id);
+    if (!target) return;
+    e.preventDefault();
     reveal(id);
-    if (a.dataset.note) { var d = document.getElementById('n' + a.dataset.note); if (d) d.open = true; }
+    if (a.dataset.note) { var d = $('n' + a.dataset.note); if (d) d.open = true; }
+    if (toc.contains(a)) openToc(false);
+    requestAnimationFrame(function(){ target.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start'}); });
+    try { history.replaceState(null, '', '#' + id); } catch(err){}
   });
 
-  // 모바일 단원 바로가기
-  document.getElementById('jump').addEventListener('change', function(){
-    if (!this.value) return;
-    reveal(this.value);
-    document.getElementById(this.value).scrollIntoView({behavior:'smooth'});
-    this.selectedIndex = 0;
-  });
-
-  // 현재 단원 목차 강조
+  // 현재 단원 표시 (목차 + 하단 메뉴)
   var tocLinks = {};
-  Array.prototype.forEach.call(document.querySelectorAll('.toc-ch'), function(a){ tocLinks[a.getAttribute('href').slice(1)] = a; });
+  all('.toc-ch').forEach(function(a){ tocLinks[a.getAttribute('href').slice(1)] = a; });
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(en){
-        if (en.isIntersecting) {
-          Object.keys(tocLinks).forEach(function(k){ tocLinks[k].classList.toggle('active', k === en.target.id); });
-        }
+        if (en.isIntersecting) Object.keys(tocLinks).forEach(function(k){ tocLinks[k].classList.toggle('active', k === en.target.id); });
       });
     }, {rootMargin:'-140px 0px -60% 0px'});
     chapters.forEach(function(ch){ io.observe(ch); });
   }
-
-  // 맨 위로
-  var totop = document.getElementById('totop');
-  addEventListener('scroll', function(){ totop.classList.toggle('show', scrollY > 800); }, {passive:true});
+  var secs = ['top', 'law', 'suit', 'final'].map(function(id){ return $(id); });
+  var bLinks = all('.bnav [data-sec]'), totop = $('totop'), ticking = false;
+  function onScroll(){
+    ticking = false;
+    var y = scrollY + innerHeight * 0.35, cur = 'top';
+    secs.forEach(function(s){ if (s && !s.hidden && s.getBoundingClientRect().top + scrollY <= y) cur = s.id; });
+    bLinks.forEach(function(a){ a.classList.toggle('on', a.dataset.sec === cur); });
+    totop.classList.toggle('show', scrollY > 800);
+  }
+  addEventListener('scroll', function(){ if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, {passive:true});
+  onScroll();
   totop.addEventListener('click', function(){ scrollTo({top:0, behavior:'smooth'}); });
 
-  // "/" 키로 검색창
+  // "/" 키로 검색
   addEventListener('keydown', function(e){
     if (e.key === '/' && document.activeElement !== q) { e.preventDefault(); q.focus(); }
   });
 
-  // 주소에 #주석이 있으면 열기
-  if (location.hash.indexOf('#n') === 0) { var d = document.querySelector(location.hash); if (d) d.open = true; }
+  // 주소의 #으로 들어온 경우
+  if (location.hash.length > 1) {
+    var id = decodeURIComponent(location.hash.slice(1));
+    reveal(id);
+    if (id.charAt(0) === 'n') { var d = $(id); if (d) d.open = true; }
+  }
 })();
 </script>
 </body>
